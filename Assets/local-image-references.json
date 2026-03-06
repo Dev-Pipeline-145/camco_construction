@@ -1,0 +1,255 @@
+{
+  "total_references": 60,
+  "files": [
+    "camco-about.html",
+    "camco-accessibility-ramps.html",
+    "camco-commercial.html",
+    "camco-deck-construction.html",
+    "camco-home-additions.html",
+    "camco-homepage.html",
+    "camco-residential-page.html",
+    "camco-residential.html"
+  ],
+  "references": [
+    {
+      "file": "camco-about.html",
+      "asset": "Assets/media/amy-challender-camco-construction-vice-president-spokane-wa.jpg"
+    },
+    {
+      "file": "camco-about.html",
+      "asset": "Assets/media/anna-campbell-camco-construction-founding-vice-president-spokane-wa.jpg"
+    },
+    {
+      "file": "camco-about.html",
+      "asset": "Assets/media/camco-construction-spokane-wa-general-contractor-team.jpg"
+    },
+    {
+      "file": "camco-about.html",
+      "asset": "Assets/media/cheryl-hart-camco-construction-bookkeeper-spokane-wa.jpg"
+    },
+    {
+      "file": "camco-about.html",
+      "asset": "Assets/media/lee-campbell-camco-construction-founding-president-spokane-wa.jpg"
+    },
+    {
+      "file": "camco-about.html",
+      "asset": "Assets/media/leif-challender-camco-construction-president-spokane-wa.jpg"
+    },
+    {
+      "file": "camco-accessibility-ramps.html",
+      "asset": "Assets/accessibility-images/camco-construction-accessibility-contractor-spokane-wa-elevator-retrofit-05.jpg"
+    },
+    {
+      "file": "camco-accessibility-ramps.html",
+      "asset": "Assets/accessibility-images/camco-construction-accessibility-retrofit-spokane-wa-veteran-02.jpg"
+    },
+    {
+      "file": "camco-accessibility-ramps.html",
+      "asset": "Assets/accessibility-images/camco-construction-elevator-retrofit-completed-spokane-wa-veteran-08.jpg"
+    },
+    {
+      "file": "camco-accessibility-ramps.html",
+      "asset": "Assets/accessibility-images/camco-construction-home-accessibility-improvement-spokane-wa-elevator-07.jpg"
+    },
+    {
+      "file": "camco-accessibility-ramps.html",
+      "asset": "Assets/accessibility-images/camco-construction-home-elevator-installation-spokane-wa-veteran-01.jpg"
+    },
+    {
+      "file": "camco-accessibility-ramps.html",
+      "asset": "Assets/accessibility-images/camco-construction-residential-accessibility-spokane-wa-elevator-completed-09.jpg"
+    },
+    {
+      "file": "camco-accessibility-ramps.html",
+      "asset": "Assets/accessibility-images/camco-construction-residential-elevator-spokane-wa-structural-prep-04.jpg"
+    },
+    {
+      "file": "camco-accessibility-ramps.html",
+      "asset": "Assets/accessibility-images/camco-construction-veteran-accessibility-spokane-wa-elevator-installation-06.jpg"
+    },
+    {
+      "file": "camco-accessibility-ramps.html",
+      "asset": "Assets/accessibility-images/camco-construction-veteran-home-modification-spokane-wa-elevator-03.jpg"
+    },
+    {
+      "file": "camco-accessibility-ramps.html",
+      "asset": "Assets/accessibility-images/camco-construction-wheelchair-ramp-installation-spokane-wa.jpg"
+    },
+    {
+      "file": "camco-commercial.html",
+      "asset": "Assets/media/camco-construction-commercial-contractor-spokane-wa-sidepic.jpg"
+    },
+    {
+      "file": "camco-commercial.html",
+      "asset": "Assets/media/camco-construction-commercial-tenant-improvement-spokane-wa-featured.jpg"
+    },
+    {
+      "file": "camco-commercial.html",
+      "asset": "Assets/media/camco-construction-excavation-services-spokane-wa-featured.jpg"
+    },
+    {
+      "file": "camco-commercial.html",
+      "asset": "Assets/media/camco-construction-social-share-spokane-wa.jpg"
+    },
+    {
+      "file": "camco-commercial.html",
+      "asset": "Assets/media/camco-construction-veteran-elevator-installation-spokane-wa-featured.jpg"
+    },
+    {
+      "file": "camco-deck-construction.html",
+      "asset": "Assets/media/camco-construction-deck-build-spokane-wa-esumac-01.jpg"
+    },
+    {
+      "file": "camco-deck-construction.html",
+      "asset": "Assets/media/camco-construction-deck-build-spokane-wa-esumac-02.jpg"
+    },
+    {
+      "file": "camco-deck-construction.html",
+      "asset": "Assets/media/camco-construction-deck-railing-spokane-wa-esumac-06.jpg"
+    },
+    {
+      "file": "camco-deck-construction.html",
+      "asset": "Assets/media/camco-construction-deck-replacement-spokane-wa-esumac-04.jpg"
+    },
+    {
+      "file": "camco-deck-construction.html",
+      "asset": "Assets/media/camco-construction-deck-spokane-wa-esumac-03.jpg"
+    },
+    {
+      "file": "camco-deck-construction.html",
+      "asset": "Assets/media/camco-construction-deck-spokane-wa-esumac-05.jpg"
+    },
+    {
+      "file": "camco-deck-construction.html",
+      "asset": "Assets/media/camco-construction-deck-spokane-wa-esumac-07.jpg"
+    },
+    {
+      "file": "camco-deck-construction.html",
+      "asset": "Assets/media/camco-construction-deck-spokane-wa-esumac-08.jpg"
+    },
+    {
+      "file": "camco-deck-construction.html",
+      "asset": "Assets/media/camco-construction-deck-spokane-wa-esumac-09.jpg"
+    },
+    {
+      "file": "camco-deck-construction.html",
+      "asset": "Assets/media/camco-construction-deck-spokane-wa-esumac-10.jpg"
+    },
+    {
+      "file": "camco-deck-construction.html",
+      "asset": "Assets/media/camco-construction-deck-spokane-wa-esumac-11.jpg"
+    },
+    {
+      "file": "camco-deck-construction.html",
+      "asset": "Assets/media/camco-construction-deck-spokane-wa-esumac-12.jpg"
+    },
+    {
+      "file": "camco-deck-construction.html",
+      "asset": "Assets/media/camco-construction-deck-spokane-wa-esumac-13.jpg"
+    },
+    {
+      "file": "camco-deck-construction.html",
+      "asset": "Assets/media/camco-construction-deck-spokane-wa-esumac-14.jpg"
+    },
+    {
+      "file": "camco-deck-construction.html",
+      "asset": "Assets/media/camco-construction-deck-spokane-wa-esumac-15.jpg"
+    },
+    {
+      "file": "camco-home-additions.html",
+      "asset": "Assets/media/camco-construction-bathroom-remodel-spokane-wa-magnolia-08.jpg"
+    },
+    {
+      "file": "camco-home-additions.html",
+      "asset": "Assets/media/camco-construction-bathroom-remodel-spokane-wa-magnolia-09.jpg"
+    },
+    {
+      "file": "camco-home-additions.html",
+      "asset": "Assets/media/camco-construction-floor-refinishing-spokane-wa-magnolia-07.jpg"
+    },
+    {
+      "file": "camco-home-additions.html",
+      "asset": "Assets/media/camco-construction-hardwood-flooring-spokane-wa-magnolia-06.jpg"
+    },
+    {
+      "file": "camco-home-additions.html",
+      "asset": "Assets/media/camco-construction-home-remodel-completed-spokane-wa-magnolia-12.jpg"
+    },
+    {
+      "file": "camco-home-additions.html",
+      "asset": "Assets/media/camco-construction-home-remodel-spokane-wa-magnolia-01.jpg"
+    },
+    {
+      "file": "camco-home-additions.html",
+      "asset": "Assets/media/camco-construction-home-remodel-spokane-wa-magnolia-02.jpg"
+    },
+    {
+      "file": "camco-home-additions.html",
+      "asset": "Assets/media/camco-construction-home-remodel-spokane-wa-magnolia-03.jpg"
+    },
+    {
+      "file": "camco-home-additions.html",
+      "asset": "Assets/media/camco-construction-kitchen-remodel-spokane-wa-magnolia-04.jpg"
+    },
+    {
+      "file": "camco-home-additions.html",
+      "asset": "Assets/media/camco-construction-kitchen-remodel-spokane-wa-magnolia-05.jpg"
+    },
+    {
+      "file": "camco-home-additions.html",
+      "asset": "Assets/media/camco-construction-master-bathroom-spokane-wa-magnolia-11.jpg"
+    },
+    {
+      "file": "camco-home-additions.html",
+      "asset": "Assets/media/camco-construction-master-suite-addition-spokane-wa-magnolia-10.jpg"
+    },
+    {
+      "file": "camco-homepage.html",
+      "asset": "Assets/media/camco-construction-about-camco-team-spokane-wa-sidepic.jpg"
+    },
+    {
+      "file": "camco-homepage.html",
+      "asset": "Assets/media/camco-construction-commercial-contractor-spokane-wa-sidepic.jpg"
+    },
+    {
+      "file": "camco-homepage.html",
+      "asset": "Assets/media/camco-construction-excavation-services-spokane-wa-featured.jpg"
+    },
+    {
+      "file": "camco-homepage.html",
+      "asset": "Assets/media/camco-construction-general-contractor-spokane-wa-hero.jpg"
+    },
+    {
+      "file": "camco-homepage.html",
+      "asset": "Assets/media/camco-construction-magnolia-remodel-spokane-wa-featured.jpg"
+    },
+    {
+      "file": "camco-homepage.html",
+      "asset": "Assets/media/camco-construction-residential-contractor-spokane-wa-sidepic.jpg"
+    },
+    {
+      "file": "camco-homepage.html",
+      "asset": "Assets/media/camco-construction-social-share-spokane-wa.jpg"
+    },
+    {
+      "file": "camco-homepage.html",
+      "asset": "Assets/media/camco-construction-veteran-elevator-installation-spokane-wa-featured.jpg"
+    },
+    {
+      "file": "camco-residential.html",
+      "asset": "Assets/media/camco-construction-deck-construction-spokane-wa-featured.jpg"
+    },
+    {
+      "file": "camco-residential.html",
+      "asset": "Assets/media/camco-construction-magnolia-remodel-spokane-wa-featured.jpg"
+    },
+    {
+      "file": "camco-residential.html",
+      "asset": "Assets/media/camco-construction-residential-contractor-spokane-wa-sidepic.jpg"
+    },
+    {
+      "file": "camco-residential.html",
+      "asset": "Assets/media/camco-construction-social-share-spokane-wa.jpg"
+    }
+  ]
+}
