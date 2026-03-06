@@ -22,7 +22,8 @@
   <link rel="canonical" href="https://camco-construction.pages.dev/residential/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap" /></noscript>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1R87642CKG"></script>
   <script>
@@ -113,13 +114,13 @@
     footer { background: var(--blk); padding: 60px 0 0; }
     .foot-grid { width: min(1140px, 90vw); margin: 0 auto; display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr 1fr; gap: 28px; padding-bottom: 38px; border-bottom: 1px solid rgba(255,255,255,.08); }
     .foot-brand p { color: rgba(255,255,255,.72); font-size: 13px; max-width: 320px; line-height: 1.8; margin-top: 14px; }
-    .foot-col h4 { color: rgba(255,255,255,.82); text-transform: uppercase; letter-spacing: .16em; font-size: .66rem; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,.14); }
+    .foot-col h3 { color: rgba(255,255,255,.95); text-transform: uppercase; letter-spacing: .16em; font-size: .66rem; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,.14); }
     .foot-col ul { list-style: none; }
     .foot-col li { margin-bottom: 8px; }
-    .foot-col a, .foot-col span { color: rgba(255,255,255,.78); text-decoration: none; font-size: 13px; }
+    .foot-col a, .foot-col span { color: rgba(255,255,255,.9); text-decoration: none; font-size: 13px; }
     .foot-col a:hover { color: #fff; }
     .foot-bottom { width: min(1140px, 90vw); margin: 0 auto; padding: 16px 0; color: rgba(255,255,255,.68); display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; font-size: 12px; }
-    .foot-bottom a { color: rgba(255,255,255,.82); text-decoration: none; }
+    .foot-bottom a { color: rgba(255,255,255,.95); text-decoration: none; }
     @media (max-width: 1100px){
       .nav { display:none; }
       .nav-cta { display:none; }
@@ -171,7 +172,7 @@
 <body>
   <header id="hdr">
     <a class="logo-box" href="/" aria-label="Camco Construction Home">
-      <img class="logo-img" src="Logo/CAMCO_Construction_logo.png" alt="Camco Construction logo" />
+      <img class="logo-img" src="Logo/CAMCO_Construction_logo.png" alt="Camco Construction logo" width="160" height="46" />
     </a>
     <ul class="nav">
       <li><a href="/">Home</a></li>
@@ -228,6 +229,8 @@
     <a href="/contact-us/" data-event="click" data-label="cta_click_nav_mobile_residential">Contact us</a>
   </nav>
 
+
+  <main>
   <section class="hero">
     <div class="hero-media" role="img" aria-label="Residential home remodeling project in Spokane by Camco"></div>
     <div class="hero-copy">
@@ -357,14 +360,16 @@
     </div>
   </section>
 
+  </main>
+
   <footer>
     <div class="foot-grid">
       <div class="foot-brand">
-        <img class="logo-img" src="Logo/CAMCO_Construction_logo.png" alt="Camco Construction logo" />
+        <img class="logo-img" src="Logo/CAMCO_Construction_logo.png" alt="Camco Construction logo" width="160" height="46" />
         <p>Serving the Spokane area with professional construction, structural remodels, and additions since 1976. Licensed, insured and bonded in WA &amp; ID.<br /><br />Lic. #CAMCOCI799L5</p>
       </div>
       <div class="foot-col">
-        <h4>Navigation</h4>
+        <h3>Navigation</h3>
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/about/">About</a></li>
@@ -375,7 +380,7 @@
         </ul>
       </div>
       <div class="foot-col">
-        <h4>Services</h4>
+        <h3>Services</h3>
         <ul>
           <li><a href="/residential/">Residential Services</a></li>
           <li><a href="/home-additions/">Home Additions</a></li>
@@ -386,7 +391,7 @@
         </ul>
       </div>
       <div class="foot-col">
-        <h4>Contact</h4>
+        <h3>Contact</h3>
         <ul>
           <li><span>3105 E Boone Ave</span></li>
           <li><span>Spokane, WA 99202</span></li>
@@ -398,7 +403,7 @@
         </ul>
       </div>
       <div class="foot-col">
-        <h4>Working Hours</h4>
+        <h3>Working Hours</h3>
         <ul>
           <li><span>Monday - Friday: 9am - 5pm</span></li>
           <li><span>Saturday - Sunday: Closed</span></li>

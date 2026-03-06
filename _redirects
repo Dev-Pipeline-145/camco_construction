@@ -1,4 +1,12 @@
 / /camco-homepage.html 200
+/camco-homepage.html / 301
+/camco-commercial.html /commercial/ 301
+/camco-residential.html /residential/ 301
+/camco-home-additions.html /home-additions/ 301
+/camco-deck-construction.html /deck-construction/ 301
+/camco-accessibility-ramps.html /accessibility-ramps/ 301
+/camco-about.html /about/ 301
+/camco-contact.html /contact-us/ 301
 /commercial /camco-commercial.html 200
 /commercial/ /camco-commercial.html 200
 /residential /camco-residential.html 200

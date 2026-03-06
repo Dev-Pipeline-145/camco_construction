@@ -22,7 +22,8 @@
   <link rel="canonical" href="https://camco-construction.pages.dev/commercial/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap" /></noscript>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1R87642CKG"></script>
   <script>
@@ -109,7 +110,7 @@
     footer{background:var(--blk);padding:60px 0 0}
     .fg{width:min(1140px,90vw);margin:0 auto;display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr 1fr;gap:28px;padding-bottom:38px;border-bottom:1px solid rgba(255,255,255,.08)}
     .fb p{font-size:13px;color:rgba(255,255,255,.72);line-height:1.8;max-width:280px}
-    .fc h4{font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.82);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.14)}
+    .fc h3{font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.82);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.14)}
     .fc ul{list-style:none}
     .fc ul li{margin-bottom:8px}
     .fc ul li a,.fc ul li span{font-size:13px;color:rgba(255,255,255,.78);text-decoration:none}
@@ -169,7 +170,7 @@
 <body>
   <header id="hdr">
     <a class="logo-box" href="/" aria-label="Camco Construction Home">
-      <img class="logo-img" src="Logo/CAMCO_Construction_logo.png" alt="Camco Construction logo" />
+      <img class="logo-img" src="Logo/CAMCO_Construction_logo.png" alt="Camco Construction logo" width="160" height="46" />
     </a>
     <ul class="nav">
       <li><a href="/">Home</a></li>
@@ -226,6 +227,8 @@
     <a href="/contact-us/" data-event="click" data-label="cta_click_nav_mobile_commercial">Contact us</a>
   </nav>
 
+
+  <main>
   <section style="display:grid;grid-template-columns:1fr 1fr;min-height:90vh" class="split-r">
     <div class="photo" style="background-image:url('Assets/media/camco-construction-commercial-contractor-spokane-wa-sidepic.jpg');min-height:520px"></div>
     <div style="background:var(--blk);display:flex;align-items:center;padding:80px 7% 80px 6%">
@@ -376,13 +379,15 @@
     <p style="margin-top:14px"><strong>Service Area:</strong> Camco does work in the following locations: Spokane, Spokane Valley, Five Mile Prairie, Nine Mile Falls, Mead, Liberty Lake, Cheney, and nearby North Idaho communities including Post Falls and Coeur d'Alene.</p>
   </section>
 
+  </main>
+
   <footer>
     <div class="fg">
       <div class="fb">
-        <img class="logo-img" src="Logo/CAMCO_Construction_logo.png" alt="Camco Construction logo" />
+        <img class="logo-img" src="Logo/CAMCO_Construction_logo.png" alt="Camco Construction logo" width="160" height="46" />
         <p>Serving the Spokane area with professional construction, structural remodels, and additions since 1976. Licensed, insured and bonded in WA &amp; ID.<br><br>Lic. #CAMCOCI799L5</p>
       </div>
-      <div class="fc"><h4>Navigation</h4><ul>
+      <div class="fc"><h3>Navigation</h3><ul>
         <li><a href="/">Home</a></li>
         <li><a href="/about/">About</a></li>
         <li><a href="/residential/">Services</a></li>
@@ -390,7 +395,7 @@
         <li><a href="/join-our-team/">Join Our Team</a></li>
         <li><a href="/contact-us/">Contact us</a></li>
       </ul></div>
-      <div class="fc"><h4>Services</h4><ul>
+      <div class="fc"><h3>Services</h3><ul>
         <li><a href="/residential/">Residential Services</a></li>
         <li><a href="/home-additions/">Home Additions</a></li>
         <li><a href="/deck-construction/">Deck Construction</a></li>
@@ -398,7 +403,7 @@
         <li><a href="/accessibility-ramps/">Accessibility &amp; Ramps</a></li>
         <li><a href="/for-realtors/">For Realtors &amp; Property Managers</a></li>
       </ul></div>
-      <div class="fc"><h4>Contact</h4><ul>
+      <div class="fc"><h3>Contact</h3><ul>
         <li><span>3105 E Boone Ave</span></li>
         <li><span>Spokane, WA 99202</span></li>
         <li><a href="tel:5095361818" data-event="generate_lead" data-label="phone_click_commercial">(509) 536-1818</a></li>
@@ -407,7 +412,7 @@
         <li><a href="https://www.linkedin.com/company/camco-construction-spokane/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
         <li><span>Contractor: #CAMCOCI799L5</span></li>
       </ul></div>
-      <div class="fc"><h4>Working Hours</h4><ul>
+      <div class="fc"><h3>Working Hours</h3><ul>
         <li><span>Monday - Friday: 9am - 5pm</span></li>
         <li><span>Saturday - Sunday: Closed</span></li>
       </ul></div>
