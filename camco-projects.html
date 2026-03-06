@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Construction Projects Spokane WA | Camco Construction Portfolio</title>
+  <title>Projects Spokane WA | Camco Construction Portfolio</title>
   <meta name="description" content="View Camco Construction projects in Spokane WA across residential remodels, commercial improvements, excavation scopes, and accessibility work." />
   <meta name="keywords" content="construction projects Spokane WA, contractor portfolio Spokane, Camco project gallery, residential and commercial projects Spokane" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Construction Projects Spokane WA | Camco Construction Portfolio" />
+  <meta property="og:title" content="Projects Spokane WA | Camco Construction Portfolio" />
   <meta property="og:description" content="View Camco Construction projects in Spokane WA across residential remodels, commercial improvements, excavation scopes, and accessibility work." />
   <meta property="og:url" content="https://camco-construction.pages.dev/projects/" />
-  <meta property="og:image" content="Assets/media/camco-construction-social-share-spokane-wa.jpg" />
+  <meta property="og:image" content="Assets/media/camco-construction-magnolia-remodel-spokane-wa-featured.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Construction Projects Spokane WA | Camco Construction Portfolio" />
+  <meta name="twitter:title" content="Projects Spokane WA | Camco Construction Portfolio" />
   <meta name="twitter:description" content="View Camco Construction projects in Spokane WA across residential remodels, commercial improvements, excavation scopes, and accessibility work." />
-  <meta name="twitter:image" content="Assets/media/camco-construction-social-share-spokane-wa.jpg" />
+  <meta name="twitter:image" content="Assets/media/camco-construction-magnolia-remodel-spokane-wa-featured.jpg" />
   <link rel="canonical" href="https://camco-construction.pages.dev/projects/" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1R87642CKG"></script>
   <script>
@@ -30,7 +30,7 @@
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{--red:#c8102e;--blk:#000;--cream:#f5ece8;--gray:#555;--font:'Barlow',Helvetica,Arial,sans-serif}
-    body{font-family:var(--font);font-size:14px;color:var(--gray);line-height:1.7}
+    body{font-family:var(--font);font-size:12pt;color:var(--gray);line-height:1.7}
     #hdr{background:#000;position:sticky;top:0;z-index:999;display:flex;align-items:stretch;min-height:70px}
     .logo-box{background:#000;padding:10px 18px;display:flex;align-items:center;flex-shrink:0}
     .logo-img{height:46px;width:auto}
@@ -71,15 +71,21 @@
     .section{padding:80px 10%}
     .cream{background:var(--cream)}
     .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .card{background:#fff;border:1px solid rgba(0,0,0,.12);padding:20px}
+    .card{background:#fff;border:1px solid rgba(0,0,0,.12);padding:20px;color:#1d1d1d}
     .card h3{color:#111;margin-bottom:10px;font-size:.95rem;text-transform:uppercase;letter-spacing:.08em}
-    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    .form-grid .full{grid-column:1/-1}
-    .intent-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .intent-card{background:#fff;border:1px solid rgba(0,0,0,.12);padding:24px}
-    .intent-card h3{color:#111;margin-bottom:10px;font-size:.95rem;text-transform:uppercase;letter-spacing:.08em}
-    input,select,textarea{width:100%;padding:12px;border:1px solid rgba(0,0,0,.18);font:inherit}
-    textarea{min-height:120px;resize:vertical}
+    .project-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+    .project-tab{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid rgba(0,0,0,.15);background:#fff;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .project-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .project-card{background:#fff;border:1px solid rgba(0,0,0,.12);overflow:hidden}
+    .project-media{position:relative;aspect-ratio:16/10;overflow:hidden}
+    .project-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+    .project-media::after{content:'';position:absolute;inset:0;background:linear-gradient(130deg,rgba(255,255,255,.22) 0%,rgba(255,255,255,0) 36%,rgba(255,255,255,.08) 64%,rgba(0,0,0,.2) 100%);pointer-events:none}
+    .project-card:hover .project-media img{transform:scale(1.03)}
+    .project-badge{position:absolute;top:10px;left:10px;background:rgba(0,0,0,.74);color:#fff;padding:5px 9px;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
+    .project-copy{padding:14px 14px 16px}
+    .project-copy h3{color:#111;margin-bottom:8px;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase}
+    .project-copy p{font-size:12pt;color:#1d1d1d}
+    .project-copy small{display:block;margin-top:9px;color:#2f2f2f;font-weight:600}
     .ccg{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid rgba(0,0,0,.13);margin:24px 0}
     .cc{padding:24px 18px;border-right:1px solid rgba(0,0,0,.13)} .cc:last-child{border-right:none}
     .ccl{font-size:.64rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-bottom:8px}
@@ -90,8 +96,8 @@
     .fc h3{font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.82);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.14)}
     .fc ul{list-style:none}.fc li{margin-bottom:8px}.fc a,.fc span{font-size:13px;color:rgba(255,255,255,.9);text-decoration:none}
     .fbot{width:min(1140px,90vw);margin:0 auto;padding:18px 0;display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.68);flex-wrap:wrap;gap:8px}
-    @media(max-width:1080px){.hero,.grid2,.ccg,.fg,.form-grid,.intent-grid{grid-template-columns:1fr 1fr}.nav{display:none}.nav-cta{display:none}.menu-btn{display:block}}
-    @media(max-width:760px){.hero,.grid2,.ccg,.fg,.form-grid,.intent-grid{grid-template-columns:1fr}.mobile-nav{top:64px}}
+    @media(max-width:1080px){.hero,.grid2,.ccg,.fg,.project-gallery{grid-template-columns:1fr 1fr}.nav{display:none}.nav-cta{display:none}.menu-btn{display:block}}
+    @media(max-width:760px){.hero,.grid2,.ccg,.fg,.project-gallery{grid-template-columns:1fr}.mobile-nav{top:64px}}
   
     /* Global nav fallback: force mobile header behavior */
     @media screen and (max-width: 1100px){
@@ -173,24 +179,92 @@
   </section>
 
   <section class="section cream">
-    <div class="lbl">Featured Work</div>
-    <h2 class="h2" style="color:#000;max-width:860px;margin-bottom:16px">Recent Projects by Service Category<span class="dot">.</span></h2>
-    <div class="grid2">
-      <article class="card"><h3>Magnolia Remodel</h3><p>Whole-home remodel and space reconfiguration with structural planning, finish carpentry, and schedule-managed delivery.</p></article>
-      <article class="card"><h3>Veteran Accessibility Retrofit</h3><p>Mobility-focused retrofit project with phased work planning, safety-first execution, and long-term accessibility outcomes.</p></article>
-      <article class="card"><h3>Commercial Tenant Improvements</h3><p>Commercial interior updates with scope transparency, coordinated trades, and operational timeline awareness.</p></article>
-      <article class="card"><h3>Excavation & Site Prep</h3><p>Site preparation, grading, utility trenching, and coordinated support for residential and commercial construction phases.</p></article>
+    <div class="lbl">Project Gallery</div>
+    <h2 class="h2" style="color:#000;max-width:900px;margin-bottom:16px">Residential, Commercial, Excavation, and Accessibility Projects<span class="dot">.</span></h2>
+    <div class="project-tabs">
+      <span class="project-tab">Residential Remodels</span>
+      <span class="project-tab">Commercial Improvements</span>
+      <span class="project-tab">Accessibility</span>
+      <span class="project-tab">Excavation</span>
+    </div>
+    <div class="project-gallery">
+      <article class="project-card">
+        <div class="project-media">
+          <img src="Assets/media/camco-construction-magnolia-remodel-spokane-wa-featured.jpg" alt="Magnolia whole-home remodel by Camco Construction in Spokane WA" loading="lazy" />
+          <span class="project-badge">Residential</span>
+        </div>
+        <div class="project-copy">
+          <h3>Magnolia Whole-Home Remodel</h3>
+          <p>Scope included structural updates, interior modernization, and finish continuity across living spaces.</p>
+          <small>Service: Residential Remodeling | Location: Spokane WA</small>
+        </div>
+      </article>
+      <article class="project-card">
+        <div class="project-media">
+          <img src="Assets/media/camco-construction-home-remodel-completed-spokane-wa-magnolia-12.jpg" alt="Completed home remodel and addition finish work by Camco in Spokane WA" loading="lazy" />
+          <span class="project-badge">Home Additions</span>
+        </div>
+        <div class="project-copy">
+          <h3>Master Suite Addition Integration</h3>
+          <p>New addition blended into existing structure with coordinated rough-ins and final finish transitions.</p>
+          <small>Service: Home Addition Contractor | Location: Spokane WA</small>
+        </div>
+      </article>
+      <article class="project-card">
+        <div class="project-media">
+          <img src="Assets/media/camco-construction-commercial-tenant-improvement-spokane-wa-featured.jpg" alt="Commercial tenant improvement project completed by Camco in Spokane WA" loading="lazy" />
+          <span class="project-badge">Commercial</span>
+        </div>
+        <div class="project-copy">
+          <h3>Tenant Improvement Build-Out</h3>
+          <p>Commercial interior improvements delivered with phased scheduling and tenant-ready handoff.</p>
+          <small>Service: Commercial Contracting | Location: Spokane WA</small>
+        </div>
+      </article>
+      <article class="project-card">
+        <div class="project-media">
+          <img src="Assets/media/camco-construction-veteran-elevator-installation-spokane-wa-featured.jpg" alt="Veteran accessibility retrofit with elevator integration by Camco in Spokane WA" loading="lazy" />
+          <span class="project-badge">Accessibility</span>
+        </div>
+        <div class="project-copy">
+          <h3>Veteran Accessibility Retrofit</h3>
+          <p>Mobility-focused retrofit with structural prep and coordinated accessibility system integration.</p>
+          <small>Service: Accessibility & Ramps | Location: Spokane WA</small>
+        </div>
+      </article>
+      <article class="project-card">
+        <div class="project-media">
+          <img src="Assets/media/camco-construction-excavation-services-spokane-wa-featured.jpg" alt="Excavation and site preparation project by Camco Construction in Spokane WA" loading="lazy" />
+          <span class="project-badge">Excavation</span>
+        </div>
+        <div class="project-copy">
+          <h3>Site Prep and Utility Coordination</h3>
+          <p>Grading, trenching, and site preparation completed to support downstream construction phases.</p>
+          <small>Service: Excavation Services | Location: Spokane WA</small>
+        </div>
+      </article>
+      <article class="project-card">
+        <div class="project-media">
+          <img src="Assets/media/camco-construction-deck-construction-spokane-wa-featured.jpg" alt="Custom deck construction project completed by Camco in Spokane WA" loading="lazy" />
+          <span class="project-badge">Deck Construction</span>
+        </div>
+        <div class="project-copy">
+          <h3>Deck Build and Replacement Program</h3>
+          <p>Permitted deck work including framing upgrades, railing systems, and final safety compliance.</p>
+          <small>Service: Deck Construction | Location: Spokane WA</small>
+        </div>
+      </article>
     </div>
   </section>
 
   <section class="section" style="background:#fff">
-    <div class="lbl">How We Deliver</div>
-    <h2 class="h2" style="color:#000;max-width:860px;margin-bottom:16px">From Scope to Final Walkthrough<span class="dot">.</span></h2>
+    <div class="lbl">Project Delivery Standards</div>
+    <h2 class="h2" style="color:#000;max-width:860px;margin-bottom:16px">How Camco Runs Projects From Scope to Closeout<span class="dot">.</span></h2>
     <div class="ccg">
-      <div class="cc"><div class="ccl">Step 1</div><div class="ccv">On-site review and real scope definition</div></div>
-      <div class="cc"><div class="ccl">Step 2</div><div class="ccv">Budget and timeline planning</div></div>
-      <div class="cc"><div class="ccl">Step 3</div><div class="ccv">Managed execution with clean communication</div></div>
-      <div class="cc"><div class="ccl">Step 4</div><div class="ccv">Quality checks and closeout</div></div>
+      <div class="cc"><div class="ccl">Step 1</div><div class="ccv">Site walkthrough and documented scope priorities</div></div>
+      <div class="cc"><div class="ccl">Step 2</div><div class="ccv">Timeline, sequencing, and permit planning</div></div>
+      <div class="cc"><div class="ccl">Step 3</div><div class="ccv">Managed execution with progress visibility</div></div>
+      <div class="cc"><div class="ccl">Step 4</div><div class="ccv">Quality checks, punch list, and handoff</div></div>
     </div>
     <a class="btn" href="/contact-us/#request-estimate" onclick="trackCTAClick('projects_cta_estimate')">Request a Project Estimate <span class="arr">></span></a>
   </section>
@@ -208,23 +282,9 @@
   </footer>
 
   <script>
-    function trackPhoneClick(){gtag('event','generate_lead',{'event_category':'contact','event_label':'phone_click','service_category':'contact','contact_method':'phone','lead_source_page':window.location.href});}
-    function trackEmailClick(){gtag('event','generate_lead',{'event_category':'contact','event_label':'email_click','service_category':'contact','contact_method':'email','lead_source_page':window.location.href});}
-    function trackCTAClick(label){gtag('event','click',{'event_category':'cta','event_label':label||'contact_cta','service_category':'contact','lead_source_page':window.location.href});}
-    function trackEstimateSubmit(projectType){
-      gtag('event','generate_lead',{'event_category':'contact','event_label':'estimate_form_submit','service_category':projectType||'contact','contact_method':'form','lead_source_page':window.location.href});
-      gtag('event','form_submit',{'event_category':'contact','event_label':'estimate_form','form_name':'camco_estimate_form','lead_source_page':window.location.href,'project_type':projectType||'unknown'});
-    }
-    function trackJoinTeamSubmit(position){
-      gtag('event','generate_lead',{'event_category':'careers','event_label':'join_team_form_submit','service_category':'careers','contact_method':'form','lead_source_page':window.location.href});
-      gtag('event','form_submit',{'event_category':'careers','event_label':'join_team_form','form_name':'camco_join_team_form','lead_source_page':window.location.href,'position_interest':position||'unknown'});
-    }
-    document.addEventListener('DOMContentLoaded',function(){
-      const estimateForm=document.getElementById('estimateForm');
-      if(estimateForm){estimateForm.addEventListener('submit',function(e){e.preventDefault();const projectType=(estimateForm.querySelector('[name=\"project_type\"]')||{}).value||'unknown';trackEstimateSubmit(projectType);alert('Thanks! Your estimate request has been recorded.');estimateForm.reset();});}
-      const joinTeamForm=document.getElementById('joinTeamForm');
-      if(joinTeamForm){joinTeamForm.addEventListener('submit',function(e){e.preventDefault();const position=(joinTeamForm.querySelector('[name=\"position_interest\"]')||{}).value||'unknown';trackJoinTeamSubmit(position);alert('Thanks! Your job inquiry has been recorded.');joinTeamForm.reset();});}
-    });
+    function trackPhoneClick(){gtag('event','generate_lead',{'event_category':'contact','event_label':'phone_click','service_category':'projects','contact_method':'phone','lead_source_page':window.location.href});}
+    function trackEmailClick(){gtag('event','generate_lead',{'event_category':'contact','event_label':'email_click','service_category':'projects','contact_method':'email','lead_source_page':window.location.href});}
+    function trackCTAClick(label){gtag('event','click',{'event_category':'cta','event_label':label||'projects_cta','service_category':'projects','lead_source_page':window.location.href});}
     const menuBtn=document.getElementById('menuBtn'), mobileNav=document.getElementById('mobileNav');
     if(menuBtn&&mobileNav){menuBtn.addEventListener('click',function(){const isOpen=mobileNav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',isOpen?'true':'false');});}
   </script>

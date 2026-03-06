@@ -36,6 +36,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://camco-construction.pages.dev/projects/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://camco-construction.pages.dev/join-our-team/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://camco-construction.pages.dev/contact-us/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
