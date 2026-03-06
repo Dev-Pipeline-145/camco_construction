@@ -6,6 +6,15 @@
   <title>Deck Construction & Replacement Spokane WA | Camco</title>
   <meta name="description" content="Expert deck construction and replacement in Spokane WA. New builds, full replacements & multi-family programs. Licensed contractor. Call Camco at 509-536-1818." />
   <meta name="keywords" content="deck construction Spokane WA, deck replacement Spokane WA, deck contractor Spokane, multi-family deck replacement Spokane, new deck Spokane WA" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Deck Construction & Replacement Spokane WA | Camco" />
+  <meta property="og:description" content="Expert deck construction and replacement in Spokane WA. New builds, full replacements & multi-family programs. Licensed contractor. Call Camco at 509-536-1818." />
+  <meta property="og:url" content="https://camco-construction.pages.dev/deck-construction/" />
+  <meta property="og:image" content="Assets/media/camco-construction-social-share-spokane-wa.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Deck Construction & Replacement Spokane WA | Camco" />
+  <meta name="twitter:description" content="Expert deck construction and replacement in Spokane WA. New builds, full replacements & multi-family programs. Licensed contractor. Call Camco at 509-536-1818." />
+  <meta name="twitter:image" content="Assets/media/camco-construction-social-share-spokane-wa.jpg" />
   <link rel="canonical" href="https://camco-construction.pages.dev/deck-construction/" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1R87642CKG"></script>
@@ -35,6 +44,22 @@
     .mobile-nav{display:none;position:fixed;top:70px;left:0;right:0;background:#111;z-index:998;border-top:1px solid rgba(255,255,255,.14)}
     .mobile-nav.open{display:block}
     .mobile-nav a{display:block;color:#fff;text-decoration:none;text-transform:uppercase;letter-spacing:.08em;font-size:.78rem;font-weight:600;padding:14px 22px;border-bottom:1px solid rgba(255,255,255,.11)}
+
+    .services-menu{position:relative}
+    .services-toggle{display:inline-flex;align-items:center;gap:6px}
+    .services-caret{font-size:.62rem;line-height:1;opacity:.9}
+    .services-dropdown{display:none;position:absolute;top:100%;right:0;min-width:720px;background:#111;border:1px solid rgba(255,255,255,.18);padding:18px;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;box-shadow:0 14px 28px rgba(0,0,0,.35)}
+    .services-menu:hover .services-dropdown,.services-menu:focus-within .services-dropdown{display:grid}
+    .services-group{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.12);padding:12px}
+    .services-group-title{display:block;color:rgba(255,255,255,.72);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:8px}
+    .services-dropdown a{display:block;color:#fff;font-size:.78rem;letter-spacing:.03em;text-transform:none;font-weight:600;padding:6px 0;text-decoration:none}
+    .services-dropdown a:hover,.services-dropdown a.on{color:var(--red)}
+    .mobile-services summary{display:block;color:#fff;text-decoration:none;text-transform:uppercase;letter-spacing:.08em;font-size:.78rem;font-weight:600;padding:14px 22px;border-bottom:1px solid rgba(255,255,255,.11);cursor:pointer;list-style:none}
+    .mobile-services summary::-webkit-details-marker{display:none}
+    .mobile-services[open] summary{color:var(--red)}
+    .mobile-services-panel{background:rgba(255,255,255,.03);padding:0 0 8px}
+    .mobile-services-group-title{display:block;color:rgba(255,255,255,.64);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:12px 22px 4px}
+    .mobile-nav .mobile-services-panel a{padding:10px 34px;font-size:.74rem;text-transform:none;letter-spacing:.03em}
     .lbl{display:flex;align-items:center;gap:10px;font-weight:700;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px}
     .lbl::before{content:'';display:block;width:3px;height:13px;background:var(--red)}
     .llt{color:rgba(255,255,255,.6)} .ldk{color:#000}
@@ -75,6 +100,13 @@
     .fbot{width:min(1140px,90vw);margin:0 auto;padding:18px 0;display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.68);flex-wrap:wrap;gap:8px}
     @media(max-width:1080px){.hero,.grid3,.faq,.ccg,.fg,.process,.gallery-grid{grid-template-columns:1fr 1fr}.nav{display:none}.nav-cta{display:none}.menu-btn{display:block}}
     @media(max-width:760px){.hero,.grid3,.faq,.ccg,.fg,.process,.gallery-grid{grid-template-columns:1fr}.mobile-nav{top:64px}}
+  
+    /* Global nav fallback: force mobile header behavior */
+    @media screen and (max-width: 1100px){
+      #hdr .nav{display:none !important;}
+      #hdr .nav-cta{display:none !important;}
+      #hdr .menu-btn{display:block !important;}
+    }
   </style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"GeneralContractor","name":"Camco Construction Inc.","url":"https://camco-construction.pages.dev/deck-construction/","telephone":"509-536-1818","email":"info@CamcoConstruction.net","address":{"@type":"PostalAddress","streetAddress":"3105 E Boone Ave","addressLocality":"Spokane","addressRegion":"WA","postalCode":"99202"},"description":"Deck construction and replacement contractor in Spokane WA since 1976.","foundingDate":"1976","hasCredential":"WA License #CAMCOCI799L5","priceRange":"$$"}
@@ -83,12 +115,59 @@
 <body>
   <header id="hdr">
     <a class="logo-box" href="/" aria-label="Camco Construction Home"><img class="logo-img" src="Logo/CAMCO_Construction_logo.png" alt="Camco Construction logo" /></a>
-    <ul class="nav"><li><a href="/">Home</a></li><li><a href="/about/">About</a></li><li><a class="on" href="/deck-construction/">Services</a></li><li><a href="/projects/">Projects</a></li><li><a href="/join-our-team/">Join Our Team</a></li></ul>
-    <div class="nav-cta"><a href="#contact" onclick="trackCTAClick('deck_nav_contact')">Contact Us <span class="arr">></span></a></div>
+    <ul class="nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li class="services-menu">
+        <a class="on services-toggle" href="/residential/" aria-haspopup="true" aria-expanded="false">Services <span class="services-caret">▾</span></a>
+        <div class="services-dropdown" role="menu" aria-label="Services menu">
+          <div class="services-group">
+            <span class="services-group-title">Commercial</span>
+            <a href="/commercial/">Commercial Contracting</a>
+            <a href="/for-realtors/">Tenant Improvements &amp; Property Managers</a>
+          </div>
+          <div class="services-group">
+            <span class="services-group-title">Residential</span>
+            <a href="/residential/">Residential Contracting</a>
+            <a href="/home-additions/">Home Additions</a>
+            <a href="/deck-construction/">Deck Construction</a>
+            <a href="/accessibility-ramps/">Accessibility &amp; Ramps</a>
+          </div>
+          <div class="services-group">
+            <span class="services-group-title">General</span>
+            <a href="/general-contracting/">General Contracting</a>
+            <a href="/contact-us/#request-estimate">Request an Estimate</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/projects/">Projects</a></li>
+      <li><a href="/join-our-team/">Join Our Team</a></li>
+    </ul>
+    <div class="nav-cta"><a href="/contact-us/" onclick="trackCTAClick('deck_nav_contact')">Contact Us <span class="arr">></span></a></div>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
   </header>
   <nav class="mobile-nav" id="mobileNav">
-    <a href="/">Home</a><a href="/about/">About</a><a href="/deck-construction/">Services</a><a href="/projects/">Projects</a><a href="/join-our-team/">Join Our Team</a><a href="#contact" onclick="trackCTAClick('deck_nav_mobile_contact')">Contact us</a>
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <details class="mobile-services">
+      <summary>Services</summary>
+      <div class="mobile-services-panel">
+        <span class="mobile-services-group-title">Commercial</span>
+        <a href="/commercial/">Commercial Contracting</a>
+        <a href="/for-realtors/">Tenant Improvements &amp; Property Managers</a>
+        <span class="mobile-services-group-title">Residential</span>
+        <a href="/residential/">Residential Contracting</a>
+        <a href="/home-additions/">Home Additions</a>
+        <a href="/deck-construction/">Deck Construction</a>
+        <a href="/accessibility-ramps/">Accessibility &amp; Ramps</a>
+        <span class="mobile-services-group-title">General</span>
+        <a href="/general-contracting/">General Contracting</a>
+        <a href="/contact-us/#request-estimate">Request an Estimate</a>
+      </div>
+    </details>
+    <a href="/projects/">Projects</a>
+    <a href="/join-our-team/">Join Our Team</a>
+    <a href="/contact-us/" onclick="trackCTAClick('deck_nav_mobile_contact')">Contact us</a>
   </nav>
 
   <section class="hero">
@@ -98,7 +177,7 @@
         <div class="lbl llt">Deck Contractor - Spokane, WA</div>
         <h1 class="h1" style="color:#fff;margin-bottom:20px">Deck Construction &amp; Replacement in Spokane WA<span class="dot">.</span></h1>
         <p style="color:rgba(255,255,255,.72);margin-bottom:20px">Camco Construction builds and replaces decks in Spokane WA — permitted new builds, full structural replacements, and multi-family deck programs managed with accountability from start to finish.</p>
-        <a class="btn" href="#contact" onclick="trackCTAClick('deck_hero_cta')">Get a Free Deck Estimate <span class="arr">></span></a>
+        <a class="btn" href="/contact-us/" onclick="trackCTAClick('deck_hero_cta')">Get a Free Deck Estimate <span class="arr">></span></a>
         <a class="btn bol" href="/projects/" onclick="trackCTAClick('deck_projects')" style="margin-left:12px">See Deck Projects <span class="arr">></span></a>
       </div>
     </div>
@@ -228,7 +307,7 @@
       <div class="fc"><h4>Contact</h4><ul><li><span>3105 E Boone Ave</span></li><li><span>Spokane, WA 99202</span></li><li><a href="tel:+15095361818" onclick="trackPhoneClick()">(509) 536-1818</a></li><li><a href="mailto:info@CamcoConstruction.net" onclick="trackEmailClick()">info@CamcoConstruction.net</a></li><li><a href="https://www.facebook.com/camcoconstruction" target="_blank" rel="noopener noreferrer">Facebook</a></li><li><a href="https://www.linkedin.com/company/camco-construction-spokane/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li><li><span>Contractor: #CAMCOCI799L5</span></li></ul></div>
       <div class="fc"><h4>Working Hours</h4><ul><li><span>Monday - Friday: 9am - 5pm</span></li><li><span>Saturday - Sunday: Closed</span></li></ul></div>
     </div>
-    <div class="fbot"><span>2026 © Camco Construction INC. All rights reserved.</span><a href="/">www.CamcoConstruction.net</a></div>
+    <div class="fbot"><span>2026 © Camco Construction INC. All rights reserved.</span><a href="/">camco-construction.pages.dev</a></div>
   </footer>
 
   <script>
@@ -239,6 +318,31 @@
     window.addEventListener('scroll',function(){var pct=Math.round((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100);scrollDepths.forEach(function(d){if(pct>=d&&!scrollFired[d]){scrollFired[d]=true;gtag('event','scroll',{'event_category':'engagement','event_label':'scroll_'+d+'_percent','page_location':window.location.href});}});});
     const menuBtn=document.getElementById("menuBtn"),mobileNav=document.getElementById("mobileNav");
     if(menuBtn&&mobileNav){menuBtn.addEventListener("click",function(){const isOpen=mobileNav.classList.toggle("open");menuBtn.setAttribute("aria-expanded",isOpen?"true":"false");});}
+  </script>
+
+  <script>
+    (function(){
+      const hdr=document.getElementById('hdr');
+      const nav=hdr?hdr.querySelector('.nav'):null;
+      const navCta=hdr?hdr.querySelector('.nav-cta'):null;
+      const menuBtn=document.getElementById('menuBtn');
+      const mobileNav=document.getElementById('mobileNav');
+      if(!nav||!menuBtn||!mobileNav){return;}
+
+      function syncResponsiveNav(){
+        const isMobile=window.innerWidth<=1100;
+        nav.style.display=isMobile?'none':'flex';
+        if(navCta){navCta.style.display=isMobile?'none':'';}
+        menuBtn.style.display=isMobile?'block':'none';
+        if(!isMobile){
+          mobileNav.classList.remove('open');
+          menuBtn.setAttribute('aria-expanded','false');
+        }
+      }
+
+      window.addEventListener('resize',syncResponsiveNav);
+      syncResponsiveNav();
+    })();
   </script>
 </body>
 </html>

@@ -3,9 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact Camco Construction | Request a Free Estimate in Spokane WA</title>
-  <meta name="description" content="Contact Camco Construction for residential, commercial, excavation, and accessibility projects in Spokane WA. Request a free estimate at 509-536-1818." />
-  <meta name="keywords" content="contact Camco Construction, free estimate Spokane WA, contractor quote Spokane, construction consultation Spokane WA" />
+  <title>Contact Camco Construction | Estimates & Careers in Spokane WA</title>
+  <meta name="description" content="Contact Camco Construction for project estimates or career opportunities in Spokane WA. Residential, commercial, excavation, and accessibility services." />
+  <meta name="keywords" content="Camco Construction contact Spokane WA, construction estimate Spokane WA, contractor careers Spokane, join construction team Spokane WA" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact Camco Construction | Estimates & Careers in Spokane WA" />
+  <meta property="og:description" content="Contact Camco Construction for project estimates or career opportunities in Spokane WA. Residential, commercial, excavation, and accessibility services." />
+  <meta property="og:url" content="https://camco-construction.pages.dev/contact-us/" />
+  <meta property="og:image" content="Assets/media/camco-construction-social-share-spokane-wa.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact Camco Construction | Estimates & Careers in Spokane WA" />
+  <meta name="twitter:description" content="Contact Camco Construction for project estimates or career opportunities in Spokane WA. Residential, commercial, excavation, and accessibility services." />
+  <meta name="twitter:image" content="Assets/media/camco-construction-social-share-spokane-wa.jpg" />
   <link rel="canonical" href="https://camco-construction.pages.dev/contact-us/" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1R87642CKG"></script>
   <script>
@@ -33,6 +42,22 @@
     .mobile-nav{display:none;position:fixed;top:70px;left:0;right:0;background:#111;z-index:998;border-top:1px solid rgba(255,255,255,.14)}
     .mobile-nav.open{display:block}
     .mobile-nav a{display:block;color:#fff;text-decoration:none;text-transform:uppercase;letter-spacing:.08em;font-size:.78rem;font-weight:600;padding:14px 22px;border-bottom:1px solid rgba(255,255,255,.11)}
+
+    .services-menu{position:relative}
+    .services-toggle{display:inline-flex;align-items:center;gap:6px}
+    .services-caret{font-size:.62rem;line-height:1;opacity:.9}
+    .services-dropdown{display:none;position:absolute;top:100%;right:0;min-width:720px;background:#111;border:1px solid rgba(255,255,255,.18);padding:18px;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;box-shadow:0 14px 28px rgba(0,0,0,.35)}
+    .services-menu:hover .services-dropdown,.services-menu:focus-within .services-dropdown{display:grid}
+    .services-group{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.12);padding:12px}
+    .services-group-title{display:block;color:rgba(255,255,255,.72);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:8px}
+    .services-dropdown a{display:block;color:#fff;font-size:.78rem;letter-spacing:.03em;text-transform:none;font-weight:600;padding:6px 0;text-decoration:none}
+    .services-dropdown a:hover,.services-dropdown a.on{color:var(--red)}
+    .mobile-services summary{display:block;color:#fff;text-decoration:none;text-transform:uppercase;letter-spacing:.08em;font-size:.78rem;font-weight:600;padding:14px 22px;border-bottom:1px solid rgba(255,255,255,.11);cursor:pointer;list-style:none}
+    .mobile-services summary::-webkit-details-marker{display:none}
+    .mobile-services[open] summary{color:var(--red)}
+    .mobile-services-panel{background:rgba(255,255,255,.03);padding:0 0 8px}
+    .mobile-services-group-title{display:block;color:rgba(255,255,255,.64);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:12px 22px 4px}
+    .mobile-nav .mobile-services-panel a{padding:10px 34px;font-size:.74rem;text-transform:none;letter-spacing:.03em}
     .hero{display:grid;grid-template-columns:1fr 1fr;min-height:72vh}
     .photo{min-height:420px;background-size:cover;background-position:center}
     .lbl{display:flex;align-items:center;gap:10px;font-weight:700;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px}
@@ -49,6 +74,9 @@
     .card h3{color:#111;margin-bottom:10px;font-size:.95rem;text-transform:uppercase;letter-spacing:.08em}
     .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
     .form-grid .full{grid-column:1/-1}
+    .intent-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .intent-card{background:#fff;border:1px solid rgba(0,0,0,.12);padding:24px}
+    .intent-card h3{color:#111;margin-bottom:10px;font-size:.95rem;text-transform:uppercase;letter-spacing:.08em}
     input,select,textarea{width:100%;padding:12px;border:1px solid rgba(0,0,0,.18);font:inherit}
     textarea{min-height:120px;resize:vertical}
     .ccg{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid rgba(0,0,0,.13);margin:24px 0}
@@ -61,19 +89,73 @@
     .fc h4{font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.82);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.14)}
     .fc ul{list-style:none}.fc li{margin-bottom:8px}.fc a,.fc span{font-size:13px;color:rgba(255,255,255,.78);text-decoration:none}
     .fbot{width:min(1140px,90vw);margin:0 auto;padding:18px 0;display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.68);flex-wrap:wrap;gap:8px}
-    @media(max-width:1080px){.hero,.grid2,.ccg,.fg,.form-grid{grid-template-columns:1fr 1fr}.nav{display:none}.nav-cta{display:none}.menu-btn{display:block}}
-    @media(max-width:760px){.hero,.grid2,.ccg,.fg,.form-grid{grid-template-columns:1fr}.mobile-nav{top:64px}}
+    @media(max-width:1080px){.hero,.grid2,.ccg,.fg,.form-grid,.intent-grid{grid-template-columns:1fr 1fr}.nav{display:none}.nav-cta{display:none}.menu-btn{display:block}}
+    @media(max-width:760px){.hero,.grid2,.ccg,.fg,.form-grid,.intent-grid{grid-template-columns:1fr}.mobile-nav{top:64px}}
+  
+    /* Global nav fallback: force mobile header behavior */
+    @media screen and (max-width: 1100px){
+      #hdr .nav{display:none !important;}
+      #hdr .nav-cta{display:none !important;}
+      #hdr .menu-btn{display:block !important;}
+    }
   </style>
 </head>
 <body>
   <header id="hdr">
     <a class="logo-box" href="/" aria-label="Camco Construction Home"><img class="logo-img" src="Logo/CAMCO_Construction_logo.png" alt="Camco Construction logo" /></a>
-    <ul class="nav"><li><a href="/">Home</a></li><li><a href="/about/">About</a></li><li><a href="/residential/">Services</a></li><li><a href="/projects/">Projects</a></li><li><a href="/join-our-team/">Join Our Team</a></li></ul>
+    <ul class="nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li class="services-menu">
+        <a class="services-toggle" href="/residential/" aria-haspopup="true" aria-expanded="false">Services <span class="services-caret">▾</span></a>
+        <div class="services-dropdown" role="menu" aria-label="Services menu">
+          <div class="services-group">
+            <span class="services-group-title">Commercial</span>
+            <a href="/commercial/">Commercial Contracting</a>
+            <a href="/for-realtors/">Tenant Improvements &amp; Property Managers</a>
+          </div>
+          <div class="services-group">
+            <span class="services-group-title">Residential</span>
+            <a href="/residential/">Residential Contracting</a>
+            <a href="/home-additions/">Home Additions</a>
+            <a href="/deck-construction/">Deck Construction</a>
+            <a href="/accessibility-ramps/">Accessibility &amp; Ramps</a>
+          </div>
+          <div class="services-group">
+            <span class="services-group-title">General</span>
+            <a href="/general-contracting/">General Contracting</a>
+            <a href="/contact-us/#request-estimate">Request an Estimate</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/projects/">Projects</a></li>
+      <li><a href="/join-our-team/">Join Our Team</a></li>
+    </ul>
     <div class="nav-cta"><a class="on" href="/contact-us/" onclick="trackCTAClick('contact_nav_contact')">Contact Us <span class="arr">></span></a></div>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
   </header>
   <nav class="mobile-nav" id="mobileNav">
-    <a href="/">Home</a><a href="/about/">About</a><a href="/residential/">Services</a><a href="/projects/">Projects</a><a href="/join-our-team/">Join Our Team</a><a href="/contact-us/" onclick="trackCTAClick('contact_nav_mobile_contact')">Contact us</a>
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <details class="mobile-services">
+      <summary>Services</summary>
+      <div class="mobile-services-panel">
+        <span class="mobile-services-group-title">Commercial</span>
+        <a href="/commercial/">Commercial Contracting</a>
+        <a href="/for-realtors/">Tenant Improvements &amp; Property Managers</a>
+        <span class="mobile-services-group-title">Residential</span>
+        <a href="/residential/">Residential Contracting</a>
+        <a href="/home-additions/">Home Additions</a>
+        <a href="/deck-construction/">Deck Construction</a>
+        <a href="/accessibility-ramps/">Accessibility &amp; Ramps</a>
+        <span class="mobile-services-group-title">General</span>
+        <a href="/general-contracting/">General Contracting</a>
+        <a href="/contact-us/#request-estimate">Request an Estimate</a>
+      </div>
+    </details>
+    <a href="/projects/">Projects</a>
+    <a href="/join-our-team/">Join Our Team</a>
+    <a href="/contact-us/" onclick="trackCTAClick('contact_nav_mobile_contact')">Contact us</a>
   </nav>
 
   <section class="hero">
@@ -81,9 +163,26 @@
     <div style="background:#000;display:flex;align-items:center;padding:80px 7% 80px 6%">
       <div style="max-width:560px">
         <div class="lbl" style="color:rgba(255,255,255,.6)">Contact Camco Construction</div>
-        <h1 class="h1" style="color:#fff;margin-bottom:20px">Request a Free Estimate in Spokane WA<span class="dot">.</span></h1>
-        <p style="color:rgba(255,255,255,.72)">Tell us about your project and we will give you a straight answer on scope, timing, and next steps. No pressure and no inflated promises.</p>
+        <h1 class="h1" style="color:#fff;margin-bottom:20px">Project Estimates &amp; Join Our Team in Spokane WA<span class="dot">.</span></h1>
+        <p style="color:rgba(255,255,255,.72)">Use this page for two clear paths: request a detailed estimate for your project, or apply to join Camco's construction team. Fast responses and clear next steps.</p>
       </div>
+    </div>
+  </section>
+
+  <section class="section cream" id="contact">
+    <div class="lbl">Choose Your Path</div>
+    <h2 class="h2" style="color:#000;max-width:860px;margin-bottom:16px">Start the Right Conversation<span class="dot">.</span></h2>
+    <div class="intent-grid">
+      <article class="intent-card">
+        <h3>Request an Estimate</h3>
+        <p style="margin-bottom:16px">For residential, commercial, excavation, and accessibility projects. Share scope details and we will follow up with timeline and budget expectations.</p>
+        <a class="btn" href="#request-estimate" onclick="trackCTAClick('contact_path_estimate')">Go to Estimate Form <span class="arr">></span></a>
+      </article>
+      <article class="intent-card">
+        <h3>Join Our Team</h3>
+        <p style="margin-bottom:16px">For skilled trades, labor, project support, and field leadership roles. Submit your experience and preferred position to start the hiring process.</p>
+        <a class="btn" href="#join-team" onclick="trackCTAClick('contact_path_join_team')">Go to Careers Form <span class="arr">></span></a>
+      </article>
     </div>
   </section>
 
@@ -98,7 +197,7 @@
     </div>
   </section>
 
-  <section class="section cream" id="contact">
+  <section class="section cream" id="request-estimate">
     <div class="lbl">Get a Free Estimate</div>
     <h2 class="h2" style="color:#000;max-width:820px;margin-bottom:16px">Send Your Project Details<span class="dot">.</span></h2>
     <p style="max-width:900px;margin-bottom:22px">Use this form for new projects, estimate requests, or scheduling questions. We typically respond within one business day.</p>
@@ -108,7 +207,7 @@
       <div class="cc"><div class="ccl">Office</div><div class="ccv">3105 E Boone Ave<br>Spokane, WA 99202</div></div>
       <div class="cc"><div class="ccl">Hours</div><div class="ccv">Mon-Fri: 9am-5pm</div></div>
     </div>
-    <form id="contactForm" action="#" method="post">
+    <form id="estimateForm" action="#" method="post">
       <div class="form-grid">
         <input type="text" name="name" placeholder="Full Name" required />
         <input type="tel" name="phone" placeholder="Phone Number" required />
@@ -129,7 +228,35 @@
           <option value="email">Email</option>
         </select>
         <textarea name="project_description" class="full" placeholder="Project Description"></textarea>
-        <button class="btn full" type="submit" onclick="trackCTAClick('contact_form_submit_button')">Send My Project Details <span class="arr">></span></button>
+        <button class="btn full" type="submit" onclick="trackCTAClick('estimate_form_submit_button')">Send Estimate Request <span class="arr">></span></button>
+      </div>
+    </form>
+  </section>
+
+  <section class="section" id="join-team" style="background:#fff">
+    <div class="lbl">Join Our Team</div>
+    <h2 class="h2" style="color:#000;max-width:860px;margin-bottom:16px">Apply for Construction Roles at Camco<span class="dot">.</span></h2>
+    <p style="max-width:900px;margin-bottom:22px">Use this form for employment inquiries, trade applications, and field role interest. Include your experience and certifications so our team can review quickly.</p>
+    <form id="joinTeamForm" action="#" method="post">
+      <div class="form-grid">
+        <input type="text" name="full_name" placeholder="Full Name" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <select name="position_interest" required>
+          <option value="">Position of Interest</option>
+          <option value="general_labor">General Labor</option>
+          <option value="carpentry">Carpentry</option>
+          <option value="project_management">Project Management</option>
+          <option value="excavation">Excavation Crew</option>
+          <option value="commercial_construction">Commercial Construction</option>
+          <option value="residential_construction">Residential Construction</option>
+          <option value="other">Other</option>
+        </select>
+        <input type="text" name="years_experience" placeholder="Years of Experience" />
+        <input type="text" name="certifications" placeholder="Certifications or Licenses" />
+        <textarea name="work_history" class="full" placeholder="Brief Work History or Relevant Projects"></textarea>
+        <textarea name="availability" class="full" placeholder="Availability and Preferred Start Date"></textarea>
+        <button class="btn full" type="submit" onclick="trackCTAClick('join_team_form_submit_button')">Submit Job Inquiry <span class="arr">></span></button>
       </div>
     </form>
   </section>
@@ -142,23 +269,54 @@
       <div class="fc"><h4>Contact</h4><ul><li><span>3105 E Boone Ave</span></li><li><span>Spokane, WA 99202</span></li><li><a href="tel:+15095361818" onclick="trackPhoneClick()">(509) 536-1818</a></li><li><a href="mailto:info@CamcoConstruction.net" onclick="trackEmailClick()">info@CamcoConstruction.net</a></li><li><a href="https://www.facebook.com/camcoconstruction" target="_blank" rel="noopener noreferrer">Facebook</a></li><li><a href="https://www.linkedin.com/company/camco-construction-spokane/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li><li><span>Contractor: #CAMCOCI799L5</span></li></ul></div>
       <div class="fc"><h4>Working Hours</h4><ul><li><span>Monday - Friday: 9am - 5pm</span></li><li><span>Saturday - Sunday: Closed</span></li></ul></div>
     </div>
-    <div class="fbot"><span>2026 © Camco Construction INC. All rights reserved.</span><a href="/">www.CamcoConstruction.net</a></div>
+    <div class="fbot"><span>2026 © Camco Construction INC. All rights reserved.</span><a href="/">camco-construction.pages.dev</a></div>
   </footer>
 
   <script>
     function trackPhoneClick(){gtag('event','generate_lead',{'event_category':'contact','event_label':'phone_click','service_category':'contact','contact_method':'phone','lead_source_page':window.location.href});}
     function trackEmailClick(){gtag('event','generate_lead',{'event_category':'contact','event_label':'email_click','service_category':'contact','contact_method':'email','lead_source_page':window.location.href});}
     function trackCTAClick(label){gtag('event','click',{'event_category':'cta','event_label':label||'contact_cta','service_category':'contact','lead_source_page':window.location.href});}
-    function trackFormSubmit(projectType){
-      gtag('event','generate_lead',{'event_category':'contact','event_label':'form_submit','service_category':projectType||'contact','contact_method':'form','lead_source_page':window.location.href});
-      gtag('event','form_submit',{'event_category':'contact','event_label':'contact_form','form_name':'camco_contact_form','lead_source_page':window.location.href,'project_type':projectType||'unknown'});
+    function trackEstimateSubmit(projectType){
+      gtag('event','generate_lead',{'event_category':'contact','event_label':'estimate_form_submit','service_category':projectType||'contact','contact_method':'form','lead_source_page':window.location.href});
+      gtag('event','form_submit',{'event_category':'contact','event_label':'estimate_form','form_name':'camco_estimate_form','lead_source_page':window.location.href,'project_type':projectType||'unknown'});
+    }
+    function trackJoinTeamSubmit(position){
+      gtag('event','generate_lead',{'event_category':'careers','event_label':'join_team_form_submit','service_category':'careers','contact_method':'form','lead_source_page':window.location.href});
+      gtag('event','form_submit',{'event_category':'careers','event_label':'join_team_form','form_name':'camco_join_team_form','lead_source_page':window.location.href,'position_interest':position||'unknown'});
     }
     document.addEventListener('DOMContentLoaded',function(){
-      const form=document.getElementById('contactForm');
-      if(form){form.addEventListener('submit',function(e){e.preventDefault();const projectType=(form.querySelector('[name=\"project_type\"]')||{}).value||'unknown';trackFormSubmit(projectType);alert('Thanks! Your message has been recorded.');form.reset();});}
+      const estimateForm=document.getElementById('estimateForm');
+      if(estimateForm){estimateForm.addEventListener('submit',function(e){e.preventDefault();const projectType=(estimateForm.querySelector('[name=\"project_type\"]')||{}).value||'unknown';trackEstimateSubmit(projectType);alert('Thanks! Your estimate request has been recorded.');estimateForm.reset();});}
+      const joinTeamForm=document.getElementById('joinTeamForm');
+      if(joinTeamForm){joinTeamForm.addEventListener('submit',function(e){e.preventDefault();const position=(joinTeamForm.querySelector('[name=\"position_interest\"]')||{}).value||'unknown';trackJoinTeamSubmit(position);alert('Thanks! Your job inquiry has been recorded.');joinTeamForm.reset();});}
     });
     const menuBtn=document.getElementById('menuBtn'), mobileNav=document.getElementById('mobileNav');
     if(menuBtn&&mobileNav){menuBtn.addEventListener('click',function(){const isOpen=mobileNav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',isOpen?'true':'false');});}
+  </script>
+
+  <script>
+    (function(){
+      const hdr=document.getElementById('hdr');
+      const nav=hdr?hdr.querySelector('.nav'):null;
+      const navCta=hdr?hdr.querySelector('.nav-cta'):null;
+      const menuBtn=document.getElementById('menuBtn');
+      const mobileNav=document.getElementById('mobileNav');
+      if(!nav||!menuBtn||!mobileNav){return;}
+
+      function syncResponsiveNav(){
+        const isMobile=window.innerWidth<=1100;
+        nav.style.display=isMobile?'none':'flex';
+        if(navCta){navCta.style.display=isMobile?'none':'';}
+        menuBtn.style.display=isMobile?'block':'none';
+        if(!isMobile){
+          mobileNav.classList.remove('open');
+          menuBtn.setAttribute('aria-expanded','false');
+        }
+      }
+
+      window.addEventListener('resize',syncResponsiveNav);
+      syncResponsiveNav();
+    })();
   </script>
 </body>
 </html>

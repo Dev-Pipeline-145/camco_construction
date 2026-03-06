@@ -19,8 +19,8 @@
 /contact-us/ /camco-contact.html 200
 /projects /camco-about.html 200
 /projects/ /camco-about.html 200
-/join-our-team /camco-about.html 200
-/join-our-team/ /camco-about.html 200
+/join-our-team /contact-us/#join-team 200
+/join-our-team/ /contact-us/#join-team 200
 /for-realtors /camco-commercial.html 200
 /for-realtors/ /camco-commercial.html 200
 /general-contracting /camco-commercial.html 200

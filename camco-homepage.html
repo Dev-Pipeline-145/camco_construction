@@ -63,6 +63,22 @@
     .mobile-nav { display: none; position: fixed; top: 70px; left: 0; right: 0; background: #111; z-index: 998; border-top: 1px solid rgba(255,255,255,.14); }
     .mobile-nav.open { display: block; }
     .mobile-nav a { display: block; color: #fff; text-decoration: none; text-transform: uppercase; letter-spacing: .08em; font-size: .78rem; font-weight: 600; padding: 14px 22px; border-bottom: 1px solid rgba(255,255,255,.11); }
+
+    .services-menu{position:relative}
+    .services-toggle{display:inline-flex;align-items:center;gap:6px}
+    .services-caret{font-size:.62rem;line-height:1;opacity:.9}
+    .services-dropdown{display:none;position:absolute;top:100%;right:0;min-width:720px;background:#111;border:1px solid rgba(255,255,255,.18);padding:18px;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;box-shadow:0 14px 28px rgba(0,0,0,.35)}
+    .services-menu:hover .services-dropdown,.services-menu:focus-within .services-dropdown{display:grid}
+    .services-group{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.12);padding:12px}
+    .services-group-title{display:block;color:rgba(255,255,255,.72);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:8px}
+    .services-dropdown a{display:block;color:#fff;font-size:.78rem;letter-spacing:.03em;text-transform:none;font-weight:600;padding:6px 0;text-decoration:none}
+    .services-dropdown a:hover,.services-dropdown a.on{color:var(--red)}
+    .mobile-services summary{display:block;color:#fff;text-decoration:none;text-transform:uppercase;letter-spacing:.08em;font-size:.78rem;font-weight:600;padding:14px 22px;border-bottom:1px solid rgba(255,255,255,.11);cursor:pointer;list-style:none}
+    .mobile-services summary::-webkit-details-marker{display:none}
+    .mobile-services[open] summary{color:var(--red)}
+    .mobile-services-panel{background:rgba(255,255,255,.03);padding:0 0 8px}
+    .mobile-services-group-title{display:block;color:rgba(255,255,255,.64);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:12px 22px 4px}
+    .mobile-nav .mobile-services-panel a{padding:10px 34px;font-size:.74rem;text-transform:none;letter-spacing:.03em}
     .mobile-nav a:hover { background: rgba(255,255,255,.08); }
     .hero { position: relative; min-height: 86vh; display: grid; align-items: center; background: var(--blk); color: var(--wht); }
     .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(0,0,0,.62), rgba(0,0,0,.62)), url("Assets/media/camco-construction-general-contractor-spokane-wa-hero.jpg") center/cover no-repeat; }
@@ -154,6 +170,13 @@
       .logo-img { height: 40px; }
       .mobile-nav { top: 64px; }
     }
+  
+    /* Global nav fallback: force mobile header behavior */
+    @media screen and (max-width: 1100px){
+      #hdr .nav{display:none !important;}
+      #hdr .nav-cta{display:none !important;}
+      #hdr .menu-btn{display:block !important;}
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -183,11 +206,32 @@
     <ul class="nav">
       <li><a class="on" href="/">Home</a></li>
       <li><a href="/about/">About</a></li>
-      <li><a href="/commercial/">Services</a></li>
+      <li class="services-menu">
+        <a class="services-toggle" href="/residential/" aria-haspopup="true" aria-expanded="false">Services <span class="services-caret">▾</span></a>
+        <div class="services-dropdown" role="menu" aria-label="Services menu">
+          <div class="services-group">
+            <span class="services-group-title">Commercial</span>
+            <a href="/commercial/">Commercial Contracting</a>
+            <a href="/for-realtors/">Tenant Improvements &amp; Property Managers</a>
+          </div>
+          <div class="services-group">
+            <span class="services-group-title">Residential</span>
+            <a href="/residential/">Residential Contracting</a>
+            <a href="/home-additions/">Home Additions</a>
+            <a href="/deck-construction/">Deck Construction</a>
+            <a href="/accessibility-ramps/">Accessibility &amp; Ramps</a>
+          </div>
+          <div class="services-group">
+            <span class="services-group-title">General</span>
+            <a href="/general-contracting/">General Contracting</a>
+            <a href="/contact-us/#request-estimate">Request an Estimate</a>
+          </div>
+        </div>
+      </li>
       <li><a href="/projects/">Projects</a></li>
       <li><a href="/join-our-team/">Join Our Team</a></li>
     </ul>
-    <div class="nav-cta"><a href="#contact" data-event="click" data-label="cta_click_nav_contact_homepage">Contact Us <span class="arr">></span></a></div>
+    <div class="nav-cta"><a href="/contact-us/" data-event="click" data-label="cta_click_nav_contact_homepage">Contact Us <span class="arr">></span></a></div>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
       <span class="bar"></span><span class="bar"></span><span class="bar"></span>
     </button>
@@ -195,16 +239,31 @@
   <nav class="mobile-nav" id="mobileNav">
     <a href="/">Home</a>
     <a href="/about/">About</a>
-    <a href="/commercial/">Services</a>
+    <details class="mobile-services">
+      <summary>Services</summary>
+      <div class="mobile-services-panel">
+        <span class="mobile-services-group-title">Commercial</span>
+        <a href="/commercial/">Commercial Contracting</a>
+        <a href="/for-realtors/">Tenant Improvements &amp; Property Managers</a>
+        <span class="mobile-services-group-title">Residential</span>
+        <a href="/residential/">Residential Contracting</a>
+        <a href="/home-additions/">Home Additions</a>
+        <a href="/deck-construction/">Deck Construction</a>
+        <a href="/accessibility-ramps/">Accessibility &amp; Ramps</a>
+        <span class="mobile-services-group-title">General</span>
+        <a href="/general-contracting/">General Contracting</a>
+        <a href="/contact-us/#request-estimate">Request an Estimate</a>
+      </div>
+    </details>
     <a href="/projects/">Projects</a>
     <a href="/join-our-team/">Join Our Team</a>
-    <a href="#contact" data-event="click" data-label="cta_click_nav_mobile_homepage">Contact us</a>
+    <a href="/contact-us/" data-event="click" data-label="cta_click_nav_mobile_homepage">Contact us</a>
   </nav>
 
   <section class="hero">
     <div class="wrap">
       <div class="label">General Contractor Spokane WA</div>
-      <h1 class="h1">Spokane's Trusted General Contractor - Honest Work Since 1976<span class="dot">.</span></h1>
+      <h1 class="h1">General Contractor Spokane WA - Honest Work Since 1976<span class="dot">.</span></h1>
       <p>Residential and commercial construction you can count on. On time, on budget, and built to last - by a Spokane contractor who's been doing this since before most of the competition was born.</p>
       <div class="cta-row">
         <a class="btn" href="/contact-us/" data-event="click" data-label="cta_click_hero_homepage">Get a Free Estimate <span class="arr">></span></a>
@@ -350,7 +409,7 @@
       <h2 class="h2">Get a Free Estimate From Spokane's Most Trusted General Contractor<span class="dot">.</span></h2>
       <p style="max-width:860px;margin-top:14px">Whether you're planning a home addition, commercial tenant improvement, new deck, or major remodel, Camco Construction gives you straight answers and fair estimates with no pressure and no inflated numbers.</p>
       <div class="contact-grid">
-        <div class="contact-cell"><div class="contact-label">Contact</div><div class="contact-value">Leif Challender<br /><span style="font-weight:400;color:#777;font-size:.86rem">President</span></div></div>
+        <div class="contact-cell"><div class="contact-label">Contact</div><div class="contact-value">Camco Construction Team<br /><span style="font-weight:400;color:#777;font-size:.86rem">Project Consultations</span></div></div>
         <div class="contact-cell"><div class="contact-label">Phone</div><div class="contact-value"><a href="tel:5095361818" data-event="generate_lead" data-label="phone_click_homepage">509-536-1818</a></div></div>
         <div class="contact-cell"><div class="contact-label">Email</div><div class="contact-value"><a href="mailto:info@CamcoConstruction.net" data-event="generate_lead" data-label="email_click_homepage">info@CamcoConstruction.net</a></div></div>
         <div class="contact-cell"><div class="contact-label">Office</div><div class="contact-value"><a href="https://maps.google.com/?q=3105+E+Boone+Ave+Spokane+WA+99202">3105 E Boone Ave<br />Spokane, WA 99202</a><br /><span style="font-weight:400;color:#777;font-size:.85rem">Monday-Friday, 9am-5pm</span></div></div>
@@ -370,7 +429,7 @@
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/about/">About</a></li>
-          <li><a href="/commercial/">Services</a></li>
+          <li><a href="/residential/">Services</a></li>
           <li><a href="/projects/">Projects</a></li>
           <li><a href="/join-our-team/">Join Our Team</a></li>
           <li><a href="/contact-us/">Contact us</a></li>
@@ -393,7 +452,7 @@
           <li><span>3105 E Boone Ave</span></li>
           <li><span>Spokane, WA 99202</span></li>
           <li><a href="tel:5095361818" data-event="generate_lead" data-label="phone_click_homepage">(509) 536-1818</a></li>
-          <li><a href="mailto:info@camcoconstruction.net" data-event="generate_lead" data-label="email_click_homepage">info@camcoconstruction.net</a></li>
+          <li><a href="mailto:info@CamcoConstruction.net" data-event="generate_lead" data-label="email_click_homepage">info@CamcoConstruction.net</a></li>
           <li><a href="https://www.facebook.com/camcoconstruction" target="_blank" rel="noopener noreferrer">Facebook</a></li>
           <li><a href="https://www.linkedin.com/company/camco-construction-spokane/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
           <li><span>Contractor: #CAMCOCI799L5</span></li>
@@ -409,7 +468,7 @@
     </div>
     <div class="foot-bottom">
       <span>2026 © Camco Construction INC. All rights reserved.</span>
-      <a href="/">www.CamcoConstruction.net</a>
+      <a href="/">camco-construction.pages.dev</a>
     </div>
   </footer>
   <script>
@@ -453,6 +512,31 @@
       });
 
       track("page_view", "landing_page_homepage", { landing_page: "/" });
+    })();
+  </script>
+
+  <script>
+    (function(){
+      const hdr=document.getElementById('hdr');
+      const nav=hdr?hdr.querySelector('.nav'):null;
+      const navCta=hdr?hdr.querySelector('.nav-cta'):null;
+      const menuBtn=document.getElementById('menuBtn');
+      const mobileNav=document.getElementById('mobileNav');
+      if(!nav||!menuBtn||!mobileNav){return;}
+
+      function syncResponsiveNav(){
+        const isMobile=window.innerWidth<=1100;
+        nav.style.display=isMobile?'none':'flex';
+        if(navCta){navCta.style.display=isMobile?'none':'';}
+        menuBtn.style.display=isMobile?'block':'none';
+        if(!isMobile){
+          mobileNav.classList.remove('open');
+          menuBtn.setAttribute('aria-expanded','false');
+        }
+      }
+
+      window.addEventListener('resize',syncResponsiveNav);
+      syncResponsiveNav();
     })();
   </script>
 </body>
