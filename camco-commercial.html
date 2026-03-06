@@ -30,7 +30,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-1R87642CKG');
+    gtag('config', 'G-1R87642CKG', {'page_title': document.title,'page_location': window.location.href,'send_page_view': true,'cookie_flags': 'SameSite=None;Secure'});
   </script>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -235,7 +235,7 @@
       <div style="max-width:540px">
         <div class="lbl llt">Commercial Contractor - Spokane, WA</div>
         <h1 class="h1" style="color:var(--wht);margin-bottom:20px">Commercial Contractor Spokane WA - Tenant Improvements &amp; Build-Outs<span class="dot">.</span></h1>
-        <p style="color:rgba(255,255,255,.72);font-size:.97rem;margin-bottom:16px;max-width:460px">When your business needs a commercial contractor in Spokane WA, you need more than a crew - you need a partner who shows up on time, works within your budget, and delivers a finished space that's ready for business.</p>
+        <p style="color:rgba(255,255,255,.72);font-size:.97rem;margin-bottom:16px;max-width:460px">When downtime affects tenants and revenue, you need a commercial contractor in Spokane WA who plans phasing, manages trades, and delivers business-ready space without surprises.</p>
         <p style="color:rgba(255,255,255,.5);font-size:.84rem;margin-bottom:36px">Serving Spokane commercial projects since 1976 &nbsp;·&nbsp; Lic. #CAMCOCI799L5</p>
         <a href="/contact-us/" class="btn" data-event="click" data-label="cta_click_commercial">Request a Free Commercial Estimate <span class="arr">></span></a>
         <a href="#services" class="btn bol" style="margin-left:12px" data-event="click" data-label="service_nav_click_commercial">Our Services <span class="arr">></span></a>
@@ -362,7 +362,7 @@
   <section id="contact" style="background:var(--cream);padding:90px 10%">
     <div class="lbl ldk">Get a Free Commercial Estimate</div>
     <h2 class="h2" style="color:var(--blk);max-width:780px;margin-bottom:16px">Ready to Move Your Commercial Project Forward<span class="dot">.</span></h2>
-    <p style="max-width:860px;margin-bottom:44px">Contact Camco Construction for a free, no-obligation estimate. We'll walk your space, assess the scope, and give you a straight answer.</p>
+    <p style="max-width:860px;margin-bottom:44px">Contact Camco Construction for a commercial scope review. We will evaluate your space, align priorities, and provide a clear path to execution.</p>
     <div class="ccg" style="margin-bottom:36px">
       <div class="cc"><div class="ccl">Phone</div><div class="ccv"><a href="tel:5095361818" data-event="generate_lead" data-label="phone_click_commercial">509-536-1818</a></div></div>
       <div class="cc"><div class="ccl">Email</div><div class="ccv" style="font-size:.8rem"><a href="mailto:info@CamcoConstruction.net" data-event="generate_lead" data-label="email_click_commercial">info@CamcoConstruction.net</a></div></div>
@@ -453,7 +453,7 @@
         if (!sent50 && pct >= 50) { sent50 = true; track("scroll", "scroll_depth_commercial", { percent_scrolled: 50 }); }
         if (!sent75 && pct >= 75) { sent75 = true; track("scroll", "scroll_depth_commercial", { percent_scrolled: 75 }); }
       });
-      track("page_view", "landing_page_commercial", { landing_page: "/commercial/" });
+      track("landing_page_view", "landing_page_commercial", { landing_page: "/commercial/" });
     })();
   </script>
 
