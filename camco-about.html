@@ -9,19 +9,20 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="About Camco Construction | Spokane WA Contractor Since 1976" />
   <meta property="og:description" content="Camco Construction has served Spokane WA since 1976. Licensed, bonded and insured in WA and ID. General contracting, remodels, excavation and accessibility services." />
-  <meta property="og:url" content="https://camco-construction.pages.dev/about/" />
+  <meta property="og:url" content="https://camcoconstruction.net/about/" />
   <meta property="og:image" content="Assets/media/camco-construction-social-share-spokane-wa.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="About Camco Construction | Spokane WA Contractor Since 1976" />
   <meta name="twitter:description" content="Camco Construction has served Spokane WA since 1976. Licensed, bonded and insured in WA and ID. General contracting, remodels, excavation and accessibility services." />
   <meta name="twitter:image" content="Assets/media/camco-construction-social-share-spokane-wa.jpg" />
-  <link rel="canonical" href="https://camco-construction.pages.dev/about/" />
+  <link rel="canonical" href="https://camcoconstruction.net/about/" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1R87642CKG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-1R87642CKG', {'page_title': document.title,'page_location': window.location.href,'send_page_view': true,'cookie_flags': 'SameSite=None;Secure'});
+    gtag('event','landing_page_view',{'landing_page': window.location.pathname, 'lead_source_page': window.location.href});
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -97,7 +98,7 @@
     .fc ul{list-style:none}.fc li{margin-bottom:8px}.fc a,.fc span{font-size:13px;color:rgba(255,255,255,.9);text-decoration:none}
     .fbot{width:min(1140px,90vw);margin:0 auto;padding:18px 0;display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.68);flex-wrap:wrap;gap:8px}
     @media(max-width:1080px){.hero,.grid2,.ccg,.fg,.form-grid,.team-grid{grid-template-columns:1fr 1fr}.nav{display:none}.nav-cta{display:none}.menu-btn{display:block}}
-    @media(max-width:760px){.hero,.grid2,.ccg,.fg,.form-grid,.team-grid{grid-template-columns:1fr}.mobile-nav{top:64px}}
+    @media(max-width:760px){.hero,.grid2,.ccg,.fg,.form-grid,.team-grid{grid-template-columns:1fr}.assoc-logos{grid-template-columns:1fr}.mobile-nav{top:64px}}
   
     /* Global nav fallback: force mobile header behavior */
     @media screen and (max-width: 1100px){
@@ -105,7 +106,35 @@
       #hdr .nav-cta{display:none !important;}
       #hdr .menu-btn{display:block !important;}
     }
+
+    .assoc-strip{background:#fff;border:1px solid rgba(0,0,0,.12);padding:22px;margin-top:24px}
+    .assoc-title{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#222;margin-bottom:14px}
+    .assoc-logos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:center}
+    .assoc-logo{background:#fff;border:1px solid rgba(0,0,0,.1);padding:12px;min-height:96px;display:flex;align-items:center;justify-content:center}
+    .assoc-logo img{max-height:62px;width:auto;max-width:100%}
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "GeneralContractor",
+        "name": "Camco Construction Inc.",
+        "url": "https://camcoconstruction.net/",
+        "telephone": "509-536-1818",
+        "email": "info@CamcoConstruction.net",
+        "address": {"@type":"PostalAddress","streetAddress":"3105 E Boone Ave","addressLocality":"Spokane","addressRegion":"WA","postalCode":"99202"},
+        "areaServed": ["Spokane","Spokane Valley","Liberty Lake","Cheney","Post Falls","Coeur d'Alene"]
+      },
+      {
+        "@type": "WebPage",
+        "name": "About Camco Construction | Spokane WA Contractor Since 1976",
+        "url": "https://camcoconstruction.net/about/",
+        "description": "About Camco Construction and company history in Spokane WA."
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header id="hdr">
@@ -194,6 +223,17 @@
     </table>
   </section>
 
+  <section class="section" style="background:#fff;padding-top:0">
+    <div class="assoc-strip">
+      <div class="assoc-title">Industry Associations</div>
+      <div class="assoc-logos">
+        <div class="assoc-logo"><img src="Assets/media/camco-spokane-home-builders-association-logo.png" alt="Spokane Home Builders Association logo" loading="lazy" /></div>
+        <div class="assoc-logo"><img src="Assets/media/camco-biaw-association-logo.png" alt="Building Industry Association of Washington logo" loading="lazy" /></div>
+        <div class="assoc-logo"><img src="Assets/media/camco-nahb-association-logo.jpg" alt="National Association of Home Builders logo" loading="lazy" /></div>
+      </div>
+    </div>
+  </section>
+
   <section class="section black">
     <div class="lbl" style="color:rgba(255,255,255,.6)">Our Values</div>
     <h2 class="h2" style="color:#fff;max-width:860px;margin-bottom:18px">What Camco Stands For on Every Project<span class="dot">.</span></h2>
@@ -267,7 +307,7 @@
       <div class="fc"><h3>Contact</h3><ul><li><span>3105 E Boone Ave</span></li><li><span>Spokane, WA 99202</span></li><li><a href="tel:+15095361818" onclick="trackPhoneClick()">(509) 536-1818</a></li><li><a href="mailto:info@CamcoConstruction.net" onclick="trackEmailClick()">info@CamcoConstruction.net</a></li><li><a href="https://www.facebook.com/camcoconstruction" target="_blank" rel="noopener noreferrer">Facebook</a></li><li><a href="https://www.linkedin.com/company/camco-construction-spokane/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li><li><span>Contractor: #CAMCOCI799L5</span></li></ul></div>
       <div class="fc"><h3>Working Hours</h3><ul><li><span>Monday - Friday: 9am - 5pm</span></li><li><span>Saturday - Sunday: Closed</span></li></ul></div>
     </div>
-    <div class="fbot"><span>2026 © Camco Construction INC. All rights reserved.</span><a href="/">camco-construction.pages.dev</a></div>
+    <div class="fbot"><span>2026 © Camco Construction INC. All rights reserved.</span><a href="/">camcoconstruction.net</a></div>
   </footer>
 
   <script>
