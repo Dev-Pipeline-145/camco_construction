@@ -9,6 +9,7 @@
 /camco-contact.html /contact-us/ 301
 /camco-projects.html /projects/ 301
 /camco-join-our-team.html /join-our-team/ 301
+/camco-residential-page.html /residential/ 301
 /commercial /camco-commercial.html 200
 /commercial/ /camco-commercial.html 200
 /residential /camco-residential.html 200
@@ -31,8 +32,9 @@
 /projects/ /camco-projects.html 200
 /join-our-team /camco-join-our-team.html 200
 /join-our-team/ /camco-join-our-team.html 200
-/for-realtors /camco-commercial.html 200
-/for-realtors/ /camco-commercial.html 200
+/camco-for-realtors.html /for-realtors/ 301
+/for-realtors /camco-for-realtors.html 200
+/for-realtors/ /camco-for-realtors.html 200
 /general-contracting /camco-commercial.html 200
 /general-contracting/ /camco-commercial.html 200
 /wheelchair-ramps /camco-accessibility-ramps.html 200

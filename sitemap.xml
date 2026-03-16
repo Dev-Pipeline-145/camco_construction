@@ -1,53 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://camco-construction.pages.dev/</loc>
+    <loc>https://www.CamcoConstruction.net/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://camco-construction.pages.dev/residential/</loc>
+    <loc>https://www.CamcoConstruction.net/residential/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://camco-construction.pages.dev/home-additions/</loc>
+    <loc>https://www.CamcoConstruction.net/home-additions/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://camco-construction.pages.dev/deck-construction/</loc>
+    <loc>https://www.CamcoConstruction.net/deck-construction/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://camco-construction.pages.dev/commercial/</loc>
+    <loc>https://www.CamcoConstruction.net/commercial/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://camco-construction.pages.dev/accessibility-ramps/</loc>
+    <loc>https://www.CamcoConstruction.net/accessibility-ramps/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://camco-construction.pages.dev/about/</loc>
+    <loc>https://www.CamcoConstruction.net/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://camco-construction.pages.dev/projects/</loc>
+    <loc>https://www.CamcoConstruction.net/projects/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://camco-construction.pages.dev/join-our-team/</loc>
+    <loc>https://www.CamcoConstruction.net/join-our-team/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://camco-construction.pages.dev/contact-us/</loc>
+    <loc>https://www.CamcoConstruction.net/contact-us/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.CamcoConstruction.net/for-realtors/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

@@ -3,25 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Camco Construction | Spokane WA Contractor Since 1976</title>
-  <meta name="description" content="Camco Construction has served Spokane WA since 1976. Licensed, bonded and insured in WA and ID. General contracting, remodels, excavation and accessibility services." />
-  <meta name="keywords" content="Camco Construction Spokane WA, licensed contractor Spokane WA since 1976, general contractor Spokane WA, licensed bonded insured contractor Spokane, construction company Spokane WA" />
+  <title>About Camco Construction | Spokane Contractor Since 1976</title>
+  <meta name="description" content="Serving Spokane since 1976. Founded by Lee and Anna Campbell, now led by Leif and Amy Challender. Licensed in WA and ID. SHBA member." />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="Camco Construction Spokane, general contractor Spokane since 1976, licensed contractor Spokane WA, Spokane Home Builders Association member, BuildZoom score Spokane contractor" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="About Camco Construction | Spokane WA Contractor Since 1976" />
-  <meta property="og:description" content="Camco Construction has served Spokane WA since 1976. Licensed, bonded and insured in WA and ID. General contracting, remodels, excavation and accessibility services." />
-  <meta property="og:url" content="https://camcoconstruction.net/about/" />
+  <meta property="og:site_name" content="Camco Construction" />
+  <meta property="og:title" content="About Camco Construction | Spokane Contractor Since 1976" />
+  <meta property="og:description" content="Serving Spokane since 1976. Founded by Lee and Anna Campbell, now led by Leif and Amy Challender. Licensed in WA and ID. SHBA member." />
+  <meta property="og:url" content="https://www.CamcoConstruction.net/about/" />
   <meta property="og:image" content="Assets/media/camco-construction-social-share-spokane-wa.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="About Camco Construction | Spokane WA Contractor Since 1976" />
-  <meta name="twitter:description" content="Camco Construction has served Spokane WA since 1976. Licensed, bonded and insured in WA and ID. General contracting, remodels, excavation and accessibility services." />
+  <meta name="twitter:title" content="About Camco Construction | Spokane Contractor Since 1976" />
+  <meta name="twitter:description" content="Serving Spokane since 1976. Founded by Lee and Anna Campbell, now led by Leif and Amy Challender. Licensed in WA and ID. SHBA member." />
   <meta name="twitter:image" content="Assets/media/camco-construction-social-share-spokane-wa.jpg" />
-  <link rel="canonical" href="https://camcoconstruction.net/about/" />
+  <link rel="canonical" href="https://www.CamcoConstruction.net/about/" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1R87642CKG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-1R87642CKG', {'page_title': document.title,'page_location': window.location.href,'send_page_view': true,'cookie_flags': 'SameSite=None;Secure'});
+    gtag('config', 'G-1R87642CKG');
     gtag('event','landing_page_view',{'landing_page': window.location.pathname, 'lead_source_page': window.location.href});
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,7 +40,8 @@
     .nav{flex:1;display:flex;align-items:center;justify-content:flex-end;padding:0 0 0 32px;gap:28px;list-style:none}
     .nav a{font-weight:600;font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;color:#fff;text-decoration:none}
     .nav a:hover,.nav a.on{color:var(--red)}
-    .nav-cta a{display:flex;align-items:center;gap:10px;background:var(--red);color:#fff;font-weight:700;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;padding:0 26px;height:70px;text-decoration:none}
+    .nav-cta{margin-left:16px}
+    .nav-cta a{display:flex;align-items:center;gap:10px;background:var(--red);color:#fff;font-weight:700;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;padding:0 18px;height:70px;text-decoration:none}
     .menu-btn{display:none;margin-left:auto;background:transparent;border:0;color:#fff;padding:0 16px;cursor:pointer}
     .menu-btn .bar{display:block;width:24px;height:2px;background:#fff;margin:5px 0}
     .mobile-nav{display:none;position:fixed;top:70px;left:0;right:0;background:#111;z-index:998;border-top:1px solid rgba(255,255,255,.14)}
@@ -76,10 +79,11 @@
     .card{background:#fff;border:1px solid rgba(0,0,0,.12);padding:20px}
     .card h3{color:#111;margin-bottom:10px;font-size:.95rem;text-transform:uppercase;letter-spacing:.08em}
     .team-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
-    .team-card{background:#fff;border:1px solid rgba(0,0,0,.12);padding:12px}
-    .team-card img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
-    .team-card figcaption{padding-top:10px;font-size:.86rem;line-height:1.5;color:#444}
-    .team-card figcaption strong{display:block;color:#111;font-size:.95rem}
+    .team-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);padding:12px;position:relative;overflow:hidden;backdrop-filter:blur(4px)}
+    .team-card::after{content:'';position:absolute;inset:0;background:linear-gradient(140deg,rgba(255,255,255,.22) 0%,rgba(255,255,255,0) 35%,rgba(255,255,255,.08) 100%);pointer-events:none}
+    .team-card img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;border:1px solid rgba(255,255,255,.34);box-shadow:0 16px 32px rgba(0,0,0,.35);filter:saturate(1.05) contrast(1.04)}
+    .team-card figcaption{padding-top:10px;font-size:.86rem;line-height:1.5;color:rgba(255,255,255,.82)}
+    .team-card figcaption strong{display:block;color:#fff;font-size:.95rem}
     .table{width:100%;border-collapse:collapse;margin-top:16px}
     .table th,.table td{border:1px solid rgba(0,0,0,.14);padding:10px;text-align:left}
     .table th{background:#f2e9e4;color:#000}
@@ -109,9 +113,18 @@
 
     .assoc-strip{background:#fff;border:1px solid rgba(0,0,0,.12);padding:22px;margin-top:24px}
     .assoc-title{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#222;margin-bottom:14px}
-    .assoc-logos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:center}
+    .assoc-logos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;align-items:center}
     .assoc-logo{background:#fff;border:1px solid rgba(0,0,0,.1);padding:12px;min-height:96px;display:flex;align-items:center;justify-content:center}
-    .assoc-logo img{max-height:62px;width:auto;max-width:100%}
+    .assoc-logo img{max-height:62px;width:auto;max-width:100%;filter:saturate(1.03) contrast(1.03)}
+    .assoc-list{margin-top:16px;padding-left:18px}
+    .assoc-list li{margin-bottom:10px}
+    .values-dl{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .values-dl div{background:#fff;border:1px solid rgba(0,0,0,.12);padding:20px}
+    .values-dl dt{color:#111;margin-bottom:10px;font-size:.95rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+    .values-dl dd{margin:0}
+    .review-quote{margin-top:18px;border-left:3px solid var(--red);padding:12px 0 12px 14px;color:rgba(255,255,255,.88);font-style:italic}
+    .photo{position:relative}
+    .photo::after{content:'';position:absolute;inset:0;background:linear-gradient(145deg,rgba(255,255,255,.12) 0%,rgba(255,255,255,0) 36%,rgba(255,255,255,.08) 100%);pointer-events:none}
   </style>
   <script type="application/ld+json">
   {
@@ -128,9 +141,27 @@
       },
       {
         "@type": "WebPage",
-        "name": "About Camco Construction | Spokane WA Contractor Since 1976",
+        "name": "About Camco Construction | Spokane Contractor Since 1976",
         "url": "https://camcoconstruction.net/about/",
         "description": "About Camco Construction and company history in Spokane WA."
+      },
+      {
+        "@type": "Person",
+        "name": "Leif Challender",
+        "jobTitle": "President",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Camco Construction Inc."
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Amy Challender",
+        "jobTitle": "Vice President",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Camco Construction Inc."
+        }
       }
     ]
   }
@@ -146,20 +177,11 @@
         <a class="services-toggle" href="/residential/" aria-haspopup="true" aria-expanded="false">Services <span class="services-caret">▾</span></a>
         <div class="services-dropdown" role="menu" aria-label="Services menu">
           <div class="services-group">
-            <span class="services-group-title">Commercial</span>
-            <a href="/commercial/">Commercial Contracting</a>
-            <a href="/for-realtors/">Tenant Improvements &amp; Property Managers</a>
-          </div>
-          <div class="services-group">
-            <span class="services-group-title">Residential</span>
-            <a href="/residential/">Residential Contracting</a>
+            <span class="services-group-title">Services</span>
+            <a href="/residential/">Residential</a>
             <a href="/home-additions/">Home Additions</a>
             <a href="/deck-construction/">Deck Construction</a>
-            <a href="/accessibility-ramps/">Accessibility &amp; Ramps</a>
-          </div>
-          <div class="services-group">
-            <span class="services-group-title">General</span>
-            <a href="/general-contracting/">General Contracting</a>
+            <a href="/commercial/">Commercial</a>
             <a href="/contact-us/#request-estimate">Request an Estimate</a>
           </div>
         </div>
@@ -176,16 +198,11 @@
     <details class="mobile-services">
       <summary>Services</summary>
       <div class="mobile-services-panel">
-        <span class="mobile-services-group-title">Commercial</span>
-        <a href="/commercial/">Commercial Contracting</a>
-        <a href="/for-realtors/">Tenant Improvements &amp; Property Managers</a>
-        <span class="mobile-services-group-title">Residential</span>
-        <a href="/residential/">Residential Contracting</a>
+        <span class="mobile-services-group-title">Services</span>
+        <a href="/residential/">Residential</a>
         <a href="/home-additions/">Home Additions</a>
         <a href="/deck-construction/">Deck Construction</a>
-        <a href="/accessibility-ramps/">Accessibility &amp; Ramps</a>
-        <span class="mobile-services-group-title">General</span>
-        <a href="/general-contracting/">General Contracting</a>
+        <a href="/commercial/">Commercial</a>
         <a href="/contact-us/#request-estimate">Request an Estimate</a>
       </div>
     </details>
@@ -196,20 +213,20 @@
 
 
   <main>
-  <section class="hero">
+  <section class="hero" aria-label="About introduction">
     <div class="photo" style="background-image:url('Assets/media/camco-construction-spokane-wa-general-contractor-team.jpg')"></div>
     <div style="background:#000;display:flex;align-items:center;padding:80px 7% 80px 6%">
       <div style="max-width:560px">
         <div class="lbl" style="color:rgba(255,255,255,.6)">About Camco Construction</div>
-        <h1 class="h1" style="color:#fff;margin-bottom:20px">General Contractor Spokane WA Since 1976 - The Camco Story<span class="dot">.</span></h1>
+        <h1 class="h1" style="color:#fff;margin-bottom:20px">The Camco Story - Built on Integrity Since 1976<span class="dot">.</span></h1>
         <p style="color:rgba(255,255,255,.72)">Camco Construction was founded in Spokane on a simple standard: do what you say, build it right, and stand behind the work. Nearly five decades later, that standard still drives every project we take on.</p>
       </div>
     </div>
   </section>
 
-  <section class="section cream">
+  <section class="section cream" aria-label="Our history">
     <div class="lbl">Our History</div>
-    <h2 class="h2" style="color:#000;max-width:860px;margin-bottom:18px">From Local General Contractor to Multi-Service Construction Partner<span class="dot">.</span></h2>
+    <h2 class="h2" style="color:#000;max-width:860px;margin-bottom:18px">Our History<span class="dot">.</span></h2>
     <p>Camco Construction was founded in Spokane in 1976 by Lee Campbell and Anna Campbell. What began as a local general contracting business grew through repeat relationships, referrals, and a reputation for dependable execution in both residential and commercial work.</p>
     <p style="margin-top:14px">Over the years, Camco expanded into complex remodels, tenant improvements, excavation support, and accessibility-focused construction for homeowners, businesses, and veterans. Today, Leif Challender (President) and Amy Challender (Vice President) continue that family-led model with hands-on project oversight and direct client communication.</p>
     <table class="table">
@@ -221,34 +238,59 @@
         <tr><td>BuildZoom Score</td><td>110 - Top 4% in Washington</td></tr>
       </tbody>
     </table>
+    <p style="margin-top:14px">Camco is an active Spokane Home Builders Association member listed in SHBA Find a Pro:
+      <a href="https://info.shba.com/findapro/Details/camco-construction-inc-3651658" target="_blank" rel="noopener">View SHBA listing</a>.
+    </p>
   </section>
 
-  <section class="section" style="background:#fff;padding-top:0">
+  <section class="section" style="background:#fff;padding-top:0" aria-label="Associations and credentials">
     <div class="assoc-strip">
       <div class="assoc-title">Industry Associations</div>
+      <h2 class="h2" style="color:#000;max-width:860px;margin-bottom:12px">Associations &amp; Credentials<span class="dot">.</span></h2>
       <div class="assoc-logos">
-        <div class="assoc-logo"><img src="Assets/media/camco-spokane-home-builders-association-logo.png" alt="Spokane Home Builders Association logo" loading="lazy" /></div>
+        <a class="assoc-logo" href="https://info.shba.com/findapro/Details/camco-construction-inc-3651658" target="_blank" rel="noopener noreferrer" aria-label="Spokane Home Builders Association profile">
+          <img src="Assets/media/camco-spokane-home-builders-association-logo.png" alt="Spokane Home Builders Association logo" loading="lazy" />
+        </a>
+        <a class="assoc-logo" href="https://www.biaw.com/" target="_blank" rel="noopener noreferrer" aria-label="Building Industry Association of Washington website">
+          <img src="Assets/media/camco-biaw-association-logo.png" alt="Building Industry Association of Washington logo" loading="lazy" />
+        </a>
+        <a class="assoc-logo" href="https://www.nahb.org/why-nahb/about-nahb" target="_blank" rel="noopener noreferrer" aria-label="National Association of Home Builders about page">
+          <img src="Assets/media/camco-nahb-association-logo.jpg" alt="National Association of Home Builders logo" loading="lazy" />
+        </a>
+        <a class="assoc-logo" href="https://www.buildzoom.com/contractor/camco-construction-inc" target="_blank" rel="noopener noreferrer" aria-label="BuildZoom contractor profile">
+          <img src="Assets/media/camco-buildzoom-logo.png" alt="BuildZoom logo" loading="lazy" />
+        </a>
+      </div>
         <div class="assoc-logo"><img src="Assets/media/camco-biaw-association-logo.png" alt="Building Industry Association of Washington logo" loading="lazy" /></div>
         <div class="assoc-logo"><img src="Assets/media/camco-nahb-association-logo.jpg" alt="National Association of Home Builders logo" loading="lazy" /></div>
       </div>
+      <ul class="assoc-list">
+        <li><strong>Spokane Home Builders Association</strong> - Active Member <a href="https://info.shba.com/findapro/Details/camco-construction-inc-3651658" target="_blank" rel="noopener" onclick="trackOutboundClick('shba_profile', this.href)">View SHBA Profile</a></li>
+        <li><strong>BuildZoom Score: 110</strong> - Top 4% of Washington licensed contractors <a href="https://www.buildzoom.com/contractor/camco-construction-inc" target="_blank" rel="noopener" onclick="trackOutboundClick('buildzoom_profile', this.href)">Verify on BuildZoom</a></li>
+        <li>WA Contractor License #CAMCOCI799L5 - Active</li>
+        <li>Licensed, Bonded &amp; Insured in Washington and Idaho</li>
+        <li>Habitat for Humanity Construction Partner - Spokane</li>
+      </ul>
     </div>
   </section>
 
-  <section class="section black">
+  <section class="section black" aria-label="Company values">
     <div class="lbl" style="color:rgba(255,255,255,.6)">Our Values</div>
-    <h2 class="h2" style="color:#fff;max-width:860px;margin-bottom:18px">What Camco Stands For on Every Project<span class="dot">.</span></h2>
-    <div class="grid2">
-      <article class="card"><h3>Integrity First</h3><p>We build scopes around real project requirements, not low numbers designed to win bids and grow through change orders.</p></article>
-      <article class="card"><h3>Accountability</h3><p>Your project is managed by our team from estimate through final walkthrough with clear ownership at every stage.</p></article>
-      <article class="card"><h3>Craftsmanship That Lasts</h3><p>We focus on structural quality, code compliance, and finish details that hold up long after final inspection.</p></article>
-      <article class="card"><h3>Respect for Clients and Community</h3><p>Respectful crews, clean jobsites, and responsive communication are part of the job, not extras.</p></article>
-    </div>
+      <h2 class="h2" style="color:#fff;max-width:860px;margin-bottom:18px">Our Values<span class="dot">.</span></h2>
+      <p style="color:rgba(255,255,255,.76);max-width:760px;margin-bottom:20px">Think Ahead. Build Right.</p>
+    <dl class="values-dl">
+      <div><dt>Integrity First</dt><dd>We build scopes around real project requirements, not low numbers designed to win bids and grow through change orders.</dd></div>
+      <div><dt>Accountability</dt><dd>Your project is managed by our team from estimate through final walkthrough with clear ownership at every stage.</dd></div>
+      <div><dt>Craftsmanship</dt><dd>We focus on structural quality, code compliance, and finish details that hold up long after final inspection.</dd></div>
+      <div><dt>Respect</dt><dd>Respectful crews, clean jobsites, and responsive communication are part of the job, not extras.</dd></div>
+    </dl>
+    <blockquote class="review-quote">"Mr. Campbell has INTEGRITY that cannot be equalled. Honest, straight-forward and highly reliable." - Doc Tom</blockquote>
   </section>
 
-  <section class="section cream" style="padding-top:0">
-    <div class="lbl">Meet Our Team</div>
-    <h2 class="h2" style="color:#000;max-width:860px;margin-bottom:18px">Experienced Leadership. Local Accountability<span class="dot">.</span></h2>
-    <p style="max-width:920px;margin-bottom:20px">Camco’s team combines deep construction experience with day-to-day client communication and project oversight. Each leader below is shown with named role-based profile data to reinforce trust and authority signals.</p>
+  <section class="section black" style="padding-top:0" aria-label="Leadership team">
+    <div class="lbl" style="color:rgba(255,255,255,.6)">Meet Our Team</div>
+    <h2 class="h2" style="color:#fff;max-width:860px;margin-bottom:18px">Leadership Team<span class="dot">.</span></h2>
+    <p style="max-width:920px;margin-bottom:20px;color:rgba(255,255,255,.78)">Camco's team combines deep construction experience with day-to-day client communication and project oversight. Each leader below is shown with named role-based profile data to reinforce trust and authority signals.</p>
     <div class="team-grid">
       <figure class="team-card">
         <img src="Assets/media/lee-campbell-camco-construction-founding-president-spokane-wa.jpg" alt="Lee Campbell, Founding President of Camco Construction Inc. - Spokane WA" loading="lazy" />
@@ -273,38 +315,39 @@
     </div>
   </section>
 
-  <section class="section black">
+  <section class="section black" aria-label="What we build">
     <div class="lbl" style="color:rgba(255,255,255,.6)">What We Build</div>
-    <h2 class="h2" style="color:#fff;max-width:780px;margin-bottom:18px">Residential, Commercial, Excavation, Accessibility<span class="dot">.</span></h2>
+    <h2 class="h2" style="color:#fff;max-width:780px;margin-bottom:18px">What We Build<span class="dot">.</span></h2>
     <div class="grid2">
-      <article class="card"><h3>Residential Construction</h3><p>Home additions, structural remodels, kitchen remodels, deck construction/replacement, and accessibility upgrades.</p></article>
-      <article class="card"><h3>Commercial Construction</h3><p>Tenant improvements, build-outs, ADA upgrades, and multi-family improvement projects.</p></article>
-      <article class="card"><h3>Excavation Services</h3><p>Site prep, grading, drainage, trenching, backfill, and haul-off support for new construction.</p></article>
-      <article class="card"><h3>Community Commitment</h3><p>Proud support for Spokane-area community organizations and veteran accessibility projects.</p></article>
+      <article class="card"><h3>Residential Construction</h3><p style="color:#222">Home additions, structural remodels, kitchen remodels, deck construction/replacement, and accessibility upgrades.</p></article>
+      <article class="card"><h3>Commercial Construction</h3><p style="color:#222">Tenant improvements, build-outs, ADA upgrades, and multi-family improvement projects.</p></article>
+      <article class="card"><h3>Excavation Services</h3><p style="color:#222">Site prep, grading, drainage, trenching, backfill, and haul-off support for new construction.</p></article>
+      <article class="card"><h3>Community Commitment</h3><p style="color:#222">Proud support for Spokane-area community organizations, Habitat for Humanity projects, and veteran accessibility work.</p></article>
     </div>
   </section>
 
-  <section class="section cream">
-    <div class="lbl">Work With Camco</div>
-    <h2 class="h2" style="color:#000;max-width:860px;margin-bottom:16px">Ready to Discuss Your Project?<span class="dot">.</span></h2>
-    <p style="max-width:900px;margin-bottom:22px">Whether you are planning a remodel, tenant improvement, excavation scope, or accessibility upgrade, our team can help you define next steps and budget expectations clearly.</p>
+  <section class="section cream" aria-label="Ready to discuss your project">
+    <div class="lbl">Start Your Estimate</div>
+    <h2 class="h2" style="color:#000;max-width:860px;margin-bottom:16px">Get a Free Estimate - Built with Foresight<span class="dot">.</span></h2>
+    <p style="max-width:900px;margin-bottom:22px">Whether you're planning a home addition, commercial tenant improvement, new deck, or major remodel, Camco Construction gives you straight answers and fair estimates with no pressure and no inflated numbers.</p>
     <div class="ccg">
+      <div class="cc"><div class="ccl">Contact</div><div class="ccv">Camco Construction Team<br><span style="font-weight:400;color:#777;font-size:.86rem">Project Consultations</span></div></div>
       <div class="cc"><div class="ccl">Phone</div><div class="ccv"><a href="tel:+15095361818" onclick="trackPhoneClick()">509-536-1818</a></div></div>
       <div class="cc"><div class="ccl">Email</div><div class="ccv"><a href="mailto:info@CamcoConstruction.net" onclick="trackEmailClick()">info@CamcoConstruction.net</a></div></div>
-      <div class="cc"><div class="ccl">Office</div><div class="ccv">3105 E Boone Ave<br>Spokane, WA 99202</div></div>
-      <div class="cc"><div class="ccl">Contact Page</div><div class="ccv"><a href="/contact-us/" onclick="trackCTAClick('about_contact_page_cta')">Open Contact Form</a></div></div>
+      <div class="cc"><div class="ccl">Office</div><div class="ccv"><address>3105 E Boone Ave<br>Spokane, WA 99202</address><br><span style="font-weight:400;color:#777;font-size:.85rem">Monday-Friday, 9am-5pm</span></div></div>
     </div>
-    <a class="btn" href="/contact-us/" onclick="trackCTAClick('about_contact_page_button')">Go to Contact Us <span class="arr">></span></a>
+    <a class="btn" href="/contact-us/" onclick="trackCTAClick('cta_about_contact')">Request a Free Estimate <span class="arr">></span></a>
   </section>
 
   </main>
 
   <footer>
     <div class="fg">
-      <div class="fb"><img class="logo-img" src="Logo/CAMCO_Construction_logo.webp" alt="Camco Construction logo" width="163" height="92" /><p>Serving the Spokane area with professional construction, structural remodels, and additions since 1976. Licensed, insured and bonded in WA &amp; ID.<br><br>Lic. #CAMCOCI799L5</p></div>
+      <div class="fb"><img class="logo-img" src="Logo/CAMCO_Construction_logo.webp" alt="Camco Construction logo" width="163" height="92" /><p>Serving the Spokane area with professional construction, structural remodels, and additions since 1976. Licensed, insured and bonded in WA &amp; ID.</p></div>
       <div class="fc"><h3>Navigation</h3><ul><li><a href="/">Home</a></li><li><a href="/about/">About</a></li><li><a href="/residential/">Services</a></li><li><a href="/projects/">Projects</a></li><li><a href="/join-our-team/">Join Our Team</a></li><li><a href="/contact-us/" onclick="trackCTAClick('about_footer_contact')">Contact us</a></li></ul></div>
       <div class="fc"><h3>Services</h3><ul><li><a href="/residential/">Residential Services</a></li><li><a href="/home-additions/">Home Additions</a></li><li><a href="/deck-construction/">Deck Construction</a></li><li><a href="/commercial/">Commercial &amp; Excavation</a></li><li><a href="/accessibility-ramps/">Accessibility &amp; Ramps</a></li><li><a href="/for-realtors/">For Realtors &amp; Property Managers</a></li></ul></div>
-      <div class="fc"><h3>Contact</h3><ul><li><span>3105 E Boone Ave</span></li><li><span>Spokane, WA 99202</span></li><li><a href="tel:+15095361818" onclick="trackPhoneClick()">(509) 536-1818</a></li><li><a href="mailto:info@CamcoConstruction.net" onclick="trackEmailClick()">info@CamcoConstruction.net</a></li><li><a href="https://www.facebook.com/camcoconstruction" target="_blank" rel="noopener noreferrer">Facebook</a></li><li><a href="https://www.linkedin.com/company/camco-construction-spokane/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li><li><span>Contractor: #CAMCOCI799L5</span></li></ul></div>
+      <div class="fc"><h3>Contact</h3><ul><li><span>3105 E Boone Ave</span></li><li><span>Spokane, WA 99202</span></li><li><a href="tel:+15095361818" onclick="trackPhoneClick()">(509) 536-1818</a></li><li><a href="mailto:info@CamcoConstruction.net" onclick="trackEmailClick()">info@CamcoConstruction.net</a></li><li><a href="https://www.facebook.com/camcoconstruction" target="_blank" rel="noopener noreferrer">Facebook</a></li><li><a href="https://www.linkedin.com/company/camco-construction-spokane/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li><li><span>Contractor: #CAMCOCI799L5</span></li>
+          <li><span>Member: Spokane Home Builders Association</span></li></ul></div>
       <div class="fc"><h3>Working Hours</h3><ul><li><span>Monday - Friday: 9am - 5pm</span></li><li><span>Saturday - Sunday: Closed</span></li></ul></div>
     </div>
     <div class="fbot"><span>2026 © Camco Construction INC. All rights reserved.</span><a href="/">camcoconstruction.net</a></div>
@@ -314,6 +357,7 @@
     function trackPhoneClick(){gtag('event','generate_lead',{'event_category':'contact','event_label':'phone_click','service_category':'contact','contact_method':'phone','lead_source_page':window.location.href});}
     function trackEmailClick(){gtag('event','generate_lead',{'event_category':'contact','event_label':'email_click','service_category':'contact','contact_method':'email','lead_source_page':window.location.href});}
     function trackCTAClick(label){gtag('event','click',{'event_category':'cta','event_label':label||'contact_cta','service_category':'contact','lead_source_page':window.location.href});}
+    function trackOutboundClick(label,url){gtag('event','outbound_click',{'event_category':'outbound','event_label':label||'outbound_link','link_url':url||window.location.href});}
     var scrollDepths=[25,50,75,100],scrollFired={};
     window.addEventListener('scroll',function(){var pct=Math.round((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100);scrollDepths.forEach(function(d){if(pct>=d&&!scrollFired[d]){scrollFired[d]=true;gtag('event','scroll',{'event_category':'engagement','event_label':'scroll_'+d+'_percent','page_location':window.location.href});}});});
     const menuBtn=document.getElementById("menuBtn"),mobileNav=document.getElementById("mobileNav");
