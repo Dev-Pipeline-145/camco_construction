@@ -114,10 +114,11 @@
     .assoc-strip{background:#fff;border:1px solid rgba(0,0,0,.12);padding:22px;margin-top:24px}
     .assoc-title{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#222;margin-bottom:14px}
     .assoc-logos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;align-items:center}
-    .assoc-logo{background:#fff;border:1px solid rgba(0,0,0,.1);padding:12px;min-height:96px;display:flex;align-items:center;justify-content:center}
+    .assoc-logo{position:relative;overflow:hidden;background:#fff;border:1px solid rgba(0,0,0,.1);padding:12px;min-height:96px;display:flex;align-items:center;justify-content:center}
     .assoc-logo img{max-height:62px;width:auto;max-width:100%;filter:saturate(1.03) contrast(1.03)}
-    .assoc-list{margin-top:16px;padding-left:18px}
-    .assoc-list li{margin-bottom:10px}
+    .assoc-tip{position:absolute;left:8px;right:8px;bottom:8px;background:rgba(0,0,0,.84);color:#fff;padding:8px 10px;font-size:.68rem;line-height:1.35;transform:translateY(120%);opacity:0;transition:transform .2s ease,opacity .2s ease;pointer-events:none}
+    .assoc-tip strong{display:block;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px;color:#fff}
+    .assoc-logo:hover .assoc-tip,.assoc-logo:focus-visible .assoc-tip{transform:translateY(0);opacity:1}
     .values-dl{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .values-dl div{background:#fff;border:1px solid rgba(0,0,0,.12);padding:20px}
     .values-dl dt{color:#111;margin-bottom:10px;font-size:.95rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
@@ -177,11 +178,17 @@
         <a class="services-toggle" href="/residential/" aria-haspopup="true" aria-expanded="false">Services <span class="services-caret">▾</span></a>
         <div class="services-dropdown" role="menu" aria-label="Services menu">
           <div class="services-group">
-            <span class="services-group-title">Services</span>
+            <span class="services-group-title">Residential</span>
             <a href="/residential/">Residential</a>
             <a href="/home-additions/">Home Additions</a>
             <a href="/deck-construction/">Deck Construction</a>
+          </div>
+          <div class="services-group">
+            <span class="services-group-title">Commercial</span>
             <a href="/commercial/">Commercial</a>
+          </div>
+          <div class="services-group">
+            <span class="services-group-title">Request an Estimate</span>
             <a href="/contact-us/#request-estimate">Request an Estimate</a>
           </div>
         </div>
@@ -198,11 +205,13 @@
     <details class="mobile-services">
       <summary>Services</summary>
       <div class="mobile-services-panel">
-        <span class="mobile-services-group-title">Services</span>
+        <span class="mobile-services-group-title">Residential</span>
         <a href="/residential/">Residential</a>
         <a href="/home-additions/">Home Additions</a>
         <a href="/deck-construction/">Deck Construction</a>
+        <span class="mobile-services-group-title">Commercial</span>
         <a href="/commercial/">Commercial</a>
+        <span class="mobile-services-group-title">Request an Estimate</span>
         <a href="/contact-us/#request-estimate">Request an Estimate</a>
       </div>
     </details>
@@ -220,7 +229,6 @@
         <div class="lbl" style="color:rgba(255,255,255,.6)">About Camco Construction</div>
         <h1 class="h1" style="color:#fff;margin-bottom:20px">The Camco Story - Built on Integrity Since 1976<span class="dot">.</span></h1>
         <p style="color:rgba(255,255,255,.72)">Camco Construction was founded in Spokane on a simple standard: do what you say, build it right, and stand behind the work. Nearly five decades later, that standard still drives every project we take on.</p>
-      </div>
     </div>
   </section>
 
@@ -250,27 +258,21 @@
       <div class="assoc-logos">
         <a class="assoc-logo" href="https://info.shba.com/findapro/Details/camco-construction-inc-3651658" target="_blank" rel="noopener noreferrer" aria-label="Spokane Home Builders Association profile">
           <img src="Assets/media/camco-spokane-home-builders-association-logo.png" alt="Spokane Home Builders Association logo" loading="lazy" />
+          <span class="assoc-tip"><strong>SHBA Member</strong>Active member listed in SHBA Find a Pro.</span>
         </a>
         <a class="assoc-logo" href="https://www.biaw.com/" target="_blank" rel="noopener noreferrer" aria-label="Building Industry Association of Washington website">
           <img src="Assets/media/camco-biaw-association-logo.png" alt="Building Industry Association of Washington logo" loading="lazy" />
+          <span class="assoc-tip"><strong>BIAW</strong>State-level advocacy and professional standards in Washington.</span>
         </a>
         <a class="assoc-logo" href="https://www.nahb.org/why-nahb/about-nahb" target="_blank" rel="noopener noreferrer" aria-label="National Association of Home Builders about page">
           <img src="Assets/media/camco-nahb-association-logo.jpg" alt="National Association of Home Builders logo" loading="lazy" />
+          <span class="assoc-tip"><strong>NAHB</strong>National home building leadership and education network.</span>
         </a>
         <a class="assoc-logo" href="https://www.buildzoom.com/contractor/camco-construction-inc" target="_blank" rel="noopener noreferrer" aria-label="BuildZoom contractor profile">
           <img src="Assets/media/camco-buildzoom-logo.png" alt="BuildZoom logo" loading="lazy" />
+          <span class="assoc-tip"><strong>BuildZoom 110</strong>Top 4% of Washington licensed contractors.</span>
         </a>
       </div>
-        <div class="assoc-logo"><img src="Assets/media/camco-biaw-association-logo.png" alt="Building Industry Association of Washington logo" loading="lazy" /></div>
-        <div class="assoc-logo"><img src="Assets/media/camco-nahb-association-logo.jpg" alt="National Association of Home Builders logo" loading="lazy" /></div>
-      </div>
-      <ul class="assoc-list">
-        <li><strong>Spokane Home Builders Association</strong> - Active Member <a href="https://info.shba.com/findapro/Details/camco-construction-inc-3651658" target="_blank" rel="noopener" onclick="trackOutboundClick('shba_profile', this.href)">View SHBA Profile</a></li>
-        <li><strong>BuildZoom Score: 110</strong> - Top 4% of Washington licensed contractors <a href="https://www.buildzoom.com/contractor/camco-construction-inc" target="_blank" rel="noopener" onclick="trackOutboundClick('buildzoom_profile', this.href)">Verify on BuildZoom</a></li>
-        <li>WA Contractor License #CAMCOCI799L5 - Active</li>
-        <li>Licensed, Bonded &amp; Insured in Washington and Idaho</li>
-        <li>Habitat for Humanity Construction Partner - Spokane</li>
-      </ul>
     </div>
   </section>
 

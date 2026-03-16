@@ -85,7 +85,7 @@
     .card .pad{padding:16px}
     .card h3{color:#111;font-size:.95rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
     .process{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
-    .step{background:#fff;border:1px solid rgba(0,0,0,.12);padding:16px}
+    .step{background:#fff;border:1px solid rgba(0,0,0,.12);padding:16px;color:#222}
     .step b{display:block;color:var(--red);margin-bottom:8px}
     .faq{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .faq .item{background:#fff;border:1px solid rgba(0,0,0,.12);padding:18px}
@@ -103,6 +103,7 @@
     .fc h3{font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.82);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.14)}
     .fc ul{list-style:none}.fc li{margin-bottom:8px}.fc a,.fc span{font-size:13px;color:rgba(255,255,255,.9);text-decoration:none}
     .fbot{width:min(1140px,90vw);margin:0 auto;padding:18px 0;display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.68);flex-wrap:wrap;gap:8px}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
     @media(max-width:1080px){.hero,.grid3,.faq,.ccg,.fg,.process,.gallery-grid{grid-template-columns:1fr 1fr}.nav{display:none}.nav-cta{display:none}.menu-btn{display:block}}
     @media(max-width:760px){.hero,.grid3,.faq,.ccg,.fg,.process,.gallery-grid{grid-template-columns:1fr}.mobile-nav{top:64px}}
   
@@ -127,11 +128,17 @@
         <a class="on services-toggle" href="/residential/" aria-haspopup="true" aria-expanded="false">Services <span class="services-caret">▾</span></a>
         <div class="services-dropdown" role="menu" aria-label="Services menu">
           <div class="services-group">
-            <span class="services-group-title">Services</span>
+            <span class="services-group-title">Residential</span>
             <a href="/residential/">Residential</a>
             <a href="/home-additions/">Home Additions</a>
             <a href="/deck-construction/">Deck Construction</a>
+          </div>
+          <div class="services-group">
+            <span class="services-group-title">Commercial</span>
             <a href="/commercial/">Commercial</a>
+          </div>
+          <div class="services-group">
+            <span class="services-group-title">Request an Estimate</span>
             <a href="/contact-us/#request-estimate">Request an Estimate</a>
           </div>
         </div>
@@ -148,11 +155,13 @@
     <details class="mobile-services">
       <summary>Services</summary>
       <div class="mobile-services-panel">
-        <span class="mobile-services-group-title">Services</span>
+        <span class="mobile-services-group-title">Residential</span>
         <a href="/residential/">Residential</a>
         <a href="/home-additions/">Home Additions</a>
         <a href="/deck-construction/">Deck Construction</a>
+        <span class="mobile-services-group-title">Commercial</span>
         <a href="/commercial/">Commercial</a>
+        <span class="mobile-services-group-title">Request an Estimate</span>
         <a href="/contact-us/#request-estimate">Request an Estimate</a>
       </div>
     </details>
@@ -170,7 +179,7 @@
         <div class="lbl llt">Deck Contractor - Spokane, WA</div>
         <h1 class="h1" style="color:#fff;margin-bottom:20px">Deck Construction &amp; Replacement in Spokane WA<span class="dot">.</span></h1>
         <p style="color:rgba(255,255,255,.72);margin-bottom:20px">Camco Construction handles deck builds and replacements in Spokane WA, from permit planning and structural framing to final rail, stair, and safety compliance review.</p>
-        <a class="btn" href="/contact-us/" onclick="trackCTAClick('deck_hero_cta')">Get a Free Deck Estimate <span class="arr">></span></a>
+        <a class="btn" href="/contact-us/?segment=residential&service=deck_construction#request-estimate" onclick="trackCTAClick('deck_hero_cta')">Get a Free Deck Estimate <span class="arr">></span></a>
         <a class="btn bol" href="/projects/" onclick="trackCTAClick('deck_projects')" style="margin-left:12px">See Deck Projects <span class="arr">></span></a>
       </div>
     </div>
@@ -207,63 +216,63 @@
     <div class="gallery-grid">
       <figure>
         <img src="Assets/media/camco-construction-deck-build-spokane-wa-esumac-01.jpg" alt="Custom deck construction by Camco Construction - E Sumac project, Spokane WA" loading="lazy" />
-        <figcaption>E Sumac deck construction - image 01</figcaption>
+        <figcaption class="sr-only">E Sumac deck construction - image 01</figcaption>
       </figure>
       <figure>
         <img src="Assets/media/camco-construction-deck-build-spokane-wa-esumac-02.jpg" alt="Camco Construction deck framing and structure - E Sumac Spokane WA" loading="lazy" />
-        <figcaption>E Sumac deck construction - image 02</figcaption>
+        <figcaption class="sr-only">E Sumac deck construction - image 02</figcaption>
       </figure>
       <figure>
         <img src="Assets/media/camco-construction-deck-spokane-wa-esumac-03.jpg" alt="Deck construction detail - Camco Construction E Sumac project Spokane WA" loading="lazy" />
-        <figcaption>E Sumac deck construction - image 03</figcaption>
+        <figcaption class="sr-only">E Sumac deck construction - image 03</figcaption>
       </figure>
       <figure>
         <img src="Assets/media/camco-construction-deck-replacement-spokane-wa-esumac-04.jpg" alt="Completed custom deck by Camco Construction - E Sumac property Spokane WA" loading="lazy" />
-        <figcaption>E Sumac deck construction - image 04</figcaption>
+        <figcaption class="sr-only">E Sumac deck construction - image 04</figcaption>
       </figure>
       <figure>
         <img src="Assets/media/camco-construction-deck-spokane-wa-esumac-05.jpg" alt="Camco Construction deck outdoor living space - E Sumac Spokane WA" loading="lazy" />
-        <figcaption>E Sumac deck construction - image 05</figcaption>
+        <figcaption class="sr-only">E Sumac deck construction - image 05</figcaption>
       </figure>
       <figure>
         <img src="Assets/media/camco-construction-deck-railing-spokane-wa-esumac-06.jpg" alt="Deck railing detail by Camco Construction - E Sumac project Spokane WA" loading="lazy" />
-        <figcaption>E Sumac deck construction - image 06</figcaption>
+        <figcaption class="sr-only">E Sumac deck construction - image 06</figcaption>
       </figure>
       <figure>
         <img src="Assets/media/camco-construction-deck-spokane-wa-esumac-07.jpg" alt="Camco Construction deck build progress - E Sumac Spokane WA" loading="lazy" />
-        <figcaption>E Sumac deck construction - image 07</figcaption>
+        <figcaption class="sr-only">E Sumac deck construction - image 07</figcaption>
       </figure>
       <figure>
         <img src="Assets/media/camco-construction-deck-spokane-wa-esumac-08.jpg" alt="Custom deck construction Spokane WA - Camco Construction E Sumac" loading="lazy" />
-        <figcaption>E Sumac deck construction - image 08</figcaption>
+        <figcaption class="sr-only">E Sumac deck construction - image 08</figcaption>
       </figure>
       <figure>
         <img src="Assets/media/camco-construction-deck-spokane-wa-esumac-09.jpg" alt="Deck construction detail - Camco Construction Spokane WA E Sumac project" loading="lazy" />
-        <figcaption>E Sumac deck construction - image 09</figcaption>
+        <figcaption class="sr-only">E Sumac deck construction - image 09</figcaption>
       </figure>
       <figure>
         <img src="Assets/media/camco-construction-deck-spokane-wa-esumac-10.jpg" alt="Camco Construction deck exterior - E Sumac Spokane WA" loading="lazy" />
-        <figcaption>E Sumac deck construction - image 10</figcaption>
+        <figcaption class="sr-only">E Sumac deck construction - image 10</figcaption>
       </figure>
       <figure>
         <img src="Assets/media/camco-construction-deck-spokane-wa-esumac-11.jpg" alt="Deck build by Camco Construction - E Sumac property Spokane WA" loading="lazy" />
-        <figcaption>E Sumac deck construction - image 11</figcaption>
+        <figcaption class="sr-only">E Sumac deck construction - image 11</figcaption>
       </figure>
       <figure>
         <img src="Assets/media/camco-construction-deck-spokane-wa-esumac-12.jpg" alt="Camco Construction deck structure detail - E Sumac Spokane WA" loading="lazy" />
-        <figcaption>E Sumac deck construction - image 12</figcaption>
+        <figcaption class="sr-only">E Sumac deck construction - image 12</figcaption>
       </figure>
       <figure>
         <img src="Assets/media/camco-construction-deck-spokane-wa-esumac-13.jpg" alt="E Sumac deck project by Camco Construction - Spokane WA" loading="lazy" />
-        <figcaption>E Sumac deck construction - image 13</figcaption>
+        <figcaption class="sr-only">E Sumac deck construction - image 13</figcaption>
       </figure>
       <figure>
         <img src="Assets/media/camco-construction-deck-spokane-wa-esumac-14.jpg" alt="Camco Construction deck craftsmanship - E Sumac project Spokane WA" loading="lazy" />
-        <figcaption>E Sumac deck construction - image 14</figcaption>
+        <figcaption class="sr-only">E Sumac deck construction - image 14</figcaption>
       </figure>
       <figure>
         <img src="Assets/media/camco-construction-deck-spokane-wa-esumac-15.jpg" alt="Custom deck completion - Camco Construction E Sumac Spokane WA" loading="lazy" />
-        <figcaption>E Sumac deck construction - image 15</figcaption>
+        <figcaption class="sr-only">E Sumac deck construction - image 15</figcaption>
       </figure>
     </div>
   </section>
@@ -289,10 +298,20 @@
       <div class="cc"><div class="ccl">Email</div><div class="ccv"><a href="mailto:info@CamcoConstruction.net" onclick="trackEmailClick()">info@CamcoConstruction.net</a></div></div>
       <div class="cc"><div class="ccl">Office</div><div class="ccv">3105 E Boone Ave<br>Spokane, WA 99202<br><span style="font-weight:400;color:#777;font-size:.85rem">Monday-Friday, 9am-5pm</span></div></div>
     </div>
-    <a class="btn" href="/contact-us/" onclick="trackCTAClick('deck_closing_cta')">Request a Free Estimate <span class="arr">></span></a>
+    <a class="btn" href="/contact-us/?segment=residential&service=deck_construction#request-estimate" onclick="trackCTAClick('deck_closing_cta')">Request a Free Estimate <span class="arr">></span></a>
   </section>
 
-  </main>
+  
+  <section class="estimate-planner-teaser" style="background:#f5f2ec;padding:72px 0" aria-label="Estimate planner teaser">
+    <div class="wrap">
+      <div class="label" style="margin-bottom:8px">Estimate Planner</div>
+      <h2 class="h2" style="color:#000;max-width:860px;margin-bottom:12px">Deck Project Planning Range<span class="dot">.</span></h2>
+      <p style="max-width:860px;margin-bottom:18px">Typical planning range: <strong>$18k - $140k+</strong>. From standard builds to multi-level composite and custom railing systems.</p>
+      <a class="btn" href="/contact-us/?segment=residential&service=deck_construction#request-estimate" onclick="gtag('event','estimate_planner_open',{'event_category':'estimate_planner','event_action':'open','event_label':'estimate_planner_open_deck_construction','service_category':'residential','planner_service':'deck_construction','planner_segment':'residential','lead_source_page':window.location.href})">Open Estimate Planner <span class="arr">></span></a>
+    </div>
+  </section>
+
+</main>
 
   <footer>
     <div class="fg">

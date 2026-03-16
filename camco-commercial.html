@@ -206,11 +206,17 @@
         <a class="on services-toggle" href="/residential/" aria-haspopup="true" aria-expanded="false">Services <span class="services-caret">▾</span></a>
         <div class="services-dropdown" role="menu" aria-label="Services menu">
           <div class="services-group">
-            <span class="services-group-title">Services</span>
+            <span class="services-group-title">Residential</span>
             <a href="/residential/">Residential</a>
             <a href="/home-additions/">Home Additions</a>
             <a href="/deck-construction/">Deck Construction</a>
+          </div>
+          <div class="services-group">
+            <span class="services-group-title">Commercial</span>
             <a href="/commercial/">Commercial</a>
+          </div>
+          <div class="services-group">
+            <span class="services-group-title">Request an Estimate</span>
             <a href="/contact-us/#request-estimate">Request an Estimate</a>
           </div>
         </div>
@@ -227,11 +233,13 @@
     <details class="mobile-services">
       <summary>Services</summary>
       <div class="mobile-services-panel">
-        <span class="mobile-services-group-title">Services</span>
+        <span class="mobile-services-group-title">Residential</span>
         <a href="/residential/">Residential</a>
         <a href="/home-additions/">Home Additions</a>
         <a href="/deck-construction/">Deck Construction</a>
+        <span class="mobile-services-group-title">Commercial</span>
         <a href="/commercial/">Commercial</a>
+        <span class="mobile-services-group-title">Request an Estimate</span>
         <a href="/contact-us/#request-estimate">Request an Estimate</a>
       </div>
     </details>
@@ -250,7 +258,7 @@
         <h1 class="h1" style="color:var(--wht);margin-bottom:20px">Commercial Contractor Spokane &mdash; Tenant Improvements &amp; Build-Outs<span class="dot">.</span></h1>
         <p style="color:rgba(255,255,255,.72);font-size:.97rem;margin-bottom:16px;max-width:460px">Construction Without Surprises. Tenant vacancies cost money. Delays have direct financial impact. Camco plans phasing, manages trades, and delivers business-ready space.</p>
         <p style="color:rgba(255,255,255,.5);font-size:.84rem;margin-bottom:36px">Serving eastern Washington and northern Idaho since 1976 &nbsp;·&nbsp; Lic. #CAMCOCI799L5</p>
-        <a href="/contact-us/" class="btn" data-event="click" data-label="cta_commercial_estimate">Request a Free Commercial Estimate <span class="arr">></span></a>
+        <a href="/contact-us/?segment=commercial&service=commercial#request-estimate" class="btn" data-event="click" data-label="cta_commercial_estimate">Request a Free Commercial Estimate <span class="arr">></span></a>
         <a href="#services" class="btn bol" style="margin-left:12px" data-event="click" data-label="service_nav_click_commercial">Our Services <span class="arr">></span></a>
         <p style="margin-top:14px;color:rgba(255,255,255,.82)">
           <a href="tel:5095361818" style="color:#fff;text-decoration:none" data-event="generate_lead" data-label="phone_click_commercial">Call 509-536-1818</a>
@@ -306,7 +314,7 @@
         <h2 class="h2" style="color:var(--wht);max-width:640px">What Sets Camco Apart<span class="dot">.</span></h2>
         <p style="color:rgba(255,255,255,.72);margin-top:10px">Clarity. Structure. Results.</p>
       </div>
-      <a href="/contact-us/" class="btn" data-event="click" data-label="cta_commercial_estimate">Request a Free Commercial Estimate <span class="arr">></span></a>
+      <a href="/contact-us/?segment=commercial&service=commercial#request-estimate" class="btn" data-event="click" data-label="cta_commercial_estimate">Request a Free Commercial Estimate <span class="arr">></span></a>
     </div>
     <dl class="sg">
       <div class="sc">
@@ -381,7 +389,7 @@
       <div class="cc"><div class="ccl">Email</div><div class="ccv" style="font-size:.8rem"><a href="mailto:info@CamcoConstruction.net" data-event="generate_lead" data-label="email_click_commercial">info@CamcoConstruction.net</a></div></div>
       <div class="cc"><div class="ccl">Office</div><address class="ccv" style="font-size:.84rem">3105 E Boone Ave<br>Spokane, WA 99202<br><span style="font-weight:400;color:#777;font-size:.85rem">Monday-Friday, 9am-5pm</span></address></div>
     </div>
-    <a href="/contact-us/" class="btn" data-event="click" data-label="cta_commercial_estimate">Request a Free Estimate <span class="arr">></span></a>
+    <a href="/contact-us/?segment=commercial&service=commercial#request-estimate" class="btn" data-event="click" data-label="cta_commercial_estimate">Request a Free Estimate <span class="arr">></span></a>
     <p style="margin-top:16px">
       <a href="/residential/" data-event="click" data-label="service_nav_click_commercial">Residential Contracting</a> |
       <a href="/commercial/#services" data-event="click" data-label="service_nav_click_commercial">Excavation Services</a> |
@@ -391,7 +399,17 @@
     <p style="margin-top:14px"><strong>Service Area:</strong> Spokane, Spokane Valley, Coeur d'Alene, and communities throughout the Inland Northwest.</p>
   </section>
 
-  </main>
+  
+  <section class="estimate-planner-teaser" style="background:#f5f2ec;padding:72px 0" aria-label="Estimate planner teaser">
+    <div class="wrap">
+      <div class="label" style="margin-bottom:8px">Estimate Planner</div>
+      <h2 class="h2" style="color:#000;max-width:860px;margin-bottom:12px">Commercial Planning Range<span class="dot">.</span></h2>
+      <p style="max-width:860px;margin-bottom:18px">Typical planning range: <strong>$40k - $750k+</strong>. Built for tenant improvements, build-outs, and phased business operations.</p>
+      <a class="btn" href="/contact-us/?segment=commercial&service=commercial#request-estimate" onclick="gtag('event','estimate_planner_open',{'event_category':'estimate_planner','event_action':'open','event_label':'estimate_planner_open_commercial','service_category':'commercial','planner_service':'commercial','planner_segment':'commercial','lead_source_page':window.location.href})">Open Estimate Planner <span class="arr">></span></a>
+    </div>
+  </section>
+
+</main>
 
   <footer>
     <div class="fg">

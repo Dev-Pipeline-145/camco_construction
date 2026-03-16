@@ -216,11 +216,17 @@
         <a class="on services-toggle" href="/residential/" aria-haspopup="true" aria-expanded="false">Services <span class="services-caret">▾</span></a>
         <div class="services-dropdown" role="menu" aria-label="Services menu">
           <div class="services-group">
-            <span class="services-group-title">Services</span>
+            <span class="services-group-title">Residential</span>
             <a href="/residential/">Residential</a>
             <a href="/home-additions/">Home Additions</a>
             <a href="/deck-construction/">Deck Construction</a>
+          </div>
+          <div class="services-group">
+            <span class="services-group-title">Commercial</span>
             <a href="/commercial/">Commercial</a>
+          </div>
+          <div class="services-group">
+            <span class="services-group-title">Request an Estimate</span>
             <a href="/contact-us/#request-estimate">Request an Estimate</a>
           </div>
         </div>
@@ -237,11 +243,13 @@
     <details class="mobile-services">
       <summary>Services</summary>
       <div class="mobile-services-panel">
-        <span class="mobile-services-group-title">Services</span>
+        <span class="mobile-services-group-title">Residential</span>
         <a href="/residential/">Residential</a>
         <a href="/home-additions/">Home Additions</a>
         <a href="/deck-construction/">Deck Construction</a>
+        <span class="mobile-services-group-title">Commercial</span>
         <a href="/commercial/">Commercial</a>
+        <span class="mobile-services-group-title">Request an Estimate</span>
         <a href="/contact-us/#request-estimate">Request an Estimate</a>
       </div>
     </details>
@@ -259,7 +267,7 @@
         <div class="label" style="color:rgba(255,255,255,.65)">Residential Contractor Spokane</div>
         <h1 class="h1" style="color:var(--wht);margin-bottom:20px">Residential Contractor Spokane - Home Additions, Remodels &amp; More<span class="dot">.</span></h1>
         <p>When you're looking for a residential contractor in Spokane, you want someone who treats your home like it's their own. Camco Construction has served local homeowners since 1976 with additions, structural remodels, kitchens, decks, and full residential contracting.</p>
-        <a class="btn" href="/contact-us/" data-event="click" data-label="cta_residential_estimate">Request a Free Residential Estimate <span class="arr">></span></a>
+        <a class="btn" href="/contact-us/?segment=residential&service=residential#request-estimate" data-event="click" data-label="cta_residential_estimate">Request a Free Residential Estimate <span class="arr">></span></a>
         <a class="btn bol" href="/projects/" data-event="click" data-label="cta_click_projects_residential" style="margin-left:12px">See Our Work <span class="arr">></span></a>
       </div>
     </div>
@@ -450,11 +458,21 @@
         <div class="contact-cell"><div class="contact-label">Email</div><div class="contact-value"><a href="mailto:info@CamcoConstruction.net" data-event="generate_lead" data-label="email_click_residential">info@CamcoConstruction.net</a></div></div>
         <div class="contact-cell"><div class="contact-label">Office</div><div class="contact-value"><address>3105 E Boone Ave<br />Spokane, WA 99202</address><br /><span style="font-weight:400;color:#777;font-size:.85rem">Monday-Friday, 9am-5pm</span></div></div>
       </div>
-      <p><a class="btn" href="/contact-us/" data-event="click" data-label="cta_residential_estimate">Request a Free Estimate <span class="arr">></span></a></p>
+      <p><a class="btn" href="/contact-us/?segment=residential&service=residential#request-estimate" data-event="click" data-label="cta_residential_estimate">Request a Free Estimate <span class="arr">></span></a></p>
     </div>
   </section>
 
-  </main>
+  
+  <section class="estimate-planner-teaser" style="background:#f5f2ec;padding:72px 0" aria-label="Estimate planner teaser">
+    <div class="wrap">
+      <div class="label" style="margin-bottom:8px">Estimate Planner</div>
+      <h2 class="h2" style="color:#000;max-width:860px;margin-bottom:12px">Residential Planning Range<span class="dot">.</span></h2>
+      <p style="max-width:860px;margin-bottom:18px">Typical planning range: <strong>$25k - $650k+</strong>. From kitchen/bath remodels to structural scopes and ADU-level projects.</p>
+      <a class="btn" href="/contact-us/?segment=residential&service=residential#request-estimate" onclick="gtag('event','estimate_planner_open',{'event_category':'estimate_planner','event_action':'open','event_label':'estimate_planner_open_residential','service_category':'residential','planner_service':'residential','planner_segment':'residential','lead_source_page':window.location.href})">Open Estimate Planner <span class="arr">></span></a>
+    </div>
+  </section>
+
+</main>
 
   <footer>
     <div class="foot-grid">

@@ -127,11 +127,17 @@
         <a class="on services-toggle" href="/residential/" aria-haspopup="true" aria-expanded="false">Services <span class="services-caret">▾</span></a>
         <div class="services-dropdown" role="menu" aria-label="Services menu">
           <div class="services-group">
-            <span class="services-group-title">Services</span>
+            <span class="services-group-title">Residential</span>
             <a href="/residential/">Residential</a>
             <a href="/home-additions/">Home Additions</a>
             <a href="/deck-construction/">Deck Construction</a>
+          </div>
+          <div class="services-group">
+            <span class="services-group-title">Commercial</span>
             <a href="/commercial/">Commercial</a>
+          </div>
+          <div class="services-group">
+            <span class="services-group-title">Request an Estimate</span>
             <a href="/contact-us/#request-estimate">Request an Estimate</a>
           </div>
         </div>
@@ -139,7 +145,7 @@
       <li><a href="/projects/">Projects</a></li>
       <li><a href="/join-our-team/">Join Our Team</a></li>
     </ul>
-    <div class="nav-cta"><a href="/contact-us/" onclick="trackCTAClick('cta_realtors_connect')">Let's Connect <span class="arr">></span></a></div>
+    <div class="nav-cta"><a href="/contact-us/?segment=commercial&service=realtors#request-estimate" onclick="trackCTAClick('cta_realtors_connect')">Let's Connect <span class="arr">></span></a></div>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
   </header>
   <nav class="mobile-nav" id="mobileNav">
@@ -148,17 +154,19 @@
     <details class="mobile-services">
       <summary>Services</summary>
       <div class="mobile-services-panel">
-        <span class="mobile-services-group-title">Services</span>
+        <span class="mobile-services-group-title">Residential</span>
         <a href="/residential/">Residential</a>
         <a href="/home-additions/">Home Additions</a>
         <a href="/deck-construction/">Deck Construction</a>
+        <span class="mobile-services-group-title">Commercial</span>
         <a href="/commercial/">Commercial</a>
+        <span class="mobile-services-group-title">Request an Estimate</span>
         <a href="/contact-us/#request-estimate">Request an Estimate</a>
       </div>
     </details>
     <a href="/projects/">Projects</a>
     <a href="/join-our-team/">Join Our Team</a>
-    <a href="/contact-us/" onclick="trackCTAClick('cta_realtors_connect')">Let's Connect</a>
+    <a href="/contact-us/?segment=commercial&service=realtors#request-estimate" onclick="trackCTAClick('cta_realtors_connect')">Let's Connect</a>
   </nav>
 
   <main>
@@ -229,9 +237,19 @@
         <div class="cc"><div class="ccl">Email</div><div class="ccv"><a href="mailto:info@CamcoConstruction.net" onclick="trackEmailClick()">info@CamcoConstruction.net</a></div></div>
         <div class="cc"><div class="ccl">Office</div><div class="ccv"><address>3105 E Boone Ave<br>Spokane, WA 99202</address></div></div>
       </div>
-      <a class="btn" href="/contact-us/" onclick="trackCTAClick('cta_realtors_connect')">Let's Connect <span class="arr">></span></a>
+      <a class="btn" href="/contact-us/?segment=commercial&service=realtors#request-estimate" onclick="trackCTAClick('cta_realtors_connect')">Let's Connect <span class="arr">></span></a>
     </section>
-  </main>
+  
+  <section class="estimate-planner-teaser" style="background:#f5f2ec;padding:72px 0" aria-label="Estimate planner teaser">
+    <div class="wrap">
+      <div class="label" style="margin-bottom:8px">Estimate Planner</div>
+      <h2 class="h2" style="color:#000;max-width:860px;margin-bottom:12px">Realtor & Property Manager Range<span class="dot">.</span></h2>
+      <p style="max-width:860px;margin-bottom:18px">Typical planning range: <strong>$25k - $750k+</strong>. Pre-listing repairs, tenant upgrades, and capital improvement scopes.</p>
+      <a class="btn" href="/contact-us/?segment=commercial&service=realtors#request-estimate" onclick="gtag('event','estimate_planner_open',{'event_category':'estimate_planner','event_action':'open','event_label':'estimate_planner_open_realtors','service_category':'commercial','planner_service':'realtors','planner_segment':'commercial','lead_source_page':window.location.href})">Open Estimate Planner <span class="arr">></span></a>
+    </div>
+  </section>
+
+</main>
 
   <footer>
     <div class="fg">

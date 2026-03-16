@@ -95,7 +95,7 @@
     .fc ul{list-style:none}.fc li{margin-bottom:8px}.fc a,.fc span{font-size:13px;color:rgba(255,255,255,.9);text-decoration:none}
     .fbot{width:min(1140px,90vw);margin:0 auto;padding:18px 0;display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.68);flex-wrap:wrap;gap:8px}
     @media(max-width:1080px){.hero,.grid2,.ccg,.fg,.form-grid,.intent-grid{grid-template-columns:1fr 1fr}.nav{display:none}.nav-cta{display:none}.menu-btn{display:block}}
-    @media(max-width:760px){.hero,.grid2,.ccg,.fg,.form-grid,.intent-grid,.jobtrends-grid,.jobtrends-kpi{grid-template-columns:1fr}.assoc-logos{grid-template-columns:1fr}.mobile-nav{top:64px}}
+    @media(max-width:760px){.hero,.grid2,.ccg,.fg,.form-grid,.intent-grid,.jobtrends-grid,.jobtrends-kpi,.range-grid{grid-template-columns:1fr}.assoc-logos{grid-template-columns:1fr}.mobile-nav{top:64px}}
   
     /* Global nav fallback: force mobile header behavior */
     @media screen and (max-width: 1100px){
@@ -109,6 +109,10 @@
     .assoc-logos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;align-items:center}
     .assoc-logo{background:#fff;border:1px solid rgba(0,0,0,.1);padding:12px;min-height:96px;display:flex;align-items:center;justify-content:center}
     .assoc-logo img{max-height:62px;width:auto;max-width:100%}
+    .assoc-logo{position:relative;overflow:hidden}
+    .assoc-tip{position:absolute;left:8px;right:8px;bottom:8px;background:rgba(0,0,0,.84);color:#fff;padding:8px 10px;font-size:.68rem;line-height:1.35;transform:translateY(120%);opacity:0;transition:transform .2s ease,opacity .2s ease;pointer-events:none}
+    .assoc-tip strong{display:block;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px;color:#fff}
+    .assoc-logo:hover .assoc-tip,.assoc-logo:focus-visible .assoc-tip{transform:translateY(0);opacity:1}
     .jobtrends{background:#fff;border:1px solid rgba(0,0,0,.12);padding:16px;margin:0 0 20px}
     .jobtrends h3{color:#111;margin-bottom:8px;font-size:.86rem;text-transform:uppercase;letter-spacing:.08em}
     .jobtrends-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:end}
@@ -116,6 +120,15 @@
     .jobtrends-kpi div{border:1px solid rgba(0,0,0,.1);padding:10px;background:#fafafa}
     .jobtrends-kpi strong{display:block;color:#111}
     .jobtrends small{display:block;margin-top:8px}
+    .range-guide{background:#fff;border:1px solid rgba(0,0,0,.12);padding:16px;margin:0 0 20px}
+    .range-head{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+    .range-head strong{color:#111}
+    .range-head span{color:#555;font-size:.82rem}
+    .range-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .range-grid div{border:1px solid rgba(0,0,0,.1);background:#fafafa;padding:10px}
+    .range-grid small{display:block;color:#666;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+    .range-grid strong{color:#111}
+    .range-note{margin-top:8px;color:#333}
   </style>
   <script type="application/ld+json">
   {
@@ -150,11 +163,17 @@
         <a class="services-toggle" href="/residential/" aria-haspopup="true" aria-expanded="false">Services <span class="services-caret">▾</span></a>
         <div class="services-dropdown" role="menu" aria-label="Services menu">
           <div class="services-group">
-            <span class="services-group-title">Services</span>
+            <span class="services-group-title">Residential</span>
             <a href="/residential/">Residential</a>
             <a href="/home-additions/">Home Additions</a>
             <a href="/deck-construction/">Deck Construction</a>
+          </div>
+          <div class="services-group">
+            <span class="services-group-title">Commercial</span>
             <a href="/commercial/">Commercial</a>
+          </div>
+          <div class="services-group">
+            <span class="services-group-title">Request an Estimate</span>
             <a href="/contact-us/#request-estimate">Request an Estimate</a>
           </div>
         </div>
@@ -171,11 +190,13 @@
     <details class="mobile-services">
       <summary>Services</summary>
       <div class="mobile-services-panel">
-        <span class="mobile-services-group-title">Services</span>
+        <span class="mobile-services-group-title">Residential</span>
         <a href="/residential/">Residential</a>
         <a href="/home-additions/">Home Additions</a>
         <a href="/deck-construction/">Deck Construction</a>
+        <span class="mobile-services-group-title">Commercial</span>
         <a href="/commercial/">Commercial</a>
+        <span class="mobile-services-group-title">Request an Estimate</span>
         <a href="/contact-us/#request-estimate">Request an Estimate</a>
       </div>
     </details>
@@ -193,7 +214,6 @@
         <div class="lbl" style="color:rgba(255,255,255,.6)">Contact Camco Construction</div>
         <h1 class="h1" style="color:#fff;margin-bottom:20px">Project Estimates &amp; Join Our Team in Spokane WA<span class="dot">.</span></h1>
         <p style="color:rgba(255,255,255,.72)">Use this page for two clear paths: request a detailed estimate for your project, or apply to join Camco's construction team. Fast responses and clear next steps.</p>
-      </div>
     </div>
   </section>
 
@@ -261,6 +281,18 @@
       </div>
       <small>Trend indicators help align early quote expectations before final scope and field review.</small>
     </div>
+    <div class="range-guide" aria-live="polite" aria-label="Typical planning ranges by project segment">
+      <div class="range-head">
+        <strong id="rangeTitle">Typical Planning Ranges: Residential Remodel</strong>
+        <span id="rangeAudience">For homeowners planning remodels and additions</span>
+      </div>
+      <div class="range-grid">
+        <div><small>Budget</small><strong id="rangeBudget">$25k - $60k</strong></div>
+        <div><small>Mid-Range</small><strong id="rangeMid">$60k - $180k</strong></div>
+        <div><small>Complex / High-End</small><strong id="rangeHigh">$180k - $650k+</strong></div>
+      </div>
+      <p id="rangeNote" class="range-note">These ranges are planning benchmarks only. Scope, permitting, engineering, site conditions, and finish level affect final pricing.</p>
+    </div>
     <form id="estimateForm" action="#" method="post">
       <input type="hidden" name="jobtrends_region" id="jobtrendsRegion" value="spokane_wa" />
       <input type="hidden" name="jobtrends_segment" id="jobtrendsSegment" value="residential" />
@@ -326,19 +358,20 @@
       <div class="assoc-logos">
         <a class="assoc-logo" href="https://info.shba.com/findapro/Details/camco-construction-inc-3651658" target="_blank" rel="noopener noreferrer" aria-label="Spokane Home Builders Association profile">
           <img src="Assets/media/camco-spokane-home-builders-association-logo.png" alt="Spokane Home Builders Association logo" loading="lazy" />
+          <span class="assoc-tip"><strong>SHBA Member</strong>Active member listed in SHBA Find a Pro.</span>
         </a>
         <a class="assoc-logo" href="https://www.biaw.com/" target="_blank" rel="noopener noreferrer" aria-label="Building Industry Association of Washington website">
           <img src="Assets/media/camco-biaw-association-logo.png" alt="Building Industry Association of Washington logo" loading="lazy" />
+          <span class="assoc-tip"><strong>BIAW</strong>State-level advocacy and professional standards in Washington.</span>
         </a>
         <a class="assoc-logo" href="https://www.nahb.org/why-nahb/about-nahb" target="_blank" rel="noopener noreferrer" aria-label="National Association of Home Builders about page">
           <img src="Assets/media/camco-nahb-association-logo.jpg" alt="National Association of Home Builders logo" loading="lazy" />
+          <span class="assoc-tip"><strong>NAHB</strong>National home building leadership and education network.</span>
         </a>
         <a class="assoc-logo" href="https://www.buildzoom.com/contractor/camco-construction-inc" target="_blank" rel="noopener noreferrer" aria-label="BuildZoom contractor profile">
           <img src="Assets/media/camco-buildzoom-logo.png" alt="BuildZoom logo" loading="lazy" />
+          <span class="assoc-tip"><strong>BuildZoom 110</strong>Top 4% of Washington licensed contractors.</span>
         </a>
-      </div>
-        <div class="assoc-logo"><img src="Assets/media/camco-biaw-association-logo.png" alt="Building Industry Association of Washington logo" loading="lazy" /></div>
-        <div class="assoc-logo"><img src="Assets/media/camco-nahb-association-logo.jpg" alt="National Association of Home Builders logo" loading="lazy" /></div>
       </div>
     </div>
   </section>
@@ -359,7 +392,10 @@
     function trackPhoneClick(){gtag('event','generate_lead',{'event_category':'contact','event_label':'phone_click','service_category':'contact','contact_method':'phone','lead_source_page':window.location.href});}
     function trackEmailClick(){gtag('event','generate_lead',{'event_category':'contact','event_label':'email_click','service_category':'contact','contact_method':'email','lead_source_page':window.location.href});}
     function trackCTAClick(label){gtag('event','click',{'event_category':'cta','event_label':label||'contact_cta','service_category':'contact','lead_source_page':window.location.href});}
-    function trackJobTrends(region,segment,index){gtag('event','click',{'event_category':'jobtrends','event_label':'jobtrends_update','lead_source_page':window.location.href,'jobtrends_region':region,'jobtrends_segment':segment,'jobtrends_index':index});}
+    function trackJobTrends(region,segment,index){gtag('event','jobtrends_update',{'event_category':'jobtrends','event_label':'jobtrends_update','lead_source_page':window.location.href,'jobtrends_region':region,'jobtrends_segment':segment,'jobtrends_index':index});}
+    function trackEstimatePlannerPrefill(segment,service,region){
+      gtag('event','estimate_planner_prefill',{'event_category':'estimate_planner','event_label':'estimate_planner_prefill_context','lead_source_page':window.location.href,'planner_segment':segment||'unknown','planner_service':service||'unknown','planner_region':region||'unknown','event_action':'prefill_context'});
+    }
     function trackEstimateSubmit(projectType){
       gtag('event','generate_lead',{'event_category':'contact','event_label':'estimate_form_submit','service_category':projectType||'contact','contact_method':'form','lead_source_page':window.location.href});
       gtag('event','form_submit',{'event_category':'contact','event_label':'estimate_form','form_name':'camco_estimate_form','lead_source_page':window.location.href,'project_type':projectType||'unknown'});
@@ -380,19 +416,39 @@
       const hiddenRegion=document.getElementById('jobtrendsRegion');
       const hiddenSeg=document.getElementById('jobtrendsSegment');
       const hiddenIndex=document.getElementById('jobtrendsIndex');
+      const rangeTitle=document.getElementById('rangeTitle');
+      const rangeAudience=document.getElementById('rangeAudience');
+      const rangeBudget=document.getElementById('rangeBudget');
+      const rangeMid=document.getElementById('rangeMid');
+      const rangeHigh=document.getElementById('rangeHigh');
+      const rangeNote=document.getElementById('rangeNote');
+      const projectTypeSelect=document.querySelector('#estimateForm [name="project_type"]');
       const trendMap={
         residential:{demand:'Demand: High',demandNote:'Strong remodel demand in established neighborhoods',lead:'Lead Time: 4-10 wks',leadNote:'Design and permit dependencies',cost:'Cost Pressure: Moderate',costNote:'Finish selections drive variance',index:'high'},
         commercial:{demand:'Demand: High',demandNote:'Tenant turnover and TI cycles remain active',lead:'Lead Time: 3-8 wks',leadNote:'Coordination with occupancy and inspections',cost:'Cost Pressure: Moderate',costNote:'Scheduling and trade availability impact',index:'high'},
         excavation:{demand:'Demand: Stable',demandNote:'Seasonal fluctuations in our region',lead:'Lead Time: 2-6 wks',leadNote:'Weather and utility windows',cost:'Cost Pressure: Moderate',costNote:'Fuel and haul-off conditions apply',index:'stable'},
         accessibility:{demand:'Demand: Growing',demandNote:'Increased retrofit planning for aging-in-place',lead:'Lead Time: 2-7 wks',leadNote:'Scope complexity shifts timeline',cost:'Cost Pressure: Moderate',costNote:'Equipment and custom elements vary',index:'growing'}
       };
+      const rangeMap={
+        residential:{title:'Typical Planning Ranges: Residential Remodel',audience:'For homeowners planning remodels and additions',budget:'$25k - $60k',mid:'$60k - $180k',high:'$180k - $650k+',note:'Kitchen, bathroom, structural remodel, and ADU-related scopes often vary by complexity and finish level.'},
+        commercial:{title:'Typical Planning Ranges: Commercial TI / Build-Out',audience:'For property managers, business owners, and investors',budget:'$40k - $150k',mid:'$150k - $450k',high:'$450k - $750k+',note:'Occupied-space constraints, permitting, and phased scheduling can materially influence final pricing.'},
+        excavation:{title:'Typical Planning Ranges: Excavation & Site Prep',audience:'For site prep, utility, and grading scopes',budget:'$15k - $60k',mid:'$60k - $180k',high:'$180k - $400k+',note:'Soils, haul-off volume, utility conflicts, and weather windows drive range movement.'},
+        accessibility:{title:'Typical Planning Ranges: Accessibility Improvements',audience:'For aging-in-place and mobility retrofit projects',budget:'$12k - $40k',mid:'$40k - $120k',high:'$120k - $300k+',note:'Ramp geometry, lift/elevator equipment, and structural modifications determine final scope and budget.'}
+      };
       function updateTrends(){
         const seg=(segmentSel&&segmentSel.value)||'residential';
         const region=(regionSel&&regionSel.value)||'spokane_wa';
         const v=trendMap[seg]||trendMap.residential;
+        const r=rangeMap[seg]||rangeMap.residential;
         demandEl.textContent=v.demand; demandNote.textContent=v.demandNote;
         leadEl.textContent=v.lead; leadNote.textContent=v.leadNote;
         costEl.textContent=v.cost; costNote.textContent=v.costNote;
+        if(rangeTitle) rangeTitle.textContent=r.title;
+        if(rangeAudience) rangeAudience.textContent=r.audience;
+        if(rangeBudget) rangeBudget.textContent=r.budget;
+        if(rangeMid) rangeMid.textContent=r.mid;
+        if(rangeHigh) rangeHigh.textContent=r.high;
+        if(rangeNote) rangeNote.textContent=r.note;
         if(hiddenRegion) hiddenRegion.value=region;
         if(hiddenSeg) hiddenSeg.value=seg;
         if(hiddenIndex) hiddenIndex.value=v.index;
@@ -400,7 +456,18 @@
       }
       if(regionSel) regionSel.addEventListener('change',updateTrends);
       if(segmentSel) segmentSel.addEventListener('change',updateTrends);
-      const projectTypeSelect=document.querySelector('#estimateForm [name=\"project_type\"]');
+      const params=new URLSearchParams(window.location.search);
+      const segmentAliases={residential:'residential',commercial:'commercial',excavation:'excavation',accessibility:'accessibility',realtors:'commercial',projects:'residential'};
+      const serviceToType={residential:'residential',home_additions:'home_additions',deck_construction:'deck_construction',commercial:'commercial',excavation:'excavation',accessibility:'accessibility',realtors:'commercial',projects:'other'};
+      const segmentParam=(params.get('segment')||'').toLowerCase();
+      const serviceParam=(params.get('service')||'').toLowerCase();
+      const regionParam=(params.get('region')||'').toLowerCase();
+      if(segmentSel&&segmentAliases[segmentParam]) segmentSel.value=segmentAliases[segmentParam];
+      if(regionSel&&['spokane_wa','inland_nw','north_idaho'].includes(regionParam)) regionSel.value=regionParam;
+      if(projectTypeSelect&&serviceToType[serviceParam]) projectTypeSelect.value=serviceToType[serviceParam];
+      if(segmentAliases[segmentParam]||serviceToType[serviceParam]||['spokane_wa','inland_nw','north_idaho'].includes(regionParam)){
+        trackEstimatePlannerPrefill(segmentAliases[segmentParam]||'unknown',serviceParam||'unknown',['spokane_wa','inland_nw','north_idaho'].includes(regionParam)?regionParam:'unknown');
+      }
       if(projectTypeSelect){
         projectTypeSelect.addEventListener('change',function(){
           const map={home_additions:'residential',residential:'residential',deck_construction:'residential',commercial:'commercial',excavation:'excavation',accessibility:'accessibility',other:'residential'};
