@@ -240,18 +240,6 @@
       <div class="cc"><div class="ccl">Office</div><div class="ccv">3105 E Boone Ave<br>Spokane, WA 99202</div></div>
       <div class="cc"><div class="ccl">Hours</div><div class="ccv">Mon-Fri: 9am-5pm</div></div>
     </div>
-    <div class="range-guide" aria-live="polite" aria-label="Typical planning ranges by project segment">
-      <div class="range-head">
-        <strong id="rangeTitle">Typical Planning Ranges: Residential Remodel</strong>
-        <span id="rangeAudience">For homeowners planning remodels and additions</span>
-      </div>
-      <div class="range-grid">
-        <div><small>Budget</small><strong id="rangeBudget">$25k - $60k</strong></div>
-        <div><small>Mid-Range</small><strong id="rangeMid">$60k - $180k</strong></div>
-        <div><small>Complex / High-End</small><strong id="rangeHigh">$180k - $650k+</strong></div>
-      </div>
-      <p id="rangeNote" class="range-note">These ranges are planning benchmarks only. Scope, permitting, engineering, site conditions, and finish level affect final pricing.</p>
-    </div>
     <div class="jobtrends jtwf" aria-label="Regional job trend snapshot">
       <h3>JobTrends Snapshot for Quote Planning</h3>
       <div class="jobtrends-grid">
@@ -281,8 +269,8 @@
             </optgroup>
           </select>
         </label>
-        <label>Project Segment (select one or more)
-          <select id="jtSegment" multiple size="6">
+        <label>Project Segment
+          <select id="jtSegment">
             <option value="residential">Residential Remodel</option>
             <option value="kitchen">Kitchen Remodel</option>
             <option value="bathroom">Bathroom Remodel</option>
@@ -296,6 +284,18 @@
           </select>
         </label>
       </div>
+    </div>
+    <div class="range-guide" aria-live="polite" aria-label="Typical planning ranges by project segment">
+      <div class="range-head">
+        <strong id="rangeTitle">Typical Planning Ranges: Residential Remodel</strong>
+        <span id="rangeAudience">For homeowners planning remodels and additions</span>
+      </div>
+      <div class="range-grid">
+        <div><small>Budget</small><strong id="rangeBudget">$25k - $60k</strong></div>
+        <div><small>Mid-Range</small><strong id="rangeMid">$60k - $180k</strong></div>
+        <div><small>Complex / High-End</small><strong id="rangeHigh">$180k - $650k+</strong></div>
+      </div>
+      <p id="rangeNote" class="range-note">These ranges are planning benchmarks only. Scope, permitting, engineering, site conditions, and finish level affect final pricing.</p>
     </div>
     <form id="estimateForm" action="#" method="post">
       <input type="hidden" name="jobtrends_region" id="jobtrendsRegion" value="spokane_wa" />

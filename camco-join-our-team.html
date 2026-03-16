@@ -23,6 +23,7 @@
   <meta name="twitter:image" content="Assets/media/camco-construction-social-share-spokane-wa.jpg" />
   <link rel="canonical" href="https://www.CamcoConstruction.net/join-our-team/" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1R87642CKG"></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -239,6 +240,7 @@
         <input type="text" name="certifications" placeholder="Certifications or Licenses" />
         <textarea name="work_history" class="full" placeholder="Brief Work History or Relevant Projects"></textarea>
         <textarea name="availability" class="full" placeholder="Availability and Preferred Start Date"></textarea>
+        <div class="full"><div class="cf-turnstile" data-sitekey="0x4AAAAAACr2KlOzjERFQk4L"></div></div>
         <button class="btn full" type="submit" onclick="trackCTAClick('join_team_page_submit')">Submit Job Inquiry <span class="arr">></span></button>
       </div>
     </form>
@@ -294,10 +296,26 @@
       gtag('event','form_submit',{'event_category':'careers','event_label':'join_team_form','form_name':'camco_join_team_form','lead_source_page':window.location.href,'position_interest':position||'unknown'});
     }
     document.addEventListener('DOMContentLoaded',function(){
+      function hasCompletedCaptcha(form){
+        const tokenField=form?form.querySelector('input[name="cf-turnstile-response"]'):null;
+        return !!(tokenField&&tokenField.value&&tokenField.value.trim().length);
+      }
+      function resetCaptchaInForm(form){
+        if(!window.turnstile||!form){return;}
+        const tokenField=form.querySelector('input[name="cf-turnstile-response"]');
+        if(!tokenField){return;}
+        const widgets=document.querySelectorAll('.cf-turnstile input[name="cf-turnstile-response"]');
+        widgets.forEach(function(field){
+          if(field===tokenField){
+            const container=field.closest('.cf-turnstile');
+            if(container){window.turnstile.reset(container);}
+          }
+        });
+      }
       const estimateForm=document.getElementById('estimateForm');
       if(estimateForm){estimateForm.addEventListener('submit',function(e){e.preventDefault();const projectType=(estimateForm.querySelector('[name=\"project_type\"]')||{}).value||'unknown';trackEstimateSubmit(projectType);alert('Thanks! Your estimate request has been recorded.');estimateForm.reset();});}
       const joinTeamForm=document.getElementById('joinTeamForm');
-      if(joinTeamForm){joinTeamForm.addEventListener('submit',function(e){e.preventDefault();const position=(joinTeamForm.querySelector('[name=\"position_interest\"]')||{}).value||'unknown';trackJoinTeamSubmit(position);alert('Thanks! Your job inquiry has been recorded.');joinTeamForm.reset();});}
+      if(joinTeamForm){joinTeamForm.addEventListener('submit',function(e){e.preventDefault();if(!hasCompletedCaptcha(joinTeamForm)){alert('Please complete verification before submitting your job inquiry.');return;}const position=(joinTeamForm.querySelector('[name=\"position_interest\"]')||{}).value||'unknown';trackJoinTeamSubmit(position);alert('Thanks! Your job inquiry has been recorded.');joinTeamForm.reset();resetCaptchaInForm(joinTeamForm);});}
     });
     const menuBtn=document.getElementById('menuBtn'), mobileNav=document.getElementById('mobileNav');
     if(menuBtn&&mobileNav){menuBtn.addEventListener('click',function(){const isOpen=mobileNav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',isOpen?'true':'false');});}
