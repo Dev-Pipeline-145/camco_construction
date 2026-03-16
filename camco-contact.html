@@ -23,6 +23,7 @@
   <meta name="twitter:image" content="Assets/media/camco-construction-social-share-spokane-wa.jpg" />
   <link rel="canonical" href="https://www.CamcoConstruction.net/contact-us/" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1R87642CKG"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -83,6 +84,8 @@
     .card h3{color:#111;margin-bottom:10px;font-size:.95rem;text-transform:uppercase;letter-spacing:.08em}
     .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
     .form-grid .full{grid-column:1/-1}
+    .captcha-wrap{margin-top:4px}
+    .captcha-note{font-size:.78rem;color:#555;margin-top:2px}
     .intent-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
     .intent-card{background:#fff;border:1px solid rgba(0,0,0,.12);padding:24px}
     .intent-card h3{color:#111;margin-bottom:10px;font-size:.95rem;text-transform:uppercase;letter-spacing:.08em}
@@ -347,6 +350,8 @@
           <option value="email">Email</option>
         </select>
         <textarea name="project_description" class="full" placeholder="Project Description"></textarea>
+        <p class="captcha-note full">Complete the reCAPTCHA verification before submitting your estimate request.</p>
+        <div class="captcha-wrap full"><div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div></div>
         <button class="btn full" type="submit" onclick="trackCTAClick('estimate_form_submit_button')">Send Estimate Request <span class="arr">></span></button>
       </div>
     </form>
@@ -375,6 +380,8 @@
         <input type="text" name="certifications" placeholder="Certifications or Licenses" />
         <textarea name="work_history" class="full" placeholder="Brief Work History or Relevant Projects"></textarea>
         <textarea name="availability" class="full" placeholder="Availability and Preferred Start Date"></textarea>
+        <p class="captcha-note full">Complete the reCAPTCHA verification before submitting your job inquiry.</p>
+        <div class="captcha-wrap full"><div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div></div>
         <button class="btn full" type="submit" onclick="trackCTAClick('join_team_form_submit_button')">Submit Job Inquiry <span class="arr">></span></button>
       </div>
     </form>
@@ -522,9 +529,22 @@
       }
       updateTrends();
       const estimateForm=document.getElementById('estimateForm');
-      if(estimateForm){estimateForm.addEventListener('submit',function(e){e.preventDefault();const projectType=(estimateForm.querySelector('[name=\"project_type\"]')||{}).value||'unknown';trackEstimateSubmit(projectType);alert('Thanks! Your estimate request has been recorded.');estimateForm.reset();if(segmentSel) segmentSel.value='residential';if(regionSel) regionSel.value='spokane_wa';updateTrends();});}
+      function hasCompletedRecaptcha(form){
+        const tokenField=form?form.querySelector('textarea[name="g-recaptcha-response"]'):null;
+        return !!(tokenField&&tokenField.value&&tokenField.value.trim().length);
+      }
+      function resetRecaptchaInForm(form){
+        if(!window.grecaptcha||!form){return;}
+        const tokenField=form.querySelector('textarea[name="g-recaptcha-response"]');
+        if(!tokenField){return;}
+        const widgets=document.querySelectorAll('.g-recaptcha textarea[name="g-recaptcha-response"]');
+        widgets.forEach(function(field,idx){
+          if(field===tokenField){window.grecaptcha.reset(idx);}
+        });
+      }
+      if(estimateForm){estimateForm.addEventListener('submit',function(e){e.preventDefault();if(!hasCompletedRecaptcha(estimateForm)){alert('Please complete reCAPTCHA before submitting your estimate request.');return;}const projectType=(estimateForm.querySelector('[name=\"project_type\"]')||{}).value||'unknown';trackEstimateSubmit(projectType);alert('Thanks! Your estimate request has been recorded.');estimateForm.reset();resetRecaptchaInForm(estimateForm);if(segmentSel) segmentSel.value='residential';if(regionSel) regionSel.value='spokane_wa';updateTrends();});}
       const joinTeamForm=document.getElementById('joinTeamForm');
-      if(joinTeamForm){joinTeamForm.addEventListener('submit',function(e){e.preventDefault();const position=(joinTeamForm.querySelector('[name=\"position_interest\"]')||{}).value||'unknown';trackJoinTeamSubmit(position);alert('Thanks! Your job inquiry has been recorded.');joinTeamForm.reset();});}
+      if(joinTeamForm){joinTeamForm.addEventListener('submit',function(e){e.preventDefault();if(!hasCompletedRecaptcha(joinTeamForm)){alert('Please complete reCAPTCHA before submitting your job inquiry.');return;}const position=(joinTeamForm.querySelector('[name=\"position_interest\"]')||{}).value||'unknown';trackJoinTeamSubmit(position);alert('Thanks! Your job inquiry has been recorded.');joinTeamForm.reset();resetRecaptchaInForm(joinTeamForm);});}
     });
     const menuBtn=document.getElementById('menuBtn'), mobileNav=document.getElementById('mobileNav');
     if(menuBtn&&mobileNav){menuBtn.addEventListener('click',function(){const isOpen=mobileNav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',isOpen?'true':'false');});}
