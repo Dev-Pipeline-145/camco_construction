@@ -23,7 +23,7 @@
   <meta name="twitter:image" content="Assets/media/camco-construction-social-share-spokane-wa.jpg" />
   <link rel="canonical" href="https://www.CamcoConstruction.net/contact-us/" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1R87642CKG"></script>
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -222,11 +222,34 @@
         <div class="lbl" style="color:rgba(255,255,255,.6)">Contact Camco Construction</div>
         <h1 class="h1" style="color:#fff;margin-bottom:20px">Project Estimates &amp; Join Our Team in Spokane WA<span class="dot">.</span></h1>
         <p style="color:rgba(255,255,255,.72)">Use this page for two clear paths: request a detailed estimate for your project, or apply to join Camco's construction team. Fast responses and clear next steps.</p>
-        <p style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
-          <a class="btn" href="#request-estimate" onclick="trackCTAClick('contact_path_estimate')">Request an Estimate <span class="arr">></span></a>
-          <a class="btn bol" href="/join-our-team/" onclick="trackCTAClick('contact_path_join_team')">Go to Careers Form <span class="arr">></span></a>
-        </p>
-      </div>
+    </div>
+  </section>
+
+  <section class="section cream" id="contact">
+    <div class="lbl">Choose Your Path</div>
+    <h2 class="h2" style="color:#000;max-width:860px;margin-bottom:16px">Start the Right Conversation<span class="dot">.</span></h2>
+    <div class="intent-grid">
+      <article class="intent-card">
+        <h3>Request an Estimate</h3>
+        <p style="margin-bottom:16px">For residential, commercial, excavation, and accessibility projects. Share scope details and we will follow up with timeline and budget expectations.</p>
+        <a class="btn" href="#request-estimate" onclick="trackCTAClick('contact_path_estimate')">Go to Estimate Form <span class="arr">></span></a>
+      </article>
+      <article class="intent-card">
+        <h3>Join Our Team</h3>
+        <p style="margin-bottom:16px">For skilled trades, labor, project support, and field leadership roles. Submit your experience and preferred position to start the hiring process.</p>
+        <a class="btn" href="#join-team" onclick="trackCTAClick('contact_path_join_team')">Go to Careers Form <span class="arr">></span></a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section cream">
+    <div class="lbl">How We Can Help</div>
+    <h2 class="h2" style="color:#000;max-width:860px;margin-bottom:16px">Residential, Commercial, Excavation, and Accessibility Projects<span class="dot">.</span></h2>
+    <div class="grid2">
+      <article class="card"><h3>Residential</h3><p>Home additions, remodels, deck construction and replacement, and permit-driven upgrades.</p></article>
+      <article class="card"><h3>Commercial &amp; Excavation</h3><p>Tenant improvements, build-outs, and excavation/site prep for business and property projects.</p></article>
+      <article class="card"><h3>Accessibility</h3><p>Wheelchair ramps and veteran-focused accessibility retrofits delivered with code compliance.</p></article>
+      <article class="card"><h3>Service Area</h3><p>Spokane, Spokane Valley, Liberty Lake, Cheney, Mead, Nine Mile Falls, and nearby North Idaho communities.</p></article>
     </div>
   </section>
 
@@ -239,18 +262,6 @@
       <div class="cc"><div class="ccl">Email</div><div class="ccv"><a href="mailto:info@CamcoConstruction.net" onclick="trackEmailClick()">info@CamcoConstruction.net</a></div></div>
       <div class="cc"><div class="ccl">Office</div><div class="ccv">3105 E Boone Ave<br>Spokane, WA 99202</div></div>
       <div class="cc"><div class="ccl">Hours</div><div class="ccv">Mon-Fri: 9am-5pm</div></div>
-    </div>
-    <div class="range-guide" aria-live="polite" aria-label="Typical planning ranges by project segment">
-      <div class="range-head">
-        <strong id="rangeTitle">Typical Planning Ranges: Residential Remodel</strong>
-        <span id="rangeAudience">For homeowners planning remodels and additions</span>
-      </div>
-      <div class="range-grid">
-        <div><small>Budget</small><strong id="rangeBudget">$25k - $60k</strong></div>
-        <div><small>Mid-Range</small><strong id="rangeMid">$60k - $180k</strong></div>
-        <div><small>Complex / High-End</small><strong id="rangeHigh">$180k - $650k+</strong></div>
-      </div>
-      <p id="rangeNote" class="range-note">These ranges are planning benchmarks only. Scope, permitting, engineering, site conditions, and finish level affect final pricing.</p>
     </div>
     <div class="jobtrends jtwf" aria-label="Regional job trend snapshot">
       <h3>JobTrends Snapshot for Quote Planning</h3>
@@ -281,8 +292,8 @@
             </optgroup>
           </select>
         </label>
-        <label>Project Segment (select one or more)
-          <select id="jtSegment" multiple size="6">
+        <label>Project Segment
+          <select id="jtSegment">
             <option value="residential">Residential Remodel</option>
             <option value="kitchen">Kitchen Remodel</option>
             <option value="bathroom">Bathroom Remodel</option>
@@ -296,6 +307,24 @@
           </select>
         </label>
       </div>
+      <div class="jobtrends-kpi">
+        <div><strong id="jtDemand">Demand: Stable</strong><span id="jtDemandNote">Balanced permit activity</span></div>
+        <div><strong id="jtLead">Lead Time: 4-8 wks</strong><span id="jtLeadNote">Varies by scope</span></div>
+        <div><strong id="jtCost">Cost Pressure: Moderate</strong><span id="jtCostNote">Material and labor sensitivity</span></div>
+      </div>
+      <small>Trend indicators help align early quote expectations before final scope and field review.</small>
+    </div>
+    <div class="range-guide" aria-live="polite" aria-label="Typical planning ranges by project segment">
+      <div class="range-head">
+        <strong id="rangeTitle">Typical Planning Ranges: Residential Remodel</strong>
+        <span id="rangeAudience">For homeowners planning remodels and additions</span>
+      </div>
+      <div class="range-grid">
+        <div><small>Budget</small><strong id="rangeBudget">$25k - $60k</strong></div>
+        <div><small>Mid-Range</small><strong id="rangeMid">$60k - $180k</strong></div>
+        <div><small>Complex / High-End</small><strong id="rangeHigh">$180k - $650k+</strong></div>
+      </div>
+      <p id="rangeNote" class="range-note">These ranges are planning benchmarks only. Scope, permitting, engineering, site conditions, and finish level affect final pricing.</p>
     </div>
     <form id="estimateForm" action="#" method="post">
       <input type="hidden" name="jobtrends_region" id="jobtrendsRegion" value="spokane_wa" />
@@ -321,13 +350,68 @@
           <option value="email">Email</option>
         </select>
         <textarea name="project_description" class="full" placeholder="Project Description"></textarea>
-        <div class="captcha-wrap full"><div class="cf-turnstile" data-sitekey="0x4AAAAAACr2KlOzjERFQk4L"></div></div>
+        <p class="captcha-note full">Complete the reCAPTCHA verification before submitting your estimate request.</p>
+        <div class="captcha-wrap full"><div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div></div>
         <button class="btn full" type="submit" onclick="trackCTAClick('estimate_form_submit_button')">Send Estimate Request <span class="arr">></span></button>
       </div>
     </form>
   </section>
 
+  <section class="section" id="join-team" style="background:#fff">
+    <div class="lbl">Join Our Team</div>
+    <h2 class="h2" style="color:#000;max-width:860px;margin-bottom:16px">Apply for Construction Roles at Camco<span class="dot">.</span></h2>
+    <p style="max-width:900px;margin-bottom:22px">Use this form for employment inquiries, trade applications, and field role interest. Include your experience and certifications so our team can review quickly.</p>
+    <form id="joinTeamForm" action="#" method="post">
+      <div class="form-grid">
+        <input type="text" name="full_name" placeholder="Full Name" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <select name="position_interest" required>
+          <option value="">Position of Interest</option>
+          <option value="general_labor">General Labor</option>
+          <option value="carpentry">Carpentry</option>
+          <option value="project_management">Project Management</option>
+          <option value="excavation">Excavation Crew</option>
+          <option value="commercial_construction">Commercial Construction</option>
+          <option value="residential_construction">Residential Construction</option>
+          <option value="other">Other</option>
+        </select>
+        <input type="text" name="years_experience" placeholder="Years of Experience" />
+        <input type="text" name="certifications" placeholder="Certifications or Licenses" />
+        <textarea name="work_history" class="full" placeholder="Brief Work History or Relevant Projects"></textarea>
+        <textarea name="availability" class="full" placeholder="Availability and Preferred Start Date"></textarea>
+        <p class="captcha-note full">Complete the reCAPTCHA verification before submitting your job inquiry.</p>
+        <div class="captcha-wrap full"><div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div></div>
+        <button class="btn full" type="submit" onclick="trackCTAClick('join_team_form_submit_button')">Submit Job Inquiry <span class="arr">></span></button>
+      </div>
+    </form>
+  </section>
+
   </main>
+
+  <section class="section" style="background:#fff;padding-top:0">
+    <div class="assoc-strip">
+      <div class="assoc-title">Industry Associations</div>
+      <div class="assoc-logos">
+        <a class="assoc-logo" href="https://info.shba.com/findapro/Details/camco-construction-inc-3651658" target="_blank" rel="noopener noreferrer" aria-label="Spokane Home Builders Association profile">
+          <img src="Assets/media/camco-spokane-home-builders-association-logo.png" alt="Spokane Home Builders Association logo" loading="lazy" />
+          <span class="assoc-tip"><strong>SHBA Member</strong>Active member listed in SHBA Find a Pro.</span>
+        </a>
+        <a class="assoc-logo" href="https://www.biaw.com/" target="_blank" rel="noopener noreferrer" aria-label="Building Industry Association of Washington website">
+          <img src="Assets/media/camco-biaw-association-logo.png" alt="Building Industry Association of Washington logo" loading="lazy" />
+          <span class="assoc-tip"><strong>BIAW</strong>State-level advocacy and professional standards in Washington.</span>
+        </a>
+        <a class="assoc-logo" href="https://www.nahb.org/why-nahb/about-nahb" target="_blank" rel="noopener noreferrer" aria-label="National Association of Home Builders about page">
+          <img src="Assets/media/camco-nahb-association-logo.jpg" alt="National Association of Home Builders logo" loading="lazy" />
+          <span class="assoc-tip"><strong>NAHB</strong>National home building leadership and education network.</span>
+        </a>
+        <a class="assoc-logo" href="https://www.buildzoom.com/contractor/camco-construction-inc" target="_blank" rel="noopener noreferrer" aria-label="BuildZoom contractor profile">
+          <img src="Assets/media/camco-buildzoom-logo.png" alt="BuildZoom logo" loading="lazy" />
+          <span class="assoc-tip"><strong>BuildZoom 110</strong>Top 4% of Washington licensed contractors.</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <div class="fg">
@@ -400,39 +484,24 @@
         accessibility:{title:'Typical Planning Ranges: Accessibility Improvements',audience:'For aging-in-place and mobility retrofit projects',budget:'$12k - $40k',mid:'$40k - $120k',high:'$120k - $300k+',note:'Ramp geometry, lift/elevator equipment, and structural modifications determine final scope and budget.'},
         other:{title:'Typical Planning Ranges: Custom Project',audience:'For scopes that do not fit a standard segment',budget:'$25k - $100k',mid:'$100k - $300k',high:'$300k - $750k+',note:'Share project details and location so we can refine a realistic range quickly.'}
       };
-      function getSelectedValues(selectEl,fallback){
-        if(!selectEl){return [fallback];}
-        const values=Array.from(selectEl.selectedOptions).map(function(opt){return opt.value;}).filter(Boolean);
-        return values.length?values:[fallback];
-      }
-      function getSelectedLabels(selectEl,fallback){
-        if(!selectEl){return [fallback];}
-        const labels=Array.from(selectEl.selectedOptions).map(function(opt){return opt.text;}).filter(Boolean);
-        return labels.length?labels:[fallback];
-      }
       function updateTrends(){
-        const selectedSegments=getSelectedValues(segmentSel,'residential');
-        const selectedRegions=getSelectedValues(regionSel,'spokane_wa');
-        const seg=selectedSegments[0];
-        const region=selectedRegions[0];
+        const seg=(segmentSel&&segmentSel.value)||'residential';
+        const region=(regionSel&&regionSel.value)||'spokane_wa';
         const v=trendMap[seg]||trendMap.residential;
         const r=rangeMap[seg]||rangeMap.residential;
-        if(demandEl) demandEl.textContent=v.demand;
-        if(demandNote) demandNote.textContent=v.demandNote;
-        if(leadEl) leadEl.textContent=v.lead;
-        if(leadNote) leadNote.textContent=v.leadNote;
-        if(costEl) costEl.textContent=v.cost;
-        if(costNote) costNote.textContent=v.costNote;
+        demandEl.textContent=v.demand; demandNote.textContent=v.demandNote;
+        leadEl.textContent=v.lead; leadNote.textContent=v.leadNote;
+        costEl.textContent=v.cost; costNote.textContent=v.costNote;
         if(rangeTitle) rangeTitle.textContent=r.title;
         if(rangeAudience) rangeAudience.textContent=r.audience;
         if(rangeBudget) rangeBudget.textContent=r.budget;
         if(rangeMid) rangeMid.textContent=r.mid;
         if(rangeHigh) rangeHigh.textContent=r.high;
         if(rangeNote) rangeNote.textContent=r.note;
-        if(hiddenRegion) hiddenRegion.value=selectedRegions.join(',');
-        if(hiddenSeg) hiddenSeg.value=selectedSegments.join(',');
+        if(hiddenRegion) hiddenRegion.value=region;
+        if(hiddenSeg) hiddenSeg.value=seg;
         if(hiddenIndex) hiddenIndex.value=v.index;
-        trackJobTrends(selectedRegions.join(','),selectedSegments.join(','),v.index);
+        trackJobTrends(region,seg,v.index);
       }
       if(regionSel) regionSel.addEventListener('change',updateTrends);
       if(segmentSel) segmentSel.addEventListener('change',updateTrends);
@@ -445,13 +514,8 @@
       const validRegions=['spokane_wa','spokane_valley_wa','liberty_lake_wa','mead_wa','five_mile_prairie_wa','nine_mile_falls_wa','cheney_wa','airway_heights_wa','post_falls_id','coeur_dalene_id','hayden_id','rathdrum_id','sandpoint_id','ponderay_id','sagle_id','other_region'];
       const legacyRegionMap={inland_nw:'spokane_wa',north_idaho:'coeur_dalene_id'};
       const normalizedRegion=validRegions.includes(regionParam)?regionParam:(legacyRegionMap[regionParam]||'');
-      if(segmentSel&&segmentAliases[segmentParam]){
-        const segVal=segmentAliases[segmentParam];
-        Array.from(segmentSel.options).forEach(function(opt){opt.selected=(opt.value===segVal);});
-      }
-      if(regionSel&&normalizedRegion){
-        Array.from(regionSel.options).forEach(function(opt){opt.selected=(opt.value===normalizedRegion);});
-      }
+      if(segmentSel&&segmentAliases[segmentParam]) segmentSel.value=segmentAliases[segmentParam];
+      if(regionSel&&normalizedRegion) regionSel.value=normalizedRegion;
       if(projectTypeSelect&&serviceToType[serviceParam]) projectTypeSelect.value=serviceToType[serviceParam];
       if(segmentAliases[segmentParam]||serviceToType[serviceParam]||normalizedRegion){
         trackEstimatePlannerPrefill(segmentAliases[segmentParam]||'unknown',serviceParam||'unknown',normalizedRegion||'unknown');
@@ -459,139 +523,28 @@
       if(projectTypeSelect){
         projectTypeSelect.addEventListener('change',function(){
           const map={home_additions:'home_additions',residential:'residential',deck_construction:'deck_construction',commercial:'commercial',excavation:'excavation',accessibility:'accessibility',other:'other'};
-          if(segmentSel){
-            const mapped=map[projectTypeSelect.value]||'residential';
-            let found=false;
-            Array.from(segmentSel.options).forEach(function(opt){
-              if(opt.value===mapped){opt.selected=true;found=true;}
-            });
-            if(!found&&segmentSel.options.length){segmentSel.options[0].selected=true;}
-          }
+          if(segmentSel) segmentSel.value=map[projectTypeSelect.value]||'residential';
           updateTrends();
         });
       }
       updateTrends();
       const estimateForm=document.getElementById('estimateForm');
-      function sendEmailCopy(formName,payload){
-        return fetch('https://formsubmit.co/ajax/info@camcoconstruction.net',{
-          method:'POST',
-          headers:{
-            'Content-Type':'application/json',
-            'Accept':'application/json'
-          },
-          body:JSON.stringify({
-            _subject:'Camco Website Form Copy - '+formName,
-            _replyto:payload.replyTo||'',
-            form_name:formName,
-            name:payload.name||'',
-            phone:payload.phone||'',
-            email:payload.email||'',
-            message:payload.message||''
-          })
-        }).catch(function(){ return null; });
-      }
-      function hasCompletedCaptcha(form){
-        const tokenField=form?form.querySelector('input[name="cf-turnstile-response"]'):null;
+      function hasCompletedRecaptcha(form){
+        const tokenField=form?form.querySelector('textarea[name="g-recaptcha-response"]'):null;
         return !!(tokenField&&tokenField.value&&tokenField.value.trim().length);
       }
-      function resetCaptchaInForm(form){
-        if(!window.turnstile||!form){return;}
-        const tokenField=form.querySelector('input[name="cf-turnstile-response"]');
+      function resetRecaptchaInForm(form){
+        if(!window.grecaptcha||!form){return;}
+        const tokenField=form.querySelector('textarea[name="g-recaptcha-response"]');
         if(!tokenField){return;}
-        const widgets=document.querySelectorAll('.cf-turnstile input[name="cf-turnstile-response"]');
-        widgets.forEach(function(field){
-          if(field===tokenField){
-            const container=field.closest('.cf-turnstile');
-            if(container){window.turnstile.reset(container);}
-          }
+        const widgets=document.querySelectorAll('.g-recaptcha textarea[name="g-recaptcha-response"]');
+        widgets.forEach(function(field,idx){
+          if(field===tokenField){window.grecaptcha.reset(idx);}
         });
       }
-      if(estimateForm){estimateForm.addEventListener('submit',async function(e){
-        e.preventDefault();
-        if(!hasCompletedCaptcha(estimateForm)){
-          alert('Please complete verification before submitting your estimate request.');
-          return;
-        }
-        const nameField=estimateForm.querySelector('[name="name"]');
-        const phoneField=estimateForm.querySelector('[name="phone"]');
-        const emailField=estimateForm.querySelector('[name="email"]');
-        const projectTypeField=estimateForm.querySelector('[name="project_type"]');
-        const preferredContactField=estimateForm.querySelector('[name="preferred_contact"]');
-        const descriptionField=estimateForm.querySelector('[name="project_description"]');
-        const projectType=(projectTypeField||{}).value||'unknown';
-        const projectTypeLabel=projectTypeField&&projectTypeField.selectedIndex>=0?projectTypeField.options[projectTypeField.selectedIndex].text:projectType;
-        const preferredContact=preferredContactField&&preferredContactField.selectedIndex>=0?preferredContactField.options[preferredContactField.selectedIndex].text:'';
-        const regionLabels=getSelectedLabels(regionSel,'Unknown Region');
-        const segmentLabels=getSelectedLabels(segmentSel,'Unknown Segment');
-        const regionValues=getSelectedValues(regionSel,'spokane_wa');
-        const segmentValues=getSelectedValues(segmentSel,'residential');
-        const userDescription=(descriptionField&&descriptionField.value?descriptionField.value.trim():'');
-        const detailLines=[
-          userDescription?('Project Description:\\n'+userDescription):'',
-          '--- Intake Details ---',
-          'Preferred Contact: '+(preferredContact||'Not specified'),
-          'Project Type: '+(projectTypeLabel||projectType),
-          'Segments: '+segmentLabels.join(', '),
-          'Regions: '+regionLabels.join(', '),
-          'JobTrends Index: '+((hiddenIndex&&hiddenIndex.value)||'unknown'),
-          'Selected Segment Values: '+segmentValues.join(','),
-          'Selected Region Values: '+regionValues.join(','),
-          'Source Page: '+window.location.href
-        ].filter(Boolean);
-        if(descriptionField){descriptionField.value=detailLines.join('\\n\\n');}
-        trackEstimateSubmit(projectType);
-        await Promise.race([
-          sendEmailCopy('Estimate Request',{
-            name:nameField&&nameField.value?nameField.value.trim():'',
-            phone:phoneField&&phoneField.value?phoneField.value.trim():'',
-            email:emailField&&emailField.value?emailField.value.trim():'',
-            replyTo:emailField&&emailField.value?emailField.value.trim():'',
-            message:detailLines.join('\\n\\n')
-          }),
-          new Promise(function(resolve){setTimeout(resolve,1200);})
-        ]);
-        alert('Thanks! Your estimate request has been recorded.');
-        estimateForm.reset();
-        resetCaptchaInForm(estimateForm);
-      });}
+      if(estimateForm){estimateForm.addEventListener('submit',function(e){e.preventDefault();if(!hasCompletedRecaptcha(estimateForm)){alert('Please complete reCAPTCHA before submitting your estimate request.');return;}const projectType=(estimateForm.querySelector('[name=\"project_type\"]')||{}).value||'unknown';trackEstimateSubmit(projectType);alert('Thanks! Your estimate request has been recorded.');estimateForm.reset();resetRecaptchaInForm(estimateForm);if(segmentSel) segmentSel.value='residential';if(regionSel) regionSel.value='spokane_wa';updateTrends();});}
       const joinTeamForm=document.getElementById('joinTeamForm');
-      if(joinTeamForm){joinTeamForm.addEventListener('submit',async function(e){
-        e.preventDefault();
-        if(!hasCompletedCaptcha(joinTeamForm)){
-          alert('Please complete verification before submitting your job inquiry.');
-          return;
-        }
-        const fullNameField=joinTeamForm.querySelector('[name="full_name"]');
-        const phoneField=joinTeamForm.querySelector('[name="phone"]');
-        const emailField=joinTeamForm.querySelector('[name="email"]');
-        const positionField=joinTeamForm.querySelector('[name="position_interest"]');
-        const yearsField=joinTeamForm.querySelector('[name="years_experience"]');
-        const certsField=joinTeamForm.querySelector('[name="certifications"]');
-        const historyField=joinTeamForm.querySelector('[name="work_history"]');
-        const availabilityField=joinTeamForm.querySelector('[name="availability"]');
-        const position=(positionField||{}).value||'unknown';
-        const positionLabel=positionField&&positionField.selectedIndex>=0?positionField.options[positionField.selectedIndex].text:position;
-        const messageLines=[
-          '--- Join Team Inquiry ---',
-          'Position of Interest: '+(positionLabel||position),
-          'Years of Experience: '+(yearsField&&yearsField.value?yearsField.value.trim():'Not provided'),
-          'Certifications: '+(certsField&&certsField.value?certsField.value.trim():'Not provided'),
-          'Work History: '+(historyField&&historyField.value?historyField.value.trim():'Not provided'),
-          'Availability: '+(availabilityField&&availabilityField.value?availabilityField.value.trim():'Not provided'),
-          'Source Page: '+window.location.href
-        ];
-        trackJoinTeamSubmit(position);
-        await sendEmailCopy('Join Team Inquiry',{
-          name:fullNameField&&fullNameField.value?fullNameField.value.trim():'',
-          phone:phoneField&&phoneField.value?phoneField.value.trim():'',
-          email:emailField&&emailField.value?emailField.value.trim():'',
-          replyTo:emailField&&emailField.value?emailField.value.trim():'',
-          message:messageLines.join('\\n\\n')
-        });
-        alert('Thanks! Your job inquiry has been recorded.');
-        joinTeamForm.reset();
-        resetCaptchaInForm(joinTeamForm);
-      });}
+      if(joinTeamForm){joinTeamForm.addEventListener('submit',function(e){e.preventDefault();if(!hasCompletedRecaptcha(joinTeamForm)){alert('Please complete reCAPTCHA before submitting your job inquiry.');return;}const position=(joinTeamForm.querySelector('[name=\"position_interest\"]')||{}).value||'unknown';trackJoinTeamSubmit(position);alert('Thanks! Your job inquiry has been recorded.');joinTeamForm.reset();resetRecaptchaInForm(joinTeamForm);});}
     });
     const menuBtn=document.getElementById('menuBtn'), mobileNav=document.getElementById('mobileNav');
     if(menuBtn&&mobileNav){menuBtn.addEventListener('click',function(){const isOpen=mobileNav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',isOpen?'true':'false');});}
