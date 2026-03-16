@@ -92,6 +92,7 @@
     .cc{padding:24px 18px;border-right:1px solid rgba(0,0,0,.13)} .cc:last-child{border-right:none}
     .ccl{font-size:.64rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-bottom:8px}
     .ccv{font-weight:700;color:#000}
+    .ccv a{color:#000;text-decoration:none}
     footer{background:#000;padding:60px 0 0}
     .fg{width:min(1140px,90vw);margin:0 auto;display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr 1fr;gap:28px;padding-bottom:38px;border-bottom:1px solid rgba(255,255,255,.08)}
     .fb p{font-size:13px;color:rgba(255,255,255,.72);line-height:1.8;max-width:280px}
@@ -264,17 +265,42 @@
       <div class="jobtrends-grid">
         <label>Region
           <select id="jtRegion">
-            <option value="spokane_wa">Spokane, WA</option>
-            <option value="inland_nw">Inland Northwest</option>
-            <option value="north_idaho">North Idaho</option>
+            <optgroup label="Washington">
+              <option value="spokane_wa">Spokane</option>
+              <option value="spokane_valley_wa">Spokane Valley</option>
+              <option value="liberty_lake_wa">Liberty Lake</option>
+              <option value="mead_wa">Mead</option>
+              <option value="five_mile_prairie_wa">Five Mile Prairie</option>
+              <option value="nine_mile_falls_wa">Nine Mile Falls</option>
+              <option value="cheney_wa">Cheney</option>
+              <option value="airway_heights_wa">Airway Heights</option>
+            </optgroup>
+            <optgroup label="Idaho">
+              <option value="post_falls_id">Post Falls</option>
+              <option value="coeur_dalene_id">Coeur d'Alene</option>
+              <option value="hayden_id">Hayden</option>
+              <option value="rathdrum_id">Rathdrum</option>
+              <option value="sandpoint_id">Sandpoint</option>
+              <option value="ponderay_id">Ponderay</option>
+              <option value="sagle_id">Sagle</option>
+            </optgroup>
+            <optgroup label="Other">
+              <option value="other_region">Other / Not Listed</option>
+            </optgroup>
           </select>
         </label>
         <label>Project Segment
           <select id="jtSegment">
             <option value="residential">Residential Remodel</option>
+            <option value="kitchen">Kitchen Remodel</option>
+            <option value="bathroom">Bathroom Remodel</option>
+            <option value="home_additions">Home Addition</option>
+            <option value="adu">ADU</option>
+            <option value="deck_construction">Deck Construction</option>
             <option value="commercial">Commercial TI</option>
             <option value="excavation">Excavation</option>
             <option value="accessibility">Accessibility</option>
+            <option value="other">Other / Not Listed</option>
           </select>
         </label>
       </div>
@@ -429,15 +455,27 @@
       const projectTypeSelect=document.querySelector('#estimateForm [name="project_type"]');
       const trendMap={
         residential:{demand:'Demand: High',demandNote:'Strong remodel demand in established neighborhoods',lead:'Lead Time: 4-10 wks',leadNote:'Design and permit dependencies',cost:'Cost Pressure: Moderate',costNote:'Finish selections drive variance',index:'high'},
+        kitchen:{demand:'Demand: High',demandNote:'Consistent kitchen upgrade demand in established homes',lead:'Lead Time: 4-10 wks',leadNote:'Design, cabinet, and permit sequencing',cost:'Cost Pressure: Moderate',costNote:'Finish and appliance selection sensitive',index:'high'},
+        bathroom:{demand:'Demand: High',demandNote:'Steady demand for high-use space updates',lead:'Lead Time: 3-8 wks',leadNote:'Fixture and waterproofing lead times vary',cost:'Cost Pressure: Moderate',costNote:'Tile and fixture selections influence variance',index:'high'},
+        home_additions:{demand:'Demand: High',demandNote:'Strong expansion demand in family neighborhoods',lead:'Lead Time: 6-14 wks',leadNote:'Engineering and permitting add timeline',cost:'Cost Pressure: Moderate',costNote:'Structural complexity drives cost movement',index:'high'},
+        adu:{demand:'Demand: Growing',demandNote:'Rising interest in ADU and multi-generational options',lead:'Lead Time: 8-20 wks',leadNote:'Planning and utilities can extend schedule',cost:'Cost Pressure: Moderate',costNote:'Mechanical and site requirements are key',index:'growing'},
+        deck_construction:{demand:'Demand: Stable',demandNote:'Seasonal demand remains consistent regionally',lead:'Lead Time: 2-8 wks',leadNote:'Material and weather windows apply',cost:'Cost Pressure: Moderate',costNote:'Material choice affects range quickly',index:'stable'},
         commercial:{demand:'Demand: High',demandNote:'Tenant turnover and TI cycles remain active',lead:'Lead Time: 3-8 wks',leadNote:'Coordination with occupancy and inspections',cost:'Cost Pressure: Moderate',costNote:'Scheduling and trade availability impact',index:'high'},
         excavation:{demand:'Demand: Stable',demandNote:'Seasonal fluctuations in our region',lead:'Lead Time: 2-6 wks',leadNote:'Weather and utility windows',cost:'Cost Pressure: Moderate',costNote:'Fuel and haul-off conditions apply',index:'stable'},
-        accessibility:{demand:'Demand: Growing',demandNote:'Increased retrofit planning for aging-in-place',lead:'Lead Time: 2-7 wks',leadNote:'Scope complexity shifts timeline',cost:'Cost Pressure: Moderate',costNote:'Equipment and custom elements vary',index:'growing'}
+        accessibility:{demand:'Demand: Growing',demandNote:'Increased retrofit planning for aging-in-place',lead:'Lead Time: 2-7 wks',leadNote:'Scope complexity shifts timeline',cost:'Cost Pressure: Moderate',costNote:'Equipment and custom elements vary',index:'growing'},
+        other:{demand:'Demand: Stable',demandNote:'Regional demand varies by project type',lead:'Lead Time: Varies',leadNote:'Timeline depends on scope and permitting',cost:'Cost Pressure: Moderate',costNote:'Scope definition improves estimate confidence',index:'stable'}
       };
       const rangeMap={
         residential:{title:'Typical Planning Ranges: Residential Remodel',audience:'For homeowners planning remodels and additions',budget:'$25k - $60k',mid:'$60k - $180k',high:'$180k - $650k+',note:'Kitchen, bathroom, structural remodel, and ADU-related scopes often vary by complexity and finish level.'},
+        kitchen:{title:'Typical Planning Ranges: Kitchen Remodel',audience:'For homeowners planning functional and finish upgrades',budget:'$25k - $45k',mid:'$50k - $85k',high:'$90k - $180k+',note:'Cabinet level, layout changes, and appliance package drive final budget.'},
+        bathroom:{title:'Typical Planning Ranges: Bathroom Remodel',audience:'For homeowners planning wet-area upgrades',budget:'$12k - $22k',mid:'$25k - $45k',high:'$50k - $95k+',note:'Tile complexity, fixtures, and waterproofing details influence total cost.'},
+        home_additions:{title:'Typical Planning Ranges: Home Addition',audience:'For family space expansion and room additions',budget:'$150k - $250k',mid:'$250k - $420k',high:'$420k - $650k+',note:'Engineering, structural integration, and finish continuity impact costs.'},
+        adu:{title:'Typical Planning Ranges: ADU',audience:'For detached, interior, and conversion ADU planning',budget:'$80k - $220k',mid:'$220k - $420k',high:'$420k - $650k+',note:'Utility ties, code requirements, and full-apartment scope determine range.'},
+        deck_construction:{title:'Typical Planning Ranges: Deck Construction',audience:'For new decks, replacements, and upgrades',budget:'$18k - $35k',mid:'$35k - $70k',high:'$70k - $140k+',note:'Decking material, rail systems, and structural corrections affect pricing.'},
         commercial:{title:'Typical Planning Ranges: Commercial TI / Build-Out',audience:'For property managers, business owners, and investors',budget:'$40k - $150k',mid:'$150k - $450k',high:'$450k - $750k+',note:'Occupied-space constraints, permitting, and phased scheduling can materially influence final pricing.'},
         excavation:{title:'Typical Planning Ranges: Excavation & Site Prep',audience:'For site prep, utility, and grading scopes',budget:'$15k - $60k',mid:'$60k - $180k',high:'$180k - $400k+',note:'Soils, haul-off volume, utility conflicts, and weather windows drive range movement.'},
-        accessibility:{title:'Typical Planning Ranges: Accessibility Improvements',audience:'For aging-in-place and mobility retrofit projects',budget:'$12k - $40k',mid:'$40k - $120k',high:'$120k - $300k+',note:'Ramp geometry, lift/elevator equipment, and structural modifications determine final scope and budget.'}
+        accessibility:{title:'Typical Planning Ranges: Accessibility Improvements',audience:'For aging-in-place and mobility retrofit projects',budget:'$12k - $40k',mid:'$40k - $120k',high:'$120k - $300k+',note:'Ramp geometry, lift/elevator equipment, and structural modifications determine final scope and budget.'},
+        other:{title:'Typical Planning Ranges: Custom Project',audience:'For scopes that do not fit a standard segment',budget:'$25k - $100k',mid:'$100k - $300k',high:'$300k - $750k+',note:'Share project details and location so we can refine a realistic range quickly.'}
       };
       function updateTrends(){
         const seg=(segmentSel&&segmentSel.value)||'residential';
@@ -461,20 +499,23 @@
       if(regionSel) regionSel.addEventListener('change',updateTrends);
       if(segmentSel) segmentSel.addEventListener('change',updateTrends);
       const params=new URLSearchParams(window.location.search);
-      const segmentAliases={residential:'residential',commercial:'commercial',excavation:'excavation',accessibility:'accessibility',realtors:'commercial',projects:'residential'};
+      const segmentAliases={residential:'residential',kitchen:'kitchen',bathroom:'bathroom',home_additions:'home_additions',adu:'adu',deck_construction:'deck_construction',commercial:'commercial',excavation:'excavation',accessibility:'accessibility',realtors:'commercial',projects:'residential',other:'other'};
       const serviceToType={residential:'residential',home_additions:'home_additions',deck_construction:'deck_construction',commercial:'commercial',excavation:'excavation',accessibility:'accessibility',realtors:'commercial',projects:'other'};
       const segmentParam=(params.get('segment')||'').toLowerCase();
       const serviceParam=(params.get('service')||'').toLowerCase();
       const regionParam=(params.get('region')||'').toLowerCase();
+      const validRegions=['spokane_wa','spokane_valley_wa','liberty_lake_wa','mead_wa','five_mile_prairie_wa','nine_mile_falls_wa','cheney_wa','airway_heights_wa','post_falls_id','coeur_dalene_id','hayden_id','rathdrum_id','sandpoint_id','ponderay_id','sagle_id','other_region'];
+      const legacyRegionMap={inland_nw:'spokane_wa',north_idaho:'coeur_dalene_id'};
+      const normalizedRegion=validRegions.includes(regionParam)?regionParam:(legacyRegionMap[regionParam]||'');
       if(segmentSel&&segmentAliases[segmentParam]) segmentSel.value=segmentAliases[segmentParam];
-      if(regionSel&&['spokane_wa','inland_nw','north_idaho'].includes(regionParam)) regionSel.value=regionParam;
+      if(regionSel&&normalizedRegion) regionSel.value=normalizedRegion;
       if(projectTypeSelect&&serviceToType[serviceParam]) projectTypeSelect.value=serviceToType[serviceParam];
-      if(segmentAliases[segmentParam]||serviceToType[serviceParam]||['spokane_wa','inland_nw','north_idaho'].includes(regionParam)){
-        trackEstimatePlannerPrefill(segmentAliases[segmentParam]||'unknown',serviceParam||'unknown',['spokane_wa','inland_nw','north_idaho'].includes(regionParam)?regionParam:'unknown');
+      if(segmentAliases[segmentParam]||serviceToType[serviceParam]||normalizedRegion){
+        trackEstimatePlannerPrefill(segmentAliases[segmentParam]||'unknown',serviceParam||'unknown',normalizedRegion||'unknown');
       }
       if(projectTypeSelect){
         projectTypeSelect.addEventListener('change',function(){
-          const map={home_additions:'residential',residential:'residential',deck_construction:'residential',commercial:'commercial',excavation:'excavation',accessibility:'accessibility',other:'residential'};
+          const map={home_additions:'home_additions',residential:'residential',deck_construction:'deck_construction',commercial:'commercial',excavation:'excavation',accessibility:'accessibility',other:'other'};
           if(segmentSel) segmentSel.value=map[projectTypeSelect.value]||'residential';
           updateTrends();
         });
