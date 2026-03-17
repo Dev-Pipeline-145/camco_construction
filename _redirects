@@ -8,8 +8,8 @@
 /camco-deck-construction.html /deck-construction/ 301
 /camco-accessibility-ramps.html /residential/ 301
 /camco-about.html /about/ 301
-/camco-about /about/ 301
-/camco-about/ /about/ 301
+/camco-about /camco-about.html 200
+/camco-about/ /camco-about.html 200
 /camco-contact.html /contact-us/ 301
 /camco-contact /contact-us/ 301
 /camco-contact/ /contact-us/ 301
