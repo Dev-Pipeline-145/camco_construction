@@ -14,10 +14,12 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/Logo/camco-favicon-32.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/Logo/camco-apple-touch-icon.png" />
 
-  <title>Contact Camco Construction | Estimates & Careers</title>
-  <meta name="description" content="Request a project estimate or apply to join Camco. Serving Spokane with residential, commercial, excavation, and accessibility services." />
+  <title>Contact Camco Construction Spokane WA | 509-536-1818</title>
+  <meta name="description" content="Contact Camco Construction in Spokane WA for project estimates. Call 509-536-1818 or email info@CamcoConstruction.net for residential and commercial work." />
   <meta name="robots" content="index, follow" />
   <meta name="keywords" content="Camco Construction contact Spokane WA, construction estimate Spokane WA, contractor careers Spokane, join construction team Spokane WA" />
+  <meta name="short-tail-keywords" content="contact Camco Construction Spokane WA, construction estimate Spokane WA, contractor consultation Spokane" />
+  <meta name="long-tail-keywords" content="contact general contractor Spokane WA, request construction estimate Spokane WA, Camco Construction phone and email" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Camco Construction" />
   <meta property="og:title" content="Contact Camco Construction | Estimates & Careers" />
@@ -221,7 +223,7 @@
     </details>
     <a href="/projects/">Projects</a>
     <a href="/join-our-team/">Join Our Team</a>
-    <a href="/contact-us/" onclick="trackCTAClick('contact_nav_mobile_contact')">Contact us</a>
+    <a href="/contact-us/" onclick="trackCTAClick('contact_nav_mobile_contact')">Contact Us</a>
   </nav>
 
 
@@ -343,7 +345,7 @@
   <footer>
     <div class="fg">
       <div class="fb"><img class="logo-img" src="Logo/CAMCO_Construction_logo.webp" alt="Camco Construction logo" width="163" height="92" /><p>Serving the Spokane area with professional construction, structural remodels, and additions since 1976. Licensed, insured and bonded in WA &amp; ID.</p></div>
-      <div class="fc"><h3>Navigation</h3><ul><li><a href="/">Home</a></li><li><a href="/about/">About</a></li><li><a href="/residential/">Services</a></li><li><a href="/projects/">Projects</a></li><li><a href="/join-our-team/">Join Our Team</a></li><li><a href="/contact-us/">Contact us</a></li></ul></div>
+      <div class="fc"><h3>Navigation</h3><ul><li><a href="/">Home</a></li><li><a href="/about/">About</a></li><li><a href="/residential/">Services</a></li><li><a href="/projects/">Projects</a></li><li><a href="/join-our-team/">Join Our Team</a></li><li><a href="/contact-us/">Contact Us</a></li></ul></div>
       <div class="fc"><h3>Services</h3><ul><li><a href="/residential/">Residential Services</a></li><li><a href="/home-additions/">Home Additions</a></li><li><a href="/deck-construction/">Deck Construction</a></li><li><a href="/commercial/">Commercial &amp; Excavation</a></li><li><a href="/accessibility-ramps/">Accessibility &amp; Ramps</a></li><li><a href="/for-realtors/">For Realtors &amp; Property Managers</a></li></ul></div>
       <div class="fc"><h3>Contact</h3><ul><li><span>3105 E Boone Ave</span></li><li><span>Spokane, WA 99202</span></li><li><a href="tel:+15095361818" onclick="trackPhoneClick()">(509) 536-1818</a></li><li><a href="mailto:info@CamcoConstruction.net" onclick="trackEmailClick()">info@CamcoConstruction.net</a></li><li><a href="https://www.facebook.com/camcoconstruction" target="_blank" rel="noopener noreferrer">Facebook</a></li><li><a href="https://www.linkedin.com/company/camco-construction-spokane/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li><li><span>Contractor: #CAMCOCI799L5</span></li>
           <li><span>Member: Spokane Home Builders Association</span></li></ul></div>
@@ -565,14 +567,14 @@
           'Selected Region Values: '+regionValues.join(','),
           'Source Page: '+window.location.href
         ].filter(Boolean);
-        if(descriptionField){descriptionField.value=detailLines.join('\\n\\n');}
+        const formattedDetailMessage=detailLines.join('\n\n');
         trackEstimateSubmit(projectType);
         const emailResult=await sendEmailCopy('Estimate Request',{
           name:nameField&&nameField.value?nameField.value.trim():'',
           phone:phoneField&&phoneField.value?phoneField.value.trim():'',
           email:emailField&&emailField.value?emailField.value.trim():'',
           replyTo:emailField&&emailField.value?emailField.value.trim():'',
-          message:detailLines.join('\\n\\n')
+          message:formattedDetailMessage
         });
         if(!emailSubmissionSucceeded(emailResult)){
           alert(emailFailureMessage(emailResult));
@@ -614,7 +616,7 @@
           phone:phoneField&&phoneField.value?phoneField.value.trim():'',
           email:emailField&&emailField.value?emailField.value.trim():'',
           replyTo:emailField&&emailField.value?emailField.value.trim():'',
-          message:messageLines.join('\\n\\n')
+          message:messageLines.join('\n\n')
         });
         if(!emailSubmissionSucceeded(emailResult)){
           alert(emailFailureMessage(emailResult));
