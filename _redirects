@@ -49,3 +49,11 @@
 /general-contracting/ /camco-commercial.html 200
 /wheelchair-ramps /residential/ 301
 /wheelchair-ramps/ /residential/ 301
+/magnolia-remodel /projects/ 301
+/magnolia-remodel/ /projects/ 301
+/esumac-deck /deck-construction/ 301
+/esumac-deck/ /deck-construction/ 301
+/wp-admin / 301
+/wp-admin/ / 301
+/wp-admin/* / 301
+/wp-login.php / 301
