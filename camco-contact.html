@@ -530,24 +530,30 @@
         if(result&&result.data&&result.data.message){return result.data.message;}
         return 'We could not deliver your form details by email. Please try again in a moment or call 509-536-1818.';
       }
+      function getCaptchaTokenField(form){
+        return form?form.querySelector('[name="cf-turnstile-response"]'):null;
+      }
       function hasCompletedCaptcha(form){
-        const tokenField=form?form.querySelector('input[name="cf-turnstile-response"]'):null;
+        const tokenField=getCaptchaTokenField(form);
         return !!(tokenField&&tokenField.value&&tokenField.value.trim().length);
       }
       function resetCaptchaInForm(form){
-        if(!window.turnstile||!form){return;}
-        const tokenField=form.querySelector('input[name="cf-turnstile-response"]');
-        if(!tokenField){return;}
-        const widgets=document.querySelectorAll('.cf-turnstile input[name="cf-turnstile-response"]');
-        widgets.forEach(function(field){
-          if(field===tokenField){
-            const container=field.closest('.cf-turnstile');
-            if(container){window.turnstile.reset(container);}
-          }
-        });
+        if(!window.turnstile||typeof window.turnstile.reset!=='function'||!form){return;}
+        const container=form.querySelector('.cf-turnstile');
+        if(!container){return;}
+        const widgetId=container.getAttribute('data-widget-id');
+        if(widgetId){
+          window.turnstile.reset(widgetId);
+          return;
+        }
+        window.turnstile.reset(container);
       }
       if(estimateForm){estimateForm.addEventListener('submit',async function(e){
         e.preventDefault();
+        if(!window.turnstile){
+          alert('Verification did not load. Refresh this page and try again.');
+          return;
+        }
         if(!hasCompletedCaptcha(estimateForm)){
           alert('Please complete verification before submitting your estimate request.');
           return;
