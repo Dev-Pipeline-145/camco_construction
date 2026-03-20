@@ -406,6 +406,12 @@
             alert(emailFailureMessage(emailResult));
             return;
           }
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event:'form_submit_success',
+            form_type:'join_team',
+            form_name:'camco_join_team_form'
+          });
           alert('Thanks! Your job inquiry has been recorded.');
           joinTeamForm.reset();
           resetCaptchaInForm(joinTeamForm);
