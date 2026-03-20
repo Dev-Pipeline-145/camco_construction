@@ -31,15 +31,14 @@
   <meta name="twitter:description" content="Request a project estimate or apply to join Camco. Serving Spokane with residential, commercial, excavation, and accessibility services." />
   <meta name="twitter:image" content="Assets/media/camco-construction-social-share-spokane-wa.jpg" />
   <link rel="canonical" href="https://camcoconstruction.net/contact-us/" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1R87642CKG"></script>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-1R87642CKG');
-    gtag('config', 'GT-TWQ52BC9');
-    gtag('event','landing_page_view',{'landing_page': window.location.pathname, 'lead_source_page': window.location.href});
+    dataLayer.push({
+      event: 'landing_page_view',
+      landing_page: window.location.pathname,
+      lead_source_page: window.location.href
+    });
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

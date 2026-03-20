@@ -31,14 +31,13 @@
   <meta name="twitter:description" content="View Camco Construction projects in Spokane WA across residential remodels, commercial improvements, excavation scopes, and accessibility work." />
   <meta name="twitter:image" content="Assets/site-images/commercial_contracting_sidepic-da4e7172.jpg" />
   <link rel="canonical" href="https://camcoconstruction.net/projects/" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1R87642CKG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-1R87642CKG');
-    gtag('config', 'GT-TWQ52BC9');
-    gtag('event','landing_page_view',{'landing_page': window.location.pathname, 'lead_source_page': window.location.href});
+    dataLayer.push({
+      event: 'landing_page_view',
+      landing_page: window.location.pathname,
+      lead_source_page: window.location.href
+    });
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
