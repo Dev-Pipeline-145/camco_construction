@@ -1,41 +1,75 @@
-/ /camco-homepage.html 200
-/camco-homepage.html / 301
-/camco-commercial.html /commercial/ 301
-/camco-residential.html /residential/ 301
-/camco-home-additions.html /home-additions/ 301
-/camco-deck-construction.html /deck-construction/ 301
-/camco-accessibility-ramps.html /accessibility-ramps/ 301
-/camco-about.html /about/ 301
-/camco-contact.html /contact-us/ 301
-/camco-projects.html /projects/ 301
-/camco-join-our-team.html /join-our-team/ 301
-/camco-residential-page.html /residential/ 301
-/commercial /camco-commercial.html 200
-/commercial/ /camco-commercial.html 200
-/residential /camco-residential.html 200
-/residential/ /camco-residential.html 200
-/commercial-contracting /camco-commercial.html 200
-/commercial-contracting/ /camco-commercial.html 200
-/residential-contracting /camco-residential.html 200
-/residential-contracting/ /camco-residential.html 200
-/home-additions /camco-home-additions.html 200
-/home-additions/ /camco-home-additions.html 200
-/deck-construction /camco-deck-construction.html 200
-/deck-construction/ /camco-deck-construction.html 200
-/accessibility-ramps /camco-accessibility-ramps.html 200
-/accessibility-ramps/ /camco-accessibility-ramps.html 200
-/about /camco-about.html 200
-/about/ /camco-about.html 200
-/contact-us /camco-contact.html 200
-/contact-us/ /camco-contact.html 200
-/projects /camco-projects.html 200
-/projects/ /camco-projects.html 200
-/join-our-team /camco-join-our-team.html 200
-/join-our-team/ /camco-join-our-team.html 200
-/camco-for-realtors.html /for-realtors/ 301
-/for-realtors /camco-for-realtors.html 200
-/for-realtors/ /camco-for-realtors.html 200
-/general-contracting /camco-commercial.html 200
-/general-contracting/ /camco-commercial.html 200
-/wheelchair-ramps /camco-accessibility-ramps.html 200
-/wheelchair-ramps/ /camco-accessibility-ramps.html 200
+# Camco Construction — _redirects
+# Rule: pretty URLs → .html files via 200 rewrite (silent, no loop possible)
+# .html files are NEVER redirect destinations — removing all .html → pretty 301s
+# One redirect authority only — no duplicate rules in Cloudflare dashboard
+
+# ── Root/Homepage safety ─────────────────────────────────────────────────────
+/                                   /camco-homepage.html            200
+/camco-homepage                     /camco-homepage.html            200
+/camco-homepage/                    /camco-homepage.html            200
+
+# ── Core pages ───────────────────────────────────────────────────────────────
+/about                              /camco-about.html               200
+/about/                             /camco-about.html               200
+/residential                        /camco-residential.html         200
+/residential/                       /camco-residential.html         200
+/commercial                         /camco-commercial.html          200
+/commercial/                        /camco-commercial.html          200
+/home-additions                     /camco-home-additions.html      200
+/home-additions/                    /camco-home-additions.html      200
+/deck-construction                  /camco-deck-construction.html   200
+/deck-construction/                 /camco-deck-construction.html   200
+/projects                           /camco-projects.html            200
+/projects/                          /camco-projects.html            200
+/join-our-team                      /camco-join-our-team.html       200
+/join-our-team/                     /camco-join-our-team.html       200
+/contact-us                         /camco-contact.html             200
+/contact-us/                        /camco-contact.html             200
+/accessibility-ramps                /camco-accessibility-ramps.html 200
+/accessibility-ramps/               /camco-accessibility-ramps.html 200
+/for-realtors                       /camco-for-realtors.html        200
+/for-realtors/                      /camco-for-realtors.html        200
+
+# ── Old /camco-* preview URLs → correct pages (200 rewrite, loop-safe) ─────
+/camco-about                        /camco-about.html               200
+/camco-about/                       /camco-about.html               200
+/camco-residential                  /camco-residential.html         200
+/camco-residential/                 /camco-residential.html         200
+/camco-commercial                   /camco-commercial.html          200
+/camco-commercial/                  /camco-commercial.html          200
+/camco-home-additions               /camco-home-additions.html      200
+/camco-home-additions/              /camco-home-additions.html      200
+/camco-deck-construction            /camco-deck-construction.html   200
+/camco-deck-construction/           /camco-deck-construction.html   200
+/camco-projects                     /camco-projects.html            200
+/camco-projects/                    /camco-projects.html            200
+/camco-join-our-team                /camco-join-our-team.html       200
+/camco-join-our-team/               /camco-join-our-team.html       200
+/camco-contact                      /camco-contact.html             200
+/camco-contact/                     /camco-contact.html             200
+
+# ── Old WordPress URL aliases → existing pages (200 rewrite) ────────────────
+/residential-contracting            /camco-residential.html         200
+/residential-contracting/           /camco-residential.html         200
+/commercial-contracting             /camco-commercial.html          200
+/commercial-contracting/            /camco-commercial.html          200
+/general-contracting                /camco-commercial.html          200
+/general-contracting/               /camco-commercial.html          200
+/wheelchair-ramps                   /camco-accessibility-ramps.html 200
+/wheelchair-ramps/                  /camco-accessibility-ramps.html 200
+
+# ── Singular → plural URL fix ────────────────────────────────────────────────
+/home-addition                      /home-additions/                301
+/home-addition/                     /home-additions/                301
+
+# ── Old WordPress project pages → projects index ────────────────────────────
+/magnolia-remodel                   /projects/                      301
+/magnolia-remodel/                  /projects/                      301
+/esumac-deck                        /deck-construction/             301
+/esumac-deck/                       /deck-construction/             301
+
+# ── WordPress security blocks ────────────────────────────────────────────────
+/wp-admin                           /                               301
+/wp-admin/                          /                               301
+/wp-admin/*                         /                               301
+/wp-login.php                       /                               301
