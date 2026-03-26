@@ -197,6 +197,26 @@
       #hdr .nav-cta{display:none !important;}
       #hdr .menu-btn{display:block !important;}
     }
+    .skip-link{
+      position:absolute;
+      left:-9999px;
+      top:auto;
+      width:1px;
+      height:1px;
+      overflow:hidden;
+      z-index:10000;
+    }
+    .skip-link:focus{
+      left:1rem;
+      top:1rem;
+      width:auto;
+      height:auto;
+      background:#000;
+      color:#fff;
+      padding:.6rem .8rem;
+      border-radius:2px;
+      text-decoration:none;
+    }
   </style>
     <script type="application/ld+json">
   {
@@ -243,12 +263,13 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P47697N4"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+  <a class="skip-link" href="#main">Skip to main content</a>
   <header id="hdr">
     <a class="logo-box" href="/" aria-label="Camco Construction Home">
       <img class="logo-img" src="Logo/CAMCO_Construction_logo.webp" alt="Camco Construction logo" width="163" height="92" />
     </a>
     <ul class="nav">
-      <li><a class="on" href="/">Home</a></li>
+      <li><a class="on" href="/" aria-current="page">Home</a></li>
       <li><a href="/about/">About</a></li>
       <li class="services-menu">
         <a class="services-toggle" href="/residential/" aria-haspopup="true" aria-expanded="false">Services <span class="services-caret">▾</span></a>
@@ -273,12 +294,12 @@
       <li><a href="/join-our-team/">Join Our Team</a></li>
     </ul>
     <div class="nav-cta"><a href="/contact-us/" data-event="click" data-label="cta_click_nav_contact_homepage">Contact Us <span class="arr">></span></a></div>
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
       <span class="bar"></span><span class="bar"></span><span class="bar"></span>
     </button>
   </header>
   <nav class="mobile-nav" id="mobileNav">
-    <a href="/">Home</a>
+    <a href="/" aria-current="page">Home</a>
     <a href="/about/">About</a>
     <details class="mobile-services">
       <summary>Services</summary>
@@ -299,7 +320,7 @@
   </nav>
 
 
-  <main>
+  <main id="main">
   <section class="hero">
     <div class="wrap">
       <div class="label">Honest Work Since 1976</div>
