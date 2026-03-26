@@ -67,9 +67,30 @@ Or add Eleventy/Jekyll later and turn these into real partials.
 
 ## Git workflow
 
-1. Create or switch to `dev` from `main`: `git checkout -b dev`  
-2. Feature branch: `git checkout -b <your-initials>/<website-name>`  
-3. Commit and push when ready.
+This matches **[AGENTS.md](./AGENTS.md)** (`<initials>/<website-name>`). Use **letters, numbers, and hyphens** only—no spaces or apostrophes (they break shell quoting and some hosts).
+
+From your default branch (usually `main`):
+
+```bash
+git checkout -b mk/camco-site
+```
+
+Replace `mk/camco-site` with your initials and a short site slug (example only).
+
+Push and set upstream:
+
+```bash
+git push -u origin mk/camco-site
+```
+
+If you are already on a branch with a different name, rename it to match the convention:
+
+```bash
+git branch -m mk/camco-site
+git push -u origin mk/camco-site
+```
+
+(If the old branch was already pushed, delete the remote old name in GitHub after pushing the new one, or ask your team how they manage renames.)
 
 ## Contact form
 
