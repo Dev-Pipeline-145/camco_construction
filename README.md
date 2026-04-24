@@ -6,22 +6,45 @@ A multi-page website built with plain HTML, CSS, and JavaScript.
 
 ## Running Locally
 
-Serve the project with any static file server. Examples:
-
-MacOS 13 and Above
+### MacOS 13 and Above
 
 ```bash
+nvm use 22
 npx wrangler pages dev ./ --live-reload
 ```
 
-Pre MacOS 13
+#### How to return to devshop standard node version
+
+```bash
+nvm use 18.20.8
+```
+
+### Pre MacOS 13
 
 ```bash
 podman machine start
 podman compose up --watch
 ```
 
-Open `http://localhost:8788` in your browser.
+### How to install
+
+MacOS 13 and Above
+
+Make sure you have NVM installed on your machine
+
+```bash
+nvm install --lts v22
+nvm use 22
+npm i wrangler
+npx wrangler pages dev ./ --live-reload
+```
+
+Pre MacOS 13
+
+Go to important links for projects, In the camco section is a folder,
+Follow the steps from running.md
+
+### Open `http://localhost:8788` in your browser.
 
 ## Git Workflow
 
