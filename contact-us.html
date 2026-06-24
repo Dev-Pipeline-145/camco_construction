@@ -1,8 +1,8 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
   <head>
     <!-- Google Tag Manager -->
-    <script>
+<!-- <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -13,18 +13,18 @@
         j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
         f.parentNode.insertBefore(j, f);
       })(window, document, "script", "dataLayer", "GTM-P47697N4");
-    </script>
-    <!-- End Google Tag Manager -->
+    </script> -->
+<!-- End Google Tag Manager -->
 
-    <script>
+<!-- <script>
       window.dataLayer = window.dataLayer || [];
       window.gtag =
         window.gtag ||
         function () {
           window.dataLayer.push(arguments);
         };
-    </script>
-    <meta charset="utf-8" />
+    </script> -->
+<!-- <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="icon"
@@ -109,8 +109,8 @@
     <link href="../assets/fonts/fonts.css" rel="stylesheet" />
 
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com" /> -->
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
-    <!-- <link
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+<!-- <link
       rel="preload"
       href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap"
       as="style"
@@ -119,12 +119,12 @@
         this.rel = 'stylesheet';
       "
     /> -->
-    <!-- <noscript
+<!-- <noscript
       ><link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap"
     /></noscript> -->
-    <style>
+<!-- <style>
       *,
       *::before,
       *::after {
@@ -796,18 +796,19 @@
       }
     </script>
   </head>
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
+  <body> -->
+-->
+<!-- Google Tag Manager (noscript) -->
+<!-- <noscript
       ><iframe
         src="https://www.googletagmanager.com/ns.html?id=GTM-P47697N4"
         height="0"
         width="0"
         style="display: none; visibility: hidden"
       ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <header id="hdr">
+    ></noscript> -->
+<!-- End Google Tag Manager (noscript) -->
+<!-- <header id="hdr">
       <a class="logo-box" href="/" aria-label="Camco Construction Home"
         ><img
           class="logo-img"
@@ -1229,84 +1230,84 @@
     </footer>
 
     <script>
-      function trackPhoneClick() {
-        gtag("event", "generate_lead", {
-          event_category: "contact",
-          event_label: "phone_click",
-          service_category: "contact",
-          contact_method: "phone",
-          lead_source_page: window.location.href,
-        });
+      function trackPhoneClick() { -->
+<!-- // gtag("event", "generate_lead", {
+        //   event_category: "contact",
+        //   event_label: "phone_click",
+        //   service_category: "contact",
+        //   contact_method: "phone",
+        //   lead_source_page: window.location.href,
+        // });
       }
       function trackEmailClick() {
-        gtag("event", "generate_lead", {
-          event_category: "contact",
-          event_label: "email_click",
-          service_category: "contact",
-          contact_method: "email",
-          lead_source_page: window.location.href,
-        });
+        // gtag("event", "generate_lead", {
+        //   event_category: "contact",
+        //   event_label: "email_click",
+        //   service_category: "contact",
+        //   contact_method: "email",
+        //   lead_source_page: window.location.href,
+        // });
       }
       function trackCTAClick(label) {
-        gtag("event", "click", {
-          event_category: "cta",
-          event_label: label || "contact_cta",
-          service_category: "contact",
-          lead_source_page: window.location.href,
-        });
+        // gtag("event", "click", {
+        //   event_category: "cta",
+        //   event_label: label || "contact_cta",
+        //   service_category: "contact",
+        //   lead_source_page: window.location.href,
+        // });
       }
       function trackJobTrends(region, segment, index) {
-        gtag("event", "jobtrends_update", {
-          event_category: "jobtrends",
-          event_label: "jobtrends_update",
-          lead_source_page: window.location.href,
-          jobtrends_region: region,
-          jobtrends_segment: segment,
-          jobtrends_index: index,
-        });
+        // gtag("event", "jobtrends_update", {
+        //   event_category: "jobtrends",
+        //   event_label: "jobtrends_update",
+        //   lead_source_page: window.location.href,
+        //   jobtrends_region: region,
+        //   jobtrends_segment: segment,
+        //   jobtrends_index: index,
+        // });
       }
       function trackEstimatePlannerPrefill(segment, service, region) {
-        gtag("event", "estimate_planner_prefill", {
-          event_category: "estimate_planner",
-          event_label: "estimate_planner_prefill_context",
-          lead_source_page: window.location.href,
-          planner_segment: segment || "unknown",
-          planner_service: service || "unknown",
-          planner_region: region || "unknown",
-          event_action: "prefill_context",
-        });
+        // gtag("event", "estimate_planner_prefill", {
+        //   event_category: "estimate_planner",
+        //   event_label: "estimate_planner_prefill_context",
+        //   lead_source_page: window.location.href,
+        //   planner_segment: segment || "unknown",
+        //   planner_service: service || "unknown",
+        //   planner_region: region || "unknown",
+        //   event_action: "prefill_context",
+        // });
       }
       function trackEstimateSubmit(projectType) {
-        gtag("event", "generate_lead", {
-          event_category: "contact",
-          event_label: "estimate_form_submit",
-          service_category: projectType || "contact",
-          contact_method: "form",
-          lead_source_page: window.location.href,
-        });
-        gtag("event", "form_submit", {
-          event_category: "contact",
-          event_label: "estimate_form",
-          form_name: "camco_estimate_form",
-          lead_source_page: window.location.href,
-          project_type: projectType || "unknown",
-        });
+        // gtag("event", "generate_lead", {
+        //   event_category: "contact",
+        //   event_label: "estimate_form_submit",
+        //   service_category: projectType || "contact",
+        //   contact_method: "form",
+        //   lead_source_page: window.location.href,
+        // });
+        // gtag("event", "form_submit", {
+        //   event_category: "contact",
+        //   event_label: "estimate_form",
+        //   form_name: "camco_estimate_form",
+        //   lead_source_page: window.location.href,
+        //   project_type: projectType || "unknown",
+        // });
       }
       function trackJoinTeamSubmit(position) {
-        gtag("event", "generate_lead", {
-          event_category: "careers",
-          event_label: "join_team_form_submit",
-          service_category: "careers",
-          contact_method: "form",
-          lead_source_page: window.location.href,
-        });
-        gtag("event", "form_submit", {
-          event_category: "careers",
-          event_label: "join_team_form",
-          form_name: "camco_join_team_form",
-          lead_source_page: window.location.href,
-          position_interest: position || "unknown",
-        });
+        // gtag("event", "generate_lead", {
+        //   event_category: "careers",
+        //   event_label: "join_team_form_submit",
+        //   service_category: "careers",
+        //   contact_method: "form",
+        //   lead_source_page: window.location.href,
+        // });
+        // gtag("event", "form_submit", {
+        //   event_category: "careers",
+        //   event_label: "join_team_form",
+        //   form_name: "camco_join_team_form",
+        //   lead_source_page: window.location.href,
+        //   position_interest: position || "unknown",
+        // });
       }
       document.addEventListener("DOMContentLoaded", function () {
         const regionSel = document.getElementById("jtRegion");
@@ -1921,8 +1922,8 @@
           const isOpen = mobileNav.classList.toggle("open");
           menuBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
         });
-      }
-    </script>
+      } -->
+<!-- </script>
 
     <script>
       (function () {
@@ -1953,4 +1954,4 @@
       })();
     </script>
   </body>
-</html>
+</html> -->
