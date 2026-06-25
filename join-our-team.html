@@ -47,10 +47,6 @@
   </script>
   <link href="../assets/fonts/fonts.css" rel="stylesheet"/>
 
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap" /></noscript> -->
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{--red:#c8102e;--blk:#000;--cream:#f5ece8;--gray:#555;--font:'Barlow',Helvetica,Arial,sans-serif}
@@ -262,25 +258,17 @@
         <textarea name="work_history" class="full" placeholder="Brief Work History or Relevant Projects"></textarea>
         <textarea name="availability" class="full" placeholder="Availability and Preferred Start Date"></textarea>
         <p class="full">
-              By submitting this form, you agree to our
-              <a href="/privacy-policy">Privacy Policy</a>. Your information is
-              used only to respond to your inquiry.
+              <p class="full">
+          By submitting this form, you consent to Camco Construction collecting
+          and using the information you provide to evaluate your employment
+          inquiry. Your message may be processed by FormSubmit, our email
+          delivery provider, so we can receive it. This page may use Cloudflare
+          Turnstile for bot verification.
+        </p>
             </p>
         <button class="btn full" type="submit" onclick="trackCTAClick('join_team_page_submit')">Submit Job Inquiry <span class="arr">></span></button>
       </div>
     </form>
-    <div id="policy-wrapper" class="policy-wrapper non-exist">
-  <h1>Privacy Policy</h1>
-  <p>
-    To contact us directly through the website you must agree to the
-    <a href="/privacy-policy">privacy policy</a>. <br />
-    <br />
-    By clicking "Accept all" you consent to the use of all essential and
-    non-essential cookies, technologies and everything outlined in the privacy
-    policy.
-  </p>
-  <button onclick="acceptPolicy()">Accept All</button>
-</div>
   </section>
 </main>
 
