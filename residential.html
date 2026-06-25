@@ -1,30 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google Tag Manager -->
-    <!-- <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-P47697N4");
-    </script> -->
-    <!-- End Google Tag Manager -->
-
-    <!-- <script>
-      window.dataLayer = window.dataLayer || [];
-      window.gtag =
-        window.gtag ||
-        function () {
-          window.dataLayer.push(arguments);
-        };
-    </script> -->
-    <meta charset="utf-8" />
+<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="icon"
@@ -96,7 +73,6 @@
     <link rel="canonical" href="https://camcoconstruction.net/residential/" />
     <link href="../assets/fonts/fonts.css" rel="stylesheet" />
 
-    <!-- Google tag (gtag.js) -->
     <style>
       *,
       *::before,
@@ -834,15 +810,7 @@
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
-    <!-- <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-P47697N4"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript> -->
-    <!-- End Google Tag Manager (noscript) -->
+<!-- End Google Tag Manager (noscript) -->
     <header id="hdr">
       <a class="logo-box" href="/" aria-label="Camco Construction Home">
         <img
@@ -887,8 +855,6 @@
       <div class="nav-cta">
         <a
           href="/contact-us/"
-          data-event="click"
-          data-label="cta_click_nav_contact_residential"
           >Contact Us <span class="arr">></span></a
         >
       </div>
@@ -923,8 +889,6 @@
       <a href="/join-our-team/">Join Our Team</a>
       <a
         href="/contact-us/"
-        data-event="click"
-        data-label="cta_click_nav_mobile_residential"
         >Contact Us</a
       >
     </nav>
@@ -955,15 +919,11 @@
             <a
               class="btn"
               href="/contact-us/?segment=residential&service=residential#request-estimate"
-              data-event="click"
-              data-label="cta_residential_estimate"
               >Request a Free Residential Estimate <span class="arr">></span></a
             >
             <a
               class="btn bol"
               href="/projects/"
-              data-event="click"
-              data-label="cta_click_projects_residential"
               style="margin-left: 12px"
               >See Our Work <span class="arr">></span></a
             >
@@ -1502,8 +1462,6 @@
               <div class="contact-value">
                 <a
                   href="tel:5095361818"
-                  data-event="generate_lead"
-                  data-label="phone_click_residential"
                   >509-536-1818</a
                 >
               </div>
@@ -1513,8 +1471,6 @@
               <div class="contact-value">
                 <a
                   href="mailto:info@CamcoConstruction.net"
-                  data-event="generate_lead"
-                  data-label="email_click_residential"
                   >info@CamcoConstruction.net</a
                 >
               </div>
@@ -1534,8 +1490,6 @@
             <a
               class="btn"
               href="/contact-us/?segment=residential&service=residential#request-estimate"
-              data-event="click"
-              data-label="cta_residential_estimate"
               >Request a Free Estimate <span class="arr">></span></a
             >
           </p>
@@ -1590,16 +1544,12 @@
             <li>
               <a
                 href="tel:5095361818"
-                data-event="generate_lead"
-                data-label="phone_click_residential"
                 >(509) 536-1818</a
               >
             </li>
             <li>
               <a
                 href="mailto:info@CamcoConstruction.net"
-                data-event="generate_lead"
-                data-label="email_click_residential"
                 >info@CamcoConstruction.net</a
               >
             </li>
@@ -1635,73 +1585,7 @@
         <a href="/">camcoconstruction.net</a>
       </div>
     </footer>
-    <script>
-      (function () {
-        const menuBtn = document.getElementById("menuBtn");
-        const mobileNav = document.getElementById("mobileNav");
-        if (menuBtn && mobileNav) {
-          menuBtn.addEventListener("click", function () {
-            const isOpen = mobileNav.classList.toggle("open");
-            menuBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
-          });
-        }
-
-        window.dataLayer = window.dataLayer || [];
-        function track(eventName, label, extras) {
-          const payload = Object.assign(
-            { event: eventName, event_label: label },
-            extras || {}
-          );
-          window.dataLayer.push(payload);
-          // if (typeof window.gtag === "function") {
-          //   window.gtag(
-          //     "event",
-          //     eventName,
-          //     Object.assign({ event_label: label }, extras || {})
-          //   );
-          // }
-        }
-
-        document
-          .querySelectorAll("[data-event][data-label]")
-          .forEach(function (el) {
-            el.addEventListener("click", function () {
-              track(
-                el.getAttribute("data-event"),
-                el.getAttribute("data-label"),
-                { page_path: "/residential/" }
-              );
-            });
-          });
-
-        let sent50 = false;
-        let sent75 = false;
-        window.addEventListener("scroll", function () {
-          const pct =
-            ((window.scrollY + window.innerHeight) /
-              document.documentElement.scrollHeight) *
-            100;
-          if (!sent50 && pct >= 50) {
-            sent50 = true;
-            track("scroll", "scroll_depth_residential", {
-              percent_scrolled: 50,
-            });
-          }
-          if (!sent75 && pct >= 75) {
-            sent75 = true;
-            track("scroll", "scroll_depth_residential", {
-              percent_scrolled: 75,
-            });
-          }
-        });
-
-        track("landing_page_view", "landing_page_residential", {
-          landing_page: "/residential/",
-        });
-      })();
-    </script>
-
-    <script>
+<script>
       (function () {
         const hdr = document.getElementById("hdr");
         const nav = hdr ? hdr.querySelector(".nav") : null;
@@ -1724,6 +1608,13 @@
             menuBtn.setAttribute("aria-expanded", "false");
           }
         }
+
+        
+        menuBtn.addEventListener("click", function () {
+          const isOpen = mobileNav.classList.toggle("open");
+          menuBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+
 
         window.addEventListener("resize", syncResponsiveNav);
         syncResponsiveNav();
