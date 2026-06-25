@@ -56,6 +56,7 @@
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{--red:#c8102e;--blk:#000;--cream:#f5ece8;--gray:#555;--font:'Barlow',Helvetica,Arial,sans-serif}
     body{font-family:var(--font);font-size:12pt;color:var(--gray);line-height:1.7}
+    a { color: inherit; }
     #hdr{background:#000;position:sticky;top:0;z-index:999;display:flex;align-items:stretch;min-height:70px}
     .logo-box{background:#000;padding:10px 18px;display:flex;align-items:center;flex-shrink:0}
     .logo-img{height:46px;width:auto}
@@ -214,16 +215,16 @@
             <span class="services-group-title">Commercial</span>
             <a href="/commercial/">Commercial</a>
           </div>
-          <!-- <div class="services-group">
+          <div class="services-group">
             <span class="services-group-title">Request an Estimate</span>
             <a href="/contact-us/#request-estimate">Request an Estimate</a>
-          </div> -->
+          </div>
         </div>
       </li>
       <li><a href="/projects/">Projects</a></li>
-      <!-- <li><a href="/join-our-team/">Join Our Team</a></li> -->
+      <li><a href="/join-our-team/">Join Our Team</a></li>
     </ul>
-    <!-- <div class="nav-cta"><a href="/contact-us/" onclick="trackCTAClick('about_nav_contact')">Contact Us <span class="arr">></span></a></div> -->
+    <div class="nav-cta"><a href="/contact-us/" onclick="trackCTAClick('about_nav_contact')">Contact Us <span class="arr">></span></a></div>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
   </header>
   <nav class="mobile-nav" id="mobileNav">
@@ -239,12 +240,12 @@
         <span class="mobile-services-group-title">Commercial</span>
         <a href="/commercial/">Commercial</a>
         <span class="mobile-services-group-title">Request an Estimate</span>
-        <!-- <a href="/contact-us/#request-estimate">Request an Estimate</a> -->
+        <a href="/contact-us/#request-estimate">Request an Estimate</a>
       </div>
     </details>
     <a href="/projects/">Projects</a>
-    <!-- <a href="/join-our-team/">Join Our Team</a> -->
-    <!-- <a href="/contact-us/" onclick="trackCTAClick('about_nav_mobile_contact')">Contact Us</a> -->
+    <a href="/join-our-team/">Join Our Team</a>
+    <a href="/contact-us/" onclick="trackCTAClick('about_nav_mobile_contact')">Contact Us</a>
   </nav>
 
 
@@ -365,7 +366,7 @@
       <div class="cc"><div class="ccl">Email</div><div class="ccv"><a href="mailto:info@CamcoConstruction.net" onclick="trackEmailClick()">info@CamcoConstruction.net</a></div></div>
       <div class="cc"><div class="ccl">Office</div><div class="ccv"><address>3105 E Boone Ave<br>Spokane, WA 99202</address><br><span style="font-weight:400;color:#777;font-size:.85rem">Monday-Friday, 9am-5pm</span></div></div>
     </div>
-    <!-- <a class="btn" href="/contact-us/" onclick="trackCTAClick('cta_about_contact')">Request a Free Estimate <span class="arr">></span></a> -->
+    <a class="btn" href="/contact-us/" onclick="trackCTAClick('cta_about_contact')">Request a Free Estimate <span class="arr">></span></a>
   </section>
 
   </main>
@@ -373,19 +374,19 @@
   <footer>
     <div class="fg">
       <div class="fb"><img class="logo-img" src="assets/images/logos/CAMCO_Construction_logo.webp" alt="Camco Construction logo" width="163" height="92" /><p>Serving the Spokane area with professional construction, structural remodels, and additions since 1976. Licensed, insured and bonded in WA &amp; ID.</p></div>
-      <!-- <div class="fc"><h3>Navigation</h3><ul><li><a href="/">Home</a></li><li><a href="/about/">About</a></li><li><a href="/residential/">Services</a></li><li><a href="/projects/">Projects</a></li><li><a href="/join-our-team/">Join Our Team</a></li><li><a href="/contact-us/" onclick="trackCTAClick('about_footer_contact')">Contact Us</a></li></ul></div> -->
+      <div class="fc"><h3>Navigation</h3><ul><li><a href="/">Home</a></li><li><a href="/about/">About</a></li><li><a href="/residential/">Services</a></li><li><a href="/projects/">Projects</a></li><li><a href="/join-our-team/">Join Our Team</a></li><li><a href="/contact-us/" onclick="trackCTAClick('about_footer_contact')">Contact Us</a></li></ul></div>
       <div class="fc"><h3>Services</h3><ul>
           <li><a href="/residential/">Residential Services</a></li>
           <li><a href="/home-additions/">Home Additions</a></li>
           <li><a href="/deck-construction/">Deck Construction</a></li>
           <li><a href="/commercial/">Commercial Construction</a></li>
-          <!-- <li><a href="/contact-us/#request-estimate">Request an Estimate</a></li> -->
+          <li><a href="/contact-us/#request-estimate">Request an Estimate</a></li>
         </ul></div>
       <div class="fc"><h3>Contact</h3><ul><li><span>3105 E Boone Ave</span></li><li><span>Spokane, WA 99202</span></li><li><a href="tel:+15095361818" onclick="trackPhoneClick()">(509) 536-1818</a></li><li><a href="mailto:info@CamcoConstruction.net" onclick="trackEmailClick()">info@CamcoConstruction.net</a></li><li><a href="https://www.facebook.com/camcoconstruction" target="_blank" rel="noopener noreferrer">Facebook</a></li><li><a href="https://www.linkedin.com/company/camco-construction-spokane/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li><li><span>Contractor: #CAMCOCI799L5</span></li>
           <li><span>Member: Spokane Home Builders Association</span></li></ul></div>
       <div class="fc"><h3>Working Hours</h3><ul><li><span>Monday - Friday: 9am - 5pm</span></li><li><span>Saturday - Sunday: Closed</span></li></ul></div>
     </div>
-    <div class="fbot"><span>2026 © Camco Construction INC. All rights reserved.</span> <a href="/privacy-policy/">Privacy Policy</a> <a href="/">camcoconstruction.net</a></div>
+    <div class="fbot"><span>2026 © Camco Construction INC. All rights reserved.</span> <a href="/privacy-policy">Privacy Policy</a> <a href="/">camcoconstruction.net</a></div>
   </footer>
 
   <!-- <script>

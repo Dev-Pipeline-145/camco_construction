@@ -1,8 +1,8 @@
-<!-- <!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Google Tag Manager -->
-<!-- <script>
+    <!-- <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -14,9 +14,9 @@
         f.parentNode.insertBefore(j, f);
       })(window, document, "script", "dataLayer", "GTM-P47697N4");
     </script> -->
-<!-- End Google Tag Manager -->
+    <!-- End Google Tag Manager -->
 
-<!-- <script>
+    <!-- <script>
       window.dataLayer = window.dataLayer || [];
       window.gtag =
         window.gtag ||
@@ -24,7 +24,7 @@
           window.dataLayer.push(arguments);
         };
     </script> -->
-<!-- <meta charset="utf-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="icon"
@@ -109,8 +109,8 @@
     <link href="../assets/fonts/fonts.css" rel="stylesheet" />
 
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com" /> -->
-<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
-<!-- <link
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+    <!-- <link
       rel="preload"
       href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap"
       as="style"
@@ -119,12 +119,12 @@
         this.rel = 'stylesheet';
       "
     /> -->
-<!-- <noscript
+    <!-- <noscript
       ><link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap"
     /></noscript> -->
-<!-- <style>
+    <style>
       *,
       *::before,
       *::after {
@@ -144,6 +144,9 @@
         font-size: 12pt;
         color: var(--gray);
         line-height: 1.7;
+      }
+      a {
+        color: inherit;
       }
       #hdr {
         background: #000;
@@ -437,14 +440,6 @@
       }
       .form-grid .full {
         grid-column: 1/-1;
-      }
-      .captcha-wrap {
-        margin-top: 4px;
-      }
-      .captcha-note {
-        font-size: 0.78rem;
-        color: #555;
-        margin-top: 2px;
       }
       .intent-grid {
         display: grid;
@@ -796,10 +791,9 @@
       }
     </script>
   </head>
-  <body> -->
--->
-<!-- Google Tag Manager (noscript) -->
-<!-- <noscript
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <!-- <noscript
       ><iframe
         src="https://www.googletagmanager.com/ns.html?id=GTM-P47697N4"
         height="0"
@@ -807,8 +801,8 @@
         style="display: none; visibility: hidden"
       ></iframe
     ></noscript> -->
-<!-- End Google Tag Manager (noscript) -->
-<!-- <header id="hdr">
+    <!-- End Google Tag Manager (noscript) -->
+    <header id="hdr">
       <a class="logo-box" href="/" aria-label="Camco Construction Home"
         ><img
           class="logo-img"
@@ -1068,6 +1062,7 @@
             engineering, site conditions, and finish level affect final pricing.
           </p>
         </div>
+
         <form id="estimateForm" action="#" method="post">
           <input
             type="hidden"
@@ -1121,12 +1116,11 @@
               class="full"
               placeholder="Project Description"
             ></textarea>
-            <div class="captcha-wrap full">
-              <div
-                class="cf-turnstile"
-                data-sitekey="0x4AAAAAACr2KlOzjERFQk4L"
-              ></div>
-            </div>
+            <p class="full">
+              By submitting this form, you agree to our
+              <a href="/privacy-policy">Privacy Policy</a>. Your information is
+              used only to respond to your inquiry.
+            </p>
             <button
               class="btn full"
               type="submit"
@@ -1225,13 +1219,13 @@
       </div>
       <div class="fbot">
         <span>2026 © Camco Construction INC. All rights reserved.</span
-        ><a href="/privacy-policy/">Privacy Policy</a> <a href="/">camcoconstruction.net</a>
+        ><a href="/">camcoconstruction.net</a>
       </div>
     </footer>
 
     <script>
-      function trackPhoneClick() { -->
-<!-- // gtag("event", "generate_lead", {
+      function trackPhoneClick() {
+        // gtag("event", "generate_lead", {
         //   event_category: "contact",
         //   event_label: "phone_click",
         //   service_category: "contact",
@@ -1710,53 +1704,9 @@
           }
           return "We could not deliver your form details by email. Please try again in a moment or call 509-536-1818.";
         }
-        function getCaptchaTokenField(form) {
-          return form
-            ? form.querySelector('[name="cf-turnstile-response"]')
-            : null;
-        }
-        function hasCompletedCaptcha(form) {
-          const tokenField = getCaptchaTokenField(form);
-          return !!(
-            tokenField &&
-            tokenField.value &&
-            tokenField.value.trim().length
-          );
-        }
-        function resetCaptchaInForm(form) {
-          if (
-            !window.turnstile ||
-            typeof window.turnstile.reset !== "function" ||
-            !form
-          ) {
-            return;
-          }
-          const container = form.querySelector(".cf-turnstile");
-          if (!container) {
-            return;
-          }
-          const widgetId = container.getAttribute("data-widget-id");
-          if (widgetId) {
-            window.turnstile.reset(widgetId);
-            return;
-          }
-          window.turnstile.reset(container);
-        }
         if (estimateForm) {
           estimateForm.addEventListener("submit", async function (e) {
             e.preventDefault();
-            if (!window.turnstile) {
-              alert(
-                "Verification did not load. Refresh this page and try again."
-              );
-              return;
-            }
-            if (!hasCompletedCaptcha(estimateForm)) {
-              alert(
-                "Please complete verification before submitting your estimate request."
-              );
-              return;
-            }
             const nameField = estimateForm.querySelector('[name="name"]');
             const phoneField = estimateForm.querySelector('[name="phone"]');
             const emailField = estimateForm.querySelector('[name="email"]');
@@ -1827,19 +1777,12 @@
             });
             alert("Thanks! Your estimate request has been recorded.");
             estimateForm.reset();
-            resetCaptchaInForm(estimateForm);
           });
         }
         const joinTeamForm = document.getElementById("joinTeamForm");
         if (joinTeamForm) {
           joinTeamForm.addEventListener("submit", async function (e) {
             e.preventDefault();
-            if (!hasCompletedCaptcha(joinTeamForm)) {
-              alert(
-                "Please complete verification before submitting your job inquiry."
-              );
-              return;
-            }
             const fullNameField =
               joinTeamForm.querySelector('[name="full_name"]');
             const phoneField = joinTeamForm.querySelector('[name="phone"]');
@@ -1911,7 +1854,6 @@
             });
             alert("Thanks! Your job inquiry has been recorded.");
             joinTeamForm.reset();
-            resetCaptchaInForm(joinTeamForm);
           });
         }
       });
@@ -1922,8 +1864,8 @@
           const isOpen = mobileNav.classList.toggle("open");
           menuBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
         });
-      } -->
-<!-- </script>
+      }
+    </script>
 
     <script>
       (function () {
@@ -1954,4 +1896,4 @@
       })();
     </script>
   </body>
-</html> -->
+</html>
