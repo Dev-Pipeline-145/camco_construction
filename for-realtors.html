@@ -1,30 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-P47697N4");
-    </script>
-    <!-- End Google Tag Manager -->
-
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      window.gtag =
-        window.gtag ||
-        function () {
-          window.dataLayer.push(arguments);
-        };
-    </script>
-    <meta charset="utf-8" />
+<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="icon"
@@ -93,22 +70,8 @@
       content="assets/images/logos/camco-construction-social-share-spokane-wa.jpg"
     />
     <link rel="canonical" href="https://camcoconstruction.net/for-realtors/" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap"
-      as="style"
-      onload="
-        this.onload = null;
-        this.rel = 'stylesheet';
-      "
-    />
-    <noscript
-      ><link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap"
-    /></noscript>
+    <link href="../assets/fonts/fonts.css" rel="stylesheet" />
+
     <style>
       *,
       *::before,
@@ -131,6 +94,9 @@
         font-size: 12pt;
         color: var(--gray);
         line-height: 1.7;
+      }
+      a {
+        color: inherit;
       }
       #hdr {
         background: var(--blk);
@@ -581,16 +547,6 @@
     </script>
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-P47697N4"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <header id="hdr">
       <a class="logo-box" href="/" aria-label="Camco Construction Home"
         ><img
@@ -634,7 +590,7 @@
       <div class="nav-cta">
         <a
           href="/contact-us/?segment=commercial&service=realtors#request-estimate"
-          onclick="trackCTAClick('cta_realtors_connect')"
+         
           >Let's Connect <span class="arr">></span></a
         >
       </div>
@@ -669,7 +625,7 @@
       <a href="/join-our-team/">Join Our Team</a>
       <a
         href="/contact-us/?segment=commercial&service=realtors#request-estimate"
-        onclick="trackCTAClick('cta_realtors_connect')"
+       
         >Let's Connect</a
       >
     </nav>
@@ -860,7 +816,7 @@
           <div class="cc">
             <div class="ccl">Phone</div>
             <div class="ccv">
-              <a href="tel:+15095361818" onclick="trackPhoneClick()"
+              <a href="tel:+15095361818"
                 >509-536-1818</a
               >
             </div>
@@ -870,7 +826,7 @@
             <div class="ccv">
               <a
                 href="mailto:info@CamcoConstruction.net"
-                onclick="trackEmailClick()"
+               
                 >info@CamcoConstruction.net</a
               >
             </div>
@@ -885,7 +841,7 @@
         <a
           class="btn"
           href="/contact-us/?segment=commercial&service=realtors#request-estimate"
-          onclick="trackCTAClick('cta_realtors_connect')"
+         
           >Let's Connect <span class="arr">></span></a
         >
       </section>
@@ -936,14 +892,14 @@
             <li><span>3105 E Boone Ave</span></li>
             <li><span>Spokane, WA 99202</span></li>
             <li>
-              <a href="tel:+15095361818" onclick="trackPhoneClick()"
+              <a href="tel:+15095361818"
                 >(509) 536-1818</a
               >
             </li>
             <li>
               <a
                 href="mailto:info@CamcoConstruction.net"
-                onclick="trackEmailClick()"
+               
                 >info@CamcoConstruction.net</a
               >
             </li>
@@ -976,46 +932,42 @@
         </div>
       </div>
       <div class="fbot">
-        <span>2026 © Camco Construction INC. All rights reserved.</span
-        ><a href="/">camcoconstruction.net</a>
+        <span>2026 © Camco Construction INC. All rights reserved.</span>
+        <a href="/">camcoconstruction.net</a>
       </div>
     </footer>
-
     <script>
-      function trackPhoneClick() {
-        gtag("event", "generate_lead", {
-          event_category: "contact",
-          event_label: "phone_click",
-          service_category: "realtors",
-          contact_method: "phone",
-          lead_source_page: window.location.href,
-        });
-      }
-      function trackEmailClick() {
-        gtag("event", "generate_lead", {
-          event_category: "contact",
-          event_label: "email_click",
-          service_category: "realtors",
-          contact_method: "email",
-          lead_source_page: window.location.href,
-        });
-      }
-      function trackCTAClick(label) {
-        gtag("event", "click", {
-          event_category: "cta",
-          event_label: label || "cta_realtors_connect",
-          service_category: "realtors",
-          lead_source_page: window.location.href,
-        });
-      }
-      const menuBtn = document.getElementById("menuBtn"),
-        mobileNav = document.getElementById("mobileNav");
-      if (menuBtn && mobileNav) {
+      (function () {
+        const hdr = document.getElementById("hdr");
+        const nav = hdr ? hdr.querySelector(".nav") : null;
+        const navCta = hdr ? hdr.querySelector(".nav-cta") : null;
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileNav = document.getElementById("mobileNav");
+        if (!nav || !menuBtn || !mobileNav) {
+          return;
+        }
+
+        function syncResponsiveNav() {
+          const isMobile = window.innerWidth <= 1100;
+          nav.style.display = isMobile ? "none" : "flex";
+          if (navCta) {
+            navCta.style.display = isMobile ? "none" : "";
+          }
+          menuBtn.style.display = isMobile ? "block" : "none";
+          if (!isMobile) {
+            mobileNav.classList.remove("open");
+            menuBtn.setAttribute("aria-expanded", "false");
+          }
+        }
+
         menuBtn.addEventListener("click", function () {
           const isOpen = mobileNav.classList.toggle("open");
           menuBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
         });
-      }
+
+        window.addEventListener("resize", syncResponsiveNav);
+        syncResponsiveNav();
+      })();
     </script>
   </body>
 </html>

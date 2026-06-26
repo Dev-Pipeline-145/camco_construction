@@ -1,29 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-P47697N4");
-    </script>
-    <!-- End Google Tag Manager -->
-
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      window.gtag =
-        window.gtag ||
-        function () {
-          window.dataLayer.push(arguments);
-        };
-    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -93,35 +70,8 @@
       content="assets/images/logos/camco-construction-social-share-spokane-wa.jpg"
     />
     <link rel="canonical" href="https://camcoconstruction.net/contact-us/" />
-    <script
-      src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-      async
-      defer
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      dataLayer.push({
-        event: "landing_page_view",
-        landing_page: window.location.pathname,
-        lead_source_page: window.location.href,
-      });
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap"
-      as="style"
-      onload="
-        this.onload = null;
-        this.rel = 'stylesheet';
-      "
-    />
-    <noscript
-      ><link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap"
-    /></noscript>
+    <link href="../assets/fonts/fonts.css" rel="stylesheet" />
+
     <style>
       *,
       *::before,
@@ -142,6 +92,9 @@
         font-size: 12pt;
         color: var(--gray);
         line-height: 1.7;
+      }
+      a {
+        color: inherit;
       }
       #hdr {
         background: #000;
@@ -435,14 +388,6 @@
       }
       .form-grid .full {
         grid-column: 1/-1;
-      }
-      .captcha-wrap {
-        margin-top: 4px;
-      }
-      .captcha-note {
-        font-size: 0.78rem;
-        color: #555;
-        margin-top: 2px;
       }
       .intent-grid {
         display: grid;
@@ -795,16 +740,6 @@
     </script>
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-P47697N4"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <header id="hdr">
       <a class="logo-box" href="/" aria-label="Camco Construction Home"
         ><img
@@ -849,7 +784,7 @@
         <a
           class="on"
           href="/contact-us/"
-          onclick="trackCTAClick('contact_nav_contact')"
+         
           >Contact Us <span class="arr">></span></a
         >
       </div>
@@ -884,7 +819,7 @@
       <a href="/join-our-team/">Join Our Team</a>
       <a
         href="/contact-us/"
-        onclick="trackCTAClick('contact_nav_mobile_contact')"
+       
         >Contact Us</a
       >
     </nav>
@@ -931,13 +866,13 @@
               <a
                 class="btn"
                 href="#request-estimate"
-                onclick="trackCTAClick('contact_path_estimate')"
+               
                 >Request an Estimate <span class="arr">></span></a
               >
               <a
                 class="btn bol"
                 href="/join-our-team/"
-                onclick="trackCTAClick('contact_path_join_team')"
+               
                 >Go to Careers Form <span class="arr">></span></a
               >
             </p>
@@ -961,7 +896,7 @@
           <div class="cc">
             <div class="ccl">Phone</div>
             <div class="ccv">
-              <a href="tel:+15095361818" onclick="trackPhoneClick()"
+              <a href="tel:+15095361818"
                 >509-536-1818</a
               >
             </div>
@@ -971,7 +906,7 @@
             <div class="ccv">
               <a
                 href="mailto:info@CamcoConstruction.net"
-                onclick="trackEmailClick()"
+               
                 >info@CamcoConstruction.net</a
               >
             </div>
@@ -1065,6 +1000,7 @@
             engineering, site conditions, and finish level affect final pricing.
           </p>
         </div>
+
         <form id="estimateForm" action="#" method="post">
           <input
             type="hidden"
@@ -1118,17 +1054,13 @@
               class="full"
               placeholder="Project Description"
             ></textarea>
-            <div class="captcha-wrap full">
-              <div
-                class="cf-turnstile"
-                data-sitekey="0x4AAAAAACr2KlOzjERFQk4L"
-              ></div>
-            </div>
-            <button
-              class="btn full"
-              type="submit"
-              onclick="trackCTAClick('estimate_form_submit_button')"
-            >
+            <p class="full">
+              By submitting this form, you consent to Camco Construction
+              collecting and using the information you provide to respond to
+              your inquiry. Your message may be processed by FormSubmit, our
+              email delivery provider, so we can receive it.
+            </p>
+            <button class="btn full" type="submit">
               Send Estimate Request <span class="arr">></span>
             </button>
           </div>
@@ -1181,14 +1113,14 @@
             <li><span>3105 E Boone Ave</span></li>
             <li><span>Spokane, WA 99202</span></li>
             <li>
-              <a href="tel:+15095361818" onclick="trackPhoneClick()"
+              <a href="tel:+15095361818"
                 >(509) 536-1818</a
               >
             </li>
             <li>
               <a
                 href="mailto:info@CamcoConstruction.net"
-                onclick="trackEmailClick()"
+               
                 >info@CamcoConstruction.net</a
               >
             </li>
@@ -1227,85 +1159,6 @@
     </footer>
 
     <script>
-      function trackPhoneClick() {
-        gtag("event", "generate_lead", {
-          event_category: "contact",
-          event_label: "phone_click",
-          service_category: "contact",
-          contact_method: "phone",
-          lead_source_page: window.location.href,
-        });
-      }
-      function trackEmailClick() {
-        gtag("event", "generate_lead", {
-          event_category: "contact",
-          event_label: "email_click",
-          service_category: "contact",
-          contact_method: "email",
-          lead_source_page: window.location.href,
-        });
-      }
-      function trackCTAClick(label) {
-        gtag("event", "click", {
-          event_category: "cta",
-          event_label: label || "contact_cta",
-          service_category: "contact",
-          lead_source_page: window.location.href,
-        });
-      }
-      function trackJobTrends(region, segment, index) {
-        gtag("event", "jobtrends_update", {
-          event_category: "jobtrends",
-          event_label: "jobtrends_update",
-          lead_source_page: window.location.href,
-          jobtrends_region: region,
-          jobtrends_segment: segment,
-          jobtrends_index: index,
-        });
-      }
-      function trackEstimatePlannerPrefill(segment, service, region) {
-        gtag("event", "estimate_planner_prefill", {
-          event_category: "estimate_planner",
-          event_label: "estimate_planner_prefill_context",
-          lead_source_page: window.location.href,
-          planner_segment: segment || "unknown",
-          planner_service: service || "unknown",
-          planner_region: region || "unknown",
-          event_action: "prefill_context",
-        });
-      }
-      function trackEstimateSubmit(projectType) {
-        gtag("event", "generate_lead", {
-          event_category: "contact",
-          event_label: "estimate_form_submit",
-          service_category: projectType || "contact",
-          contact_method: "form",
-          lead_source_page: window.location.href,
-        });
-        gtag("event", "form_submit", {
-          event_category: "contact",
-          event_label: "estimate_form",
-          form_name: "camco_estimate_form",
-          lead_source_page: window.location.href,
-          project_type: projectType || "unknown",
-        });
-      }
-      function trackJoinTeamSubmit(position) {
-        gtag("event", "generate_lead", {
-          event_category: "careers",
-          event_label: "join_team_form_submit",
-          service_category: "careers",
-          contact_method: "form",
-          lead_source_page: window.location.href,
-        });
-        gtag("event", "form_submit", {
-          event_category: "careers",
-          event_label: "join_team_form",
-          form_name: "camco_join_team_form",
-          lead_source_page: window.location.href,
-          position_interest: position || "unknown",
-        });
-      }
       document.addEventListener("DOMContentLoaded", function () {
         const regionSel = document.getElementById("jtRegion");
         const segmentSel = document.getElementById("jtSegment");
@@ -1546,11 +1399,6 @@
           if (hiddenRegion) hiddenRegion.value = selectedRegions.join(",");
           if (hiddenSeg) hiddenSeg.value = selectedSegments.join(",");
           if (hiddenIndex) hiddenIndex.value = v.index;
-          trackJobTrends(
-            selectedRegions.join(","),
-            selectedSegments.join(","),
-            v.index
-          );
         }
         if (regionSel) regionSel.addEventListener("change", updateTrends);
         if (segmentSel) segmentSel.addEventListener("change", updateTrends);
@@ -1625,11 +1473,7 @@
           serviceToType[serviceParam] ||
           normalizedRegion
         ) {
-          trackEstimatePlannerPrefill(
-            segmentAliases[segmentParam] || "unknown",
-            serviceParam || "unknown",
-            normalizedRegion || "unknown"
-          );
+          updateTrends();
         }
         if (projectTypeSelect) {
           projectTypeSelect.addEventListener("change", function () {
@@ -1707,53 +1551,9 @@
           }
           return "We could not deliver your form details by email. Please try again in a moment or call 509-536-1818.";
         }
-        function getCaptchaTokenField(form) {
-          return form
-            ? form.querySelector('[name="cf-turnstile-response"]')
-            : null;
-        }
-        function hasCompletedCaptcha(form) {
-          const tokenField = getCaptchaTokenField(form);
-          return !!(
-            tokenField &&
-            tokenField.value &&
-            tokenField.value.trim().length
-          );
-        }
-        function resetCaptchaInForm(form) {
-          if (
-            !window.turnstile ||
-            typeof window.turnstile.reset !== "function" ||
-            !form
-          ) {
-            return;
-          }
-          const container = form.querySelector(".cf-turnstile");
-          if (!container) {
-            return;
-          }
-          const widgetId = container.getAttribute("data-widget-id");
-          if (widgetId) {
-            window.turnstile.reset(widgetId);
-            return;
-          }
-          window.turnstile.reset(container);
-        }
         if (estimateForm) {
           estimateForm.addEventListener("submit", async function (e) {
             e.preventDefault();
-            if (!window.turnstile) {
-              alert(
-                "Verification did not load. Refresh this page and try again."
-              );
-              return;
-            }
-            if (!hasCompletedCaptcha(estimateForm)) {
-              alert(
-                "Please complete verification before submitting your estimate request."
-              );
-              return;
-            }
             const nameField = estimateForm.querySelector('[name="name"]');
             const phoneField = estimateForm.querySelector('[name="phone"]');
             const emailField = estimateForm.querySelector('[name="email"]');
@@ -1801,7 +1601,6 @@
               "Source Page: " + window.location.href,
             ].filter(Boolean);
             const formattedDetailMessage = detailLines.join("\n\n");
-            trackEstimateSubmit(projectType);
             const emailResult = await sendEmailCopy("Estimate Request", {
               name: nameField && nameField.value ? nameField.value.trim() : "",
               phone:
@@ -1816,99 +1615,8 @@
               alert(emailFailureMessage(emailResult));
               return;
             }
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-              event: "form_submit_success",
-              form_type: "contact_estimate",
-              form_name: "camco_estimate_form",
-            });
             alert("Thanks! Your estimate request has been recorded.");
             estimateForm.reset();
-            resetCaptchaInForm(estimateForm);
-          });
-        }
-        const joinTeamForm = document.getElementById("joinTeamForm");
-        if (joinTeamForm) {
-          joinTeamForm.addEventListener("submit", async function (e) {
-            e.preventDefault();
-            if (!hasCompletedCaptcha(joinTeamForm)) {
-              alert(
-                "Please complete verification before submitting your job inquiry."
-              );
-              return;
-            }
-            const fullNameField =
-              joinTeamForm.querySelector('[name="full_name"]');
-            const phoneField = joinTeamForm.querySelector('[name="phone"]');
-            const emailField = joinTeamForm.querySelector('[name="email"]');
-            const positionField = joinTeamForm.querySelector(
-              '[name="position_interest"]'
-            );
-            const yearsField = joinTeamForm.querySelector(
-              '[name="years_experience"]'
-            );
-            const certsField = joinTeamForm.querySelector(
-              '[name="certifications"]'
-            );
-            const historyField = joinTeamForm.querySelector(
-              '[name="work_history"]'
-            );
-            const availabilityField = joinTeamForm.querySelector(
-              '[name="availability"]'
-            );
-            const position = (positionField || {}).value || "unknown";
-            const positionLabel =
-              positionField && positionField.selectedIndex >= 0
-                ? positionField.options[positionField.selectedIndex].text
-                : position;
-            const messageLines = [
-              "--- Join Team Inquiry ---",
-              "Position of Interest: " + (positionLabel || position),
-              "Years of Experience: " +
-                (yearsField && yearsField.value
-                  ? yearsField.value.trim()
-                  : "Not provided"),
-              "Certifications: " +
-                (certsField && certsField.value
-                  ? certsField.value.trim()
-                  : "Not provided"),
-              "Work History: " +
-                (historyField && historyField.value
-                  ? historyField.value.trim()
-                  : "Not provided"),
-              "Availability: " +
-                (availabilityField && availabilityField.value
-                  ? availabilityField.value.trim()
-                  : "Not provided"),
-              "Source Page: " + window.location.href,
-            ];
-            trackJoinTeamSubmit(position);
-            const emailResult = await sendEmailCopy("Join Team Inquiry", {
-              name:
-                fullNameField && fullNameField.value
-                  ? fullNameField.value.trim()
-                  : "",
-              phone:
-                phoneField && phoneField.value ? phoneField.value.trim() : "",
-              email:
-                emailField && emailField.value ? emailField.value.trim() : "",
-              replyTo:
-                emailField && emailField.value ? emailField.value.trim() : "",
-              message: messageLines.join("\n\n"),
-            });
-            if (!emailSubmissionSucceeded(emailResult)) {
-              alert(emailFailureMessage(emailResult));
-              return;
-            }
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-              event: "form_submit_success",
-              form_type: "join_team",
-              form_name: "camco_join_team_form",
-            });
-            alert("Thanks! Your job inquiry has been recorded.");
-            joinTeamForm.reset();
-            resetCaptchaInForm(joinTeamForm);
           });
         }
       });

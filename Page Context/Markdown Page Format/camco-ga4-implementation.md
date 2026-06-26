@@ -16,17 +16,22 @@ Paste this block immediately after the opening `<head>` tag on **every single pa
 <!-- Measurement ID: G-1R87642CKG                                -->
 <!-- ADD TO EVERY PAGE — immediately after opening <head> tag    -->
 <!-- ============================================================ -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1R87642CKG"></script>
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-1R87642CKG"
+></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
 
-  gtag('config', 'G-1R87642CKG', {
-    'page_title': document.title,
-    'page_location': window.location.href,
-    'send_page_view': true,
-    'cookie_flags': 'SameSite=None;Secure'
+  gtag("config", "G-1R87642CKG", {
+    page_title: document.title,
+    page_location: window.location.href,
+    send_page_view: true,
+    cookie_flags: "SameSite=None;Secure",
   });
 </script>
 <!-- ============================================================ -->
@@ -56,54 +61,56 @@ Copy the appropriate block for each page. Each block contains all tracked events
 <!-- GA4 Event Tracking — Homepage                               -->
 <!-- ============================================================ -->
 <script>
-// ---- Phone Click Tracking ----
-function trackPhoneClick() {
-  gtag('event', 'generate_lead', {
-    'event_category': 'contact',
-    'event_label': 'phone_click',
-    'service_category': 'general',
-    'contact_method': 'phone',
-    'lead_source_page': window.location.href
-  });
-}
+  // ---- Phone Click Tracking ----
+  function trackPhoneClick() {
+    gtag("event", "generate_lead", {
+      event_category: "contact",
+      event_label: "phone_click",
+      service_category: "general",
+      contact_method: "phone",
+      lead_source_page: window.location.href,
+    });
+  }
 
-// ---- Email Click Tracking ----
-function trackEmailClick() {
-  gtag('event', 'generate_lead', {
-    'event_category': 'contact',
-    'event_label': 'email_click',
-    'service_category': 'general',
-    'contact_method': 'email',
-    'lead_source_page': window.location.href
-  });
-}
+  // ---- Email Click Tracking ----
+  function trackEmailClick() {
+    gtag("event", "generate_lead", {
+      event_category: "contact",
+      event_label: "email_click",
+      service_category: "general",
+      contact_method: "email",
+      lead_source_page: window.location.href,
+    });
+  }
 
-// ---- CTA Button Click Tracking ----
-function trackCTAClick(label) {
-  gtag('event', 'click', {
-    'event_category': 'cta',
-    'event_label': label || 'cta_button',
-    'service_category': 'general',
-    'lead_source_page': window.location.href
-  });
-}
+  // ---- CTA Button Click Tracking ----
+  function trackCTAClick(label) {
+    gtag("event", "click", {
+      event_category: "cta",
+      event_label: label || "cta_button",
+      service_category: "general",
+      lead_source_page: window.location.href,
+    });
+  }
 
-// ---- Scroll Depth Tracking ----
-var scrollDepths = [25, 50, 75, 100];
-var scrollFired = {};
-window.addEventListener('scroll', function() {
-  var scrollPct = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
-  scrollDepths.forEach(function(depth) {
-    if (scrollPct >= depth && !scrollFired[depth]) {
-      scrollFired[depth] = true;
-      gtag('event', 'scroll', {
-        'event_category': 'engagement',
-        'event_label': 'scroll_' + depth + '_percent',
-        'page_location': window.location.href
-      });
-    }
+  // ---- Scroll Depth Tracking ----
+  var scrollDepths = [25, 50, 75, 100];
+  var scrollFired = {};
+  window.addEventListener("scroll", function () {
+    var scrollPct = Math.round(
+      (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
+    );
+    scrollDepths.forEach(function (depth) {
+      if (scrollPct >= depth && !scrollFired[depth]) {
+        scrollFired[depth] = true;
+        gtag("event", "scroll", {
+          event_category: "engagement",
+          event_label: "scroll_" + depth + "_percent",
+          page_location: window.location.href,
+        });
+      }
+    });
   });
-});
 </script>
 
 <!-- Apply to phone number links: -->
@@ -126,34 +133,34 @@ window.addEventListener('scroll', function() {
 <!-- GA4 Event Tracking — Residential Services                   -->
 <!-- ============================================================ -->
 <script>
-function trackPhoneClick() {
-  gtag('event', 'generate_lead', {
-    'event_category': 'contact',
-    'event_label': 'phone_click',
-    'service_category': 'residential',
-    'contact_method': 'phone',
-    'lead_source_page': window.location.href
-  });
-}
+  function trackPhoneClick() {
+    gtag("event", "generate_lead", {
+      event_category: "contact",
+      event_label: "phone_click",
+      service_category: "residential",
+      contact_method: "phone",
+      lead_source_page: window.location.href,
+    });
+  }
 
-function trackEmailClick() {
-  gtag('event', 'generate_lead', {
-    'event_category': 'contact',
-    'event_label': 'email_click',
-    'service_category': 'residential',
-    'contact_method': 'email',
-    'lead_source_page': window.location.href
-  });
-}
+  function trackEmailClick() {
+    gtag("event", "generate_lead", {
+      event_category: "contact",
+      event_label: "email_click",
+      service_category: "residential",
+      contact_method: "email",
+      lead_source_page: window.location.href,
+    });
+  }
 
-function trackCTAClick(label) {
-  gtag('event', 'click', {
-    'event_category': 'cta',
-    'event_label': label || 'residential_cta',
-    'service_category': 'residential',
-    'lead_source_page': window.location.href
-  });
-}
+  function trackCTAClick(label) {
+    gtag("event", "click", {
+      event_category: "cta",
+      event_label: label || "residential_cta",
+      service_category: "residential",
+      lead_source_page: window.location.href,
+    });
+  }
 </script>
 ```
 
@@ -166,34 +173,34 @@ function trackCTAClick(label) {
 <!-- GA4 Event Tracking — Home Additions                         -->
 <!-- ============================================================ -->
 <script>
-function trackPhoneClick() {
-  gtag('event', 'generate_lead', {
-    'event_category': 'contact',
-    'event_label': 'phone_click',
-    'service_category': 'home_additions',
-    'contact_method': 'phone',
-    'lead_source_page': window.location.href
-  });
-}
+  function trackPhoneClick() {
+    gtag("event", "generate_lead", {
+      event_category: "contact",
+      event_label: "phone_click",
+      service_category: "home_additions",
+      contact_method: "phone",
+      lead_source_page: window.location.href,
+    });
+  }
 
-function trackEmailClick() {
-  gtag('event', 'generate_lead', {
-    'event_category': 'contact',
-    'event_label': 'email_click',
-    'service_category': 'home_additions',
-    'contact_method': 'email',
-    'lead_source_page': window.location.href
-  });
-}
+  function trackEmailClick() {
+    gtag("event", "generate_lead", {
+      event_category: "contact",
+      event_label: "email_click",
+      service_category: "home_additions",
+      contact_method: "email",
+      lead_source_page: window.location.href,
+    });
+  }
 
-function trackCTAClick(label) {
-  gtag('event', 'click', {
-    'event_category': 'cta',
-    'event_label': label || 'home_additions_cta',
-    'service_category': 'home_additions',
-    'lead_source_page': window.location.href
-  });
-}
+  function trackCTAClick(label) {
+    gtag("event", "click", {
+      event_category: "cta",
+      event_label: label || "home_additions_cta",
+      service_category: "home_additions",
+      lead_source_page: window.location.href,
+    });
+  }
 </script>
 ```
 
@@ -206,34 +213,34 @@ function trackCTAClick(label) {
 <!-- GA4 Event Tracking — Deck Construction                      -->
 <!-- ============================================================ -->
 <script>
-function trackPhoneClick() {
-  gtag('event', 'generate_lead', {
-    'event_category': 'contact',
-    'event_label': 'phone_click',
-    'service_category': 'deck_construction',
-    'contact_method': 'phone',
-    'lead_source_page': window.location.href
-  });
-}
+  function trackPhoneClick() {
+    gtag("event", "generate_lead", {
+      event_category: "contact",
+      event_label: "phone_click",
+      service_category: "deck_construction",
+      contact_method: "phone",
+      lead_source_page: window.location.href,
+    });
+  }
 
-function trackEmailClick() {
-  gtag('event', 'generate_lead', {
-    'event_category': 'contact',
-    'event_label': 'email_click',
-    'service_category': 'deck_construction',
-    'contact_method': 'email',
-    'lead_source_page': window.location.href
-  });
-}
+  function trackEmailClick() {
+    gtag("event", "generate_lead", {
+      event_category: "contact",
+      event_label: "email_click",
+      service_category: "deck_construction",
+      contact_method: "email",
+      lead_source_page: window.location.href,
+    });
+  }
 
-function trackCTAClick(label) {
-  gtag('event', 'click', {
-    'event_category': 'cta',
-    'event_label': label || 'deck_cta',
-    'service_category': 'deck_construction',
-    'lead_source_page': window.location.href
-  });
-}
+  function trackCTAClick(label) {
+    gtag("event", "click", {
+      event_category: "cta",
+      event_label: label || "deck_cta",
+      service_category: "deck_construction",
+      lead_source_page: window.location.href,
+    });
+  }
 </script>
 ```
 
@@ -246,34 +253,34 @@ function trackCTAClick(label) {
 <!-- GA4 Event Tracking — Commercial & Excavation                -->
 <!-- ============================================================ -->
 <script>
-function trackPhoneClick() {
-  gtag('event', 'generate_lead', {
-    'event_category': 'contact',
-    'event_label': 'phone_click',
-    'service_category': 'commercial',
-    'contact_method': 'phone',
-    'lead_source_page': window.location.href
-  });
-}
+  function trackPhoneClick() {
+    gtag("event", "generate_lead", {
+      event_category: "contact",
+      event_label: "phone_click",
+      service_category: "commercial",
+      contact_method: "phone",
+      lead_source_page: window.location.href,
+    });
+  }
 
-function trackEmailClick() {
-  gtag('event', 'generate_lead', {
-    'event_category': 'contact',
-    'event_label': 'email_click',
-    'service_category': 'commercial',
-    'contact_method': 'email',
-    'lead_source_page': window.location.href
-  });
-}
+  function trackEmailClick() {
+    gtag("event", "generate_lead", {
+      event_category: "contact",
+      event_label: "email_click",
+      service_category: "commercial",
+      contact_method: "email",
+      lead_source_page: window.location.href,
+    });
+  }
 
-function trackCTAClick(label) {
-  gtag('event', 'click', {
-    'event_category': 'cta',
-    'event_label': label || 'commercial_cta',
-    'service_category': 'commercial',
-    'lead_source_page': window.location.href
-  });
-}
+  function trackCTAClick(label) {
+    gtag("event", "click", {
+      event_category: "cta",
+      event_label: label || "commercial_cta",
+      service_category: "commercial",
+      lead_source_page: window.location.href,
+    });
+  }
 </script>
 ```
 
@@ -286,34 +293,34 @@ function trackCTAClick(label) {
 <!-- GA4 Event Tracking — Accessibility & Ramps                  -->
 <!-- ============================================================ -->
 <script>
-function trackPhoneClick() {
-  gtag('event', 'generate_lead', {
-    'event_category': 'contact',
-    'event_label': 'phone_click',
-    'service_category': 'accessibility',
-    'contact_method': 'phone',
-    'lead_source_page': window.location.href
-  });
-}
+  function trackPhoneClick() {
+    gtag("event", "generate_lead", {
+      event_category: "contact",
+      event_label: "phone_click",
+      service_category: "accessibility",
+      contact_method: "phone",
+      lead_source_page: window.location.href,
+    });
+  }
 
-function trackEmailClick() {
-  gtag('event', 'generate_lead', {
-    'event_category': 'contact',
-    'event_label': 'email_click',
-    'service_category': 'accessibility',
-    'contact_method': 'email',
-    'lead_source_page': window.location.href
-  });
-}
+  function trackEmailClick() {
+    gtag("event", "generate_lead", {
+      event_category: "contact",
+      event_label: "email_click",
+      service_category: "accessibility",
+      contact_method: "email",
+      lead_source_page: window.location.href,
+    });
+  }
 
-function trackCTAClick(label) {
-  gtag('event', 'click', {
-    'event_category': 'cta',
-    'event_label': label || 'accessibility_cta',
-    'service_category': 'accessibility',
-    'lead_source_page': window.location.href
-  });
-}
+  function trackCTAClick(label) {
+    gtag("event", "click", {
+      event_category: "cta",
+      event_label: label || "accessibility_cta",
+      service_category: "accessibility",
+      lead_source_page: window.location.href,
+    });
+  }
 </script>
 ```
 
@@ -327,58 +334,58 @@ function trackCTAClick(label) {
 <!-- Includes form submission tracking                           -->
 <!-- ============================================================ -->
 <script>
-function trackPhoneClick() {
-  gtag('event', 'generate_lead', {
-    'event_category': 'contact',
-    'event_label': 'phone_click',
-    'service_category': 'contact',
-    'contact_method': 'phone',
-    'lead_source_page': window.location.href
-  });
-}
-
-function trackEmailClick() {
-  gtag('event', 'generate_lead', {
-    'event_category': 'contact',
-    'event_label': 'email_click',
-    'service_category': 'contact',
-    'contact_method': 'email',
-    'lead_source_page': window.location.href
-  });
-}
-
-// ---- Contact Form Submission ----
-// Call this function on form submit or when thank-you state appears
-function trackFormSubmit(projectType) {
-  // Primary lead event
-  gtag('event', 'generate_lead', {
-    'event_category': 'contact',
-    'event_label': 'form_submit',
-    'service_category': projectType || 'contact',
-    'contact_method': 'form',
-    'lead_source_page': window.location.href
-  });
-
-  // Secondary form event for GA4 form reports
-  gtag('event', 'form_submit', {
-    'event_category': 'contact',
-    'event_label': 'contact_form',
-    'form_name': 'camco_contact_form',
-    'lead_source_page': window.location.href
-  });
-}
-
-// ---- Wire up form on page load ----
-document.addEventListener('DOMContentLoaded', function() {
-  var form = document.querySelector('form');
-  if (form) {
-    form.addEventListener('submit', function(e) {
-      var projectTypeField = form.querySelector('[name="project_type"]');
-      var projectType = projectTypeField ? projectTypeField.value : 'unknown';
-      trackFormSubmit(projectType);
+  function trackPhoneClick() {
+    gtag("event", "generate_lead", {
+      event_category: "contact",
+      event_label: "phone_click",
+      service_category: "contact",
+      contact_method: "phone",
+      lead_source_page: window.location.href,
     });
   }
-});
+
+  function trackEmailClick() {
+    gtag("event", "generate_lead", {
+      event_category: "contact",
+      event_label: "email_click",
+      service_category: "contact",
+      contact_method: "email",
+      lead_source_page: window.location.href,
+    });
+  }
+
+  // ---- Contact Form Submission ----
+  // Call this function on form submit or when thank-you state appears
+  function trackFormSubmit(projectType) {
+    // Primary lead event
+    gtag("event", "generate_lead", {
+      event_category: "contact",
+      event_label: "form_submit",
+      service_category: projectType || "contact",
+      contact_method: "form",
+      lead_source_page: window.location.href,
+    });
+
+    // Secondary form event for GA4 form reports
+    gtag("event", "form_submit", {
+      event_category: "contact",
+      event_label: "contact_form",
+      form_name: "camco_contact_form",
+      lead_source_page: window.location.href,
+    });
+  }
+
+  // ---- Wire up form on page load ----
+  document.addEventListener("DOMContentLoaded", function () {
+    var form = document.querySelector("form");
+    if (form) {
+      form.addEventListener("submit", function (e) {
+        var projectTypeField = form.querySelector('[name="project_type"]');
+        var projectType = projectTypeField ? projectTypeField.value : "unknown";
+        trackFormSubmit(projectType);
+      });
+    }
+  });
 </script>
 ```
 
@@ -394,11 +401,11 @@ Complete these steps inside GA4 Admin. You only do these once — they apply to 
 
 Create these three dimensions in order:
 
-| # | Dimension Name | Scope | Parameter Name |
-|---|---|---|---|
-| 1 | Service Category | Event | `service_category` |
-| 2 | Lead Source Page | Event | `lead_source_page` |
-| 3 | Contact Method | Event | `contact_method` |
+| #   | Dimension Name   | Scope | Parameter Name     |
+| --- | ---------------- | ----- | ------------------ |
+| 1   | Service Category | Event | `service_category` |
+| 2   | Lead Source Page | Event | `lead_source_page` |
+| 3   | Contact Method   | Event | `contact_method`   |
 
 ---
 
@@ -421,16 +428,19 @@ This makes leads appear in the Conversions report and enables conversion-based a
 After launch, check these reports weekly:
 
 **Reports > Engagement > Events**
+
 - `generate_lead` — total leads by source
 - `form_submit` — contact form completions
 - `click` — CTA button engagement
 - `scroll` — scroll depth by page
 
 **Reports > Acquisition > Traffic Acquisition**
+
 - Filter by `First user medium = organic` to see SEO-driven leads
 - Compare organic vs. direct vs. referral week over week
 
 **Reports > Engagement > Pages and Screens**
+
 - Sort by `Event count` for `generate_lead` to see which pages generate the most leads
 - This tells you which service pages are working and which need improvement
 
@@ -447,7 +457,10 @@ After launch, check these reports weekly:
 
 ```html
 <!-- Google Search Console Verification — add to homepage <head> only -->
-<meta name="google-site-verification" content="[VERIFICATION CODE FROM SEARCH CONSOLE]" />
+<meta
+  name="google-site-verification"
+  content="[VERIFICATION CODE FROM SEARCH CONSOLE]"
+/>
 ```
 
 5. Click Verify in Search Console
@@ -520,31 +533,31 @@ Update and resubmit the sitemap each time a new page goes live.
 
 Once live, review the following in GA4 every week:
 
-| Check | Where in GA4 | What to Look For |
-|---|---|---|
-| Total leads this week | Reports > Conversions | Week-over-week trend |
-| Which pages generated leads | Reports > Pages and screens > filter by generate_lead | Highest performing pages |
-| Which service generated leads | Reports > Events > service_category dimension | Where to invest content effort |
-| Organic traffic trend | Reports > Acquisition > Traffic Acquisition | Growth from SEO |
-| Search queries driving traffic | Reports > Search Console > Queries | Which keywords are working |
-| Pages with impressions but no clicks | Search Console > Search Results | Fix title/meta on those pages |
-| Phone vs. email vs. form split | Reports > Events > contact_method dimension | Understand how leads prefer to contact |
+| Check                                | Where in GA4                                          | What to Look For                       |
+| ------------------------------------ | ----------------------------------------------------- | -------------------------------------- |
+| Total leads this week                | Reports > Conversions                                 | Week-over-week trend                   |
+| Which pages generated leads          | Reports > Pages and screens > filter by generate_lead | Highest performing pages               |
+| Which service generated leads        | Reports > Events > service_category dimension         | Where to invest content effort         |
+| Organic traffic trend                | Reports > Acquisition > Traffic Acquisition           | Growth from SEO                        |
+| Search queries driving traffic       | Reports > Search Console > Queries                    | Which keywords are working             |
+| Pages with impressions but no clicks | Search Console > Search Results                       | Fix title/meta on those pages          |
+| Phone vs. email vs. form split       | Reports > Events > contact_method dimension           | Understand how leads prefer to contact |
 
 ---
 
 ## Quick Reference — All Measurement IDs & Accounts
 
-| Asset | ID / URL |
-|---|---|
-| GA4 Measurement ID | `G-1R87642CKG` |
-| Website | `https://www.camcoconstruction.net` |
+| Asset                 | ID / URL                                   |
+| --------------------- | ------------------------------------------ |
+| GA4 Measurement ID    | `G-1R87642CKG`                             |
+| Website               | `https://www.camcoconstruction.net`        |
 | Google Search Console | `https://search.google.com/search-console` |
-| GA4 Admin | `https://analytics.google.com` |
-| Phone (tracked) | `tel:+15095361818` |
-| Email (tracked) | `mailto:info@CamcoConstruction.net` |
-| WA Contractor License | `CAMCOCI799L5` |
+| GA4 Admin             | `https://analytics.google.com`             |
+| Phone (tracked)       | `tel:+15095361818`                         |
+| Email (tracked)       | `mailto:info@CamcoConstruction.net`        |
+| WA Contractor License | `CAMCOCI799L5`                             |
 
 ---
 
-*Document prepared for Camco Construction Inc. · Leif Challender, President · 509-536-1818 · info@CamcoConstruction.net*  
-*Lic. #CAMCOCI799L5 · Licensed in WA & ID · www.CamcoConstruction.net*
+_Document prepared for Camco Construction Inc. · Leif Challender, President · 509-536-1818 · info@CamcoConstruction.net_  
+_Lic. #CAMCOCI799L5 · Licensed in WA & ID · www.CamcoConstruction.net_
