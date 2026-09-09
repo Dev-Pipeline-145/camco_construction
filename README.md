@@ -46,6 +46,19 @@ Follow the steps from running.md
 
 ### Open `http://localhost:8788` in your browser.
 
+## Analytics
+
+Live site: `https://camcoconstruction.net`
+
+| Product | ID | Where it runs |
+| --- | --- | --- |
+| Google Tag Manager (website) | `GTM-WTN4CTH6` | `camcoconstruction.net` only |
+| Google Analytics 4 (website) | `G-1R87642CKG` | Fired by `GTM-WTN4CTH6` |
+| Google Tag Manager (landers / tools) | `GTM-P47697N4` | RequestABuild, CallRail, LiveChat, Ads |
+| Google Analytics 4 (landers) | `G-KXBZR9GFMJ` | Fired by `GTM-P47697N4`, not by the website snippet |
+
+Website pages install `GTM-WTN4CTH6` only. Do not also load `GTM-P47697N4` or a duplicate `gtag` config for `G-KXBZR9GFMJ` on the site, or lander tools (CallRail number swap, LiveChat) and Ads tags will leak onto camcoconstruction.net.
+
 ## Git Workflow
 
 1. **Create a dev branch** (in GitHub or locally): `git checkout -b dev` from `main`
