@@ -1,0 +1,7 @@
+{
+  "name": "camco-construction",
+  "private": true,
+  "scripts": {
+    "build": "bash scripts/pages-build.sh"
+  }
+}

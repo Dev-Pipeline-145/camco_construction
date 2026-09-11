@@ -1,14 +1,69 @@
+# Trailing-slash collisions with leftover camco-* pretty URLs on production.
+# Keep these first so estimate/careers/residential CTAs do not bounce to Home.
+/residential/ /residential 301
+/contact-us/ /contact-us 301
+/join-our-team/ /join-our-team 301
+
+# Future pages stay in git, not in the Pages output.
+/accessibility-ramps /residential 301
+/accessibility-ramps/ /residential 301
+/for-realtors /commercial/ 301
+/for-realtors/ /commercial/ 301
+
+# Leftover pretty URLs from old HTML filenames
+/camco-contact /contact-us 301
+/camco-contact/ /contact-us 301
+/camco-join-our-team /join-our-team 301
+/camco-join-our-team/ /join-our-team 301
+/camco-residential /residential 301
+/camco-residential/ /residential 301
+/camco-homepage / 301
+/camco-homepage/ / 301
+/camco-about /about/ 301
+/camco-about/ /about/ 301
+/camco-commercial /commercial/ 301
+/camco-commercial/ /commercial/ 301
+/camco-projects /projects/ 301
+/camco-projects/ /projects/ 301
+/camco-home-additions /home-additions/ 301
+/camco-home-additions/ /home-additions/ 301
+/camco-deck-construction /deck-construction/ 301
+/camco-deck-construction/ /deck-construction/ 301
+/camco-accessibility-ramps /residential 301
+/camco-accessibility-ramps/ /residential 301
+/camco-for-realtors /commercial/ 301
+/camco-for-realtors/ /commercial/ 301
+
+# Old filename redirects
 /camco-homepage.html / 301
 /camco-commercial.html /commercial/ 301
-/camco-residential.html /residential/ 301
+/camco-residential.html /residential 301
 /camco-home-additions.html /home-additions/ 301
 /camco-deck-construction.html /deck-construction/ 301
-/camco-accessibility-ramps.html /accessibility-ramps/ 301
+/camco-accessibility-ramps.html /residential 301
 /camco-about.html /about/ 301
-/camco-contact.html /contact-us/ 301
+/camco-contact.html /contact-us 301
 /camco-projects.html /projects/ 301
-/camco-join-our-team.html /join-our-team/ 301
-/camco-residential-page.html /residential/ 301
-/camco-for-realtors.html /for-realtors/ 301
+/camco-join-our-team.html /join-our-team 301
+/camco-residential-page.html /residential 301
+/camco-for-realtors.html /commercial/ 301
 /privacy-policy.html / 301
 /privacy-policy/ / 301
+
+# Indexed WordPress / unused aliases
+/our-capabilities /about/ 301
+/our-capabilities/ /about/ 301
+/carpenter /join-our-team 301
+/carpenter/ /join-our-team 301
+/magnolia-remodel /projects/ 301
+/magnolia-remodel/ /projects/ 301
+/veteran-elevator-installation /projects/ 301
+/veteran-elevator-installation/ /projects/ 301
+/habitat-for-humanity-project /projects/ 301
+/habitat-for-humanity-project/ /projects/ 301
+/general-contracting /commercial/ 301
+/general-contracting/ /commercial/ 301
+/residential-contracting /residential 301
+/residential-contracting/ /residential 301
+/wheelchair-ramps /residential 301
+/wheelchair-ramps/ /residential 301
