@@ -1,5 +1,10 @@
 (() => {
   window.dataLayer = window.dataLayer || [];
+  if (typeof window.gtag !== "function") {
+    window.gtag = function gtag() {
+      window.dataLayer.push(arguments);
+    };
+  }
 
   const PAGE_GROUPS = {
     "/": "home",
@@ -53,11 +58,9 @@
       cleanParams(params)
     );
     window.dataLayer.push(payload);
-    if (typeof window.gtag === "function") {
-      const gtagParams = Object.assign({}, payload);
-      delete gtagParams.event;
-      window.gtag("event", eventName, gtagParams);
-    }
+    const gtagParams = Object.assign({ send_to: "G-7JP0LPLE2V" }, payload);
+    delete gtagParams.event;
+    window.gtag("event", eventName, gtagParams);
   }
 
   window.camcoTrack = {
